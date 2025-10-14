@@ -215,8 +215,7 @@ export function Contact() {
                   <h4>Quick Response</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  I typically respond within 24 hours. For urgent projects,
-                  feel free to call directly and we can set up a quick chat.
+                  I typically respond within 24 hours. For urgent projects, flag the timeline in your message and I’ll set up a quick video chat.
                 </p>
               </motion.div>
             </motion.div>
