@@ -127,7 +127,7 @@ export function Hero() {
                 <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
                   <span className="text-orange-600">Create. Innovate. Code.</span><br />
                   A full-stack developer who builds
-                  <span className="text-foreground"> scalable web solutions</span>
+                  <span className="text-foreground"> scalable web solutions.</span>
                 </p>
               </motion.div>
 
