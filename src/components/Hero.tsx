@@ -227,7 +227,7 @@ export function Hero() {
                   transition={{ duration: 0.3 }}
                 >
                   <img
-                    src={"/public/images/projects/Untitled design-4.svg"}
+                    src={"images/projects/Untitled design-4.svg"}
                     alt="Matt Roshay"
                     className="w-full h-full object-cover opacity-90"
                   />
