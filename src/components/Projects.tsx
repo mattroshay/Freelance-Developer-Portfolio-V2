@@ -9,7 +9,7 @@ export function Projects() {
     {
       title: "B-itconsulting",
       description: "Portfolio + blog CMS for an IT infrastructure consultant with LinkedIn auto-posting, content management, and responsive design.",
-      image: "/public/images/projects/b-itconsulting.png",
+  image: "/images/projects/b-itconsulting.png",
       technologies: ["Ruby on rails", "SCSS", "Javascript", "PostgreSQL", "Heroku", "Cloudinary"],
       liveUrl: "https://www.b-itconsulting.com",
       // githubUrl: "https://github.com",
@@ -18,7 +18,7 @@ export function Projects() {
     {
       title: "MatchMeal",
       description: "AI-powered recipe app that identifies ingredients and suggests personalized meals using OpenAI API. Features image uploads, favorites, and adaptive UI.",
-      image: "/public/images/projects/matchmeal-screen.png",
+  image: "/images/projects/matchmeal-screen.png",
       technologies: ["Ruby on rails", "SCSS", "Javascript", "PostgreSQL", "Heroku", "Cloudinary", "Postman", "OpenAI API", "Spoonacular API"],
       liveUrl: "https://www.matchmeal.eu",
       githubUrl: "https://github.com/mattroshay/MatchMeal",
@@ -27,7 +27,7 @@ export function Projects() {
     {
       title: "FlatRent",
       description: "Full-stack booking platform inspired by Airbnb, with property listings, authentication, search filters, and reservation management. Deployed on Heroku.",
-      image: "/public/images/projects/flatrent.png",
+  image: "/images/projects/flatrent.png",
       technologies: ["Ruby on Rails", "PostgreSQL", "SCSS", "JavaScript", "Heroku", "Cloudinary", "Mapbox API", "Stripe API"],
       liveUrl: "https://airbnb-roshaym-5f0f5ed33d88.herokuapp.com",
       githubUrl: "https://github.com/mattroshay/CEMY-AirBNB",
