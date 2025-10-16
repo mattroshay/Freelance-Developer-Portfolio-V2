@@ -4,7 +4,7 @@ import { Code, Palette, Zap, Coffee, Users, Rocket, Icon, ShieldCheck, MapPin, B
 export function About() {
   const stats = [
     { icon: <ShieldCheck className="w-6 h-6" />, text: "Le Wagon Certified Web Developer (RNCP 39261)" },
-    { icon: <Zap className="w-6 h-6" />, text: "Founder of MatchMeal & TrakBot" },
+    { icon: <Zap className="w-6 h-6" />, text: "Founder of MatchMeal" },
     { icon: <MapPin className="w-6 h-6" />, text: "Based near Bordeaux, working remotely" },
     { icon: <Coffee className="w-6 h-6" />, text: "Fueled by curiosity & coffee" },
   ];
@@ -12,8 +12,8 @@ export function About() {
   const services = [
     {
       icon: <Terminal className="w-6 h-6" />,
-      title: "Full-Stack Development",
-      description: "End-to-end web applications with modern frameworks and cloud deployment."
+      title: "Web & App Development",
+      description: "From modern websites to custom web applications — I design and build reliable, responsive, and scalable digital products using modern frameworks and cloud deployment."
     },
     {
       icon: <Palette className="w-6 h-6" />,
@@ -64,7 +64,7 @@ export function About() {
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
               I’m a full-stack developer with 15 years’ experience in business development and client relationship management,
-              now helping professionals, startups and PMEs transform their ideas into intuitive, scalable digital products.
+              now helping professionals, startups and SMEs transform their ideas into intuitive, scalable digital products.
               Beyond code, I guide clients on technical strategy, AI adoption, and performance optimization to ensure every project is impactful, maintainable, and future-ready.
             </p>
           </motion.div>

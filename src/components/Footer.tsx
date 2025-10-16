@@ -26,12 +26,12 @@ export function Footer() {
                   Matt Roshay
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6 max-w-md">
-                  Full-stack developer crafting modern, performant web applications with a focus on usability and maintainability.
+                  Full-stack developer building modern web applications with an emphasis on user experience and sustainability.
                 </p>
                 <div className="flex space-x-4">
                   {[
                     { icon: Github, href: "https://github.com/mattroshay", label: "GitHub" },
-                    { icon: Linkedin, href: "https://linkedin.com/mattroshay", label: "LinkedIn" },
+                    { icon: Linkedin, href: "https://linkedin.com/in/mattroshay", label: "LinkedIn" },
                     // { icon: Twitter, href: "https://twitter.com", label: "Twitter" }
                   ].map((social, index) => (
                     <motion.a
