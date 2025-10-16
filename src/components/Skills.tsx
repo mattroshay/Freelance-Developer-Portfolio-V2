@@ -9,7 +9,7 @@ export function Skills() {
         "React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3", 
         "Tailwind CSS", "Styled Components", "Redux", "Zustand", "React Query", "Motion"
       ],
-      color: "from-[rgba(255,122,0,0.12)] to-[rgba(255,151,64,0.18)]"
+      color: "from-orange-400/20 to-orange-500/20"
     },
     {
       title: "Backend & Database",
@@ -17,7 +17,7 @@ export function Skills() {
         "Node.js", "Express.js", "Python", "Django", "PostgreSQL", "MongoDB", 
         "Redis", "GraphQL", "REST APIs", "JWT", "Supabase", "Prisma"
       ],
-      color: "from-[rgba(255,122,0,0.14)] to-[rgba(204,97,0,0.18)]"
+      color: "from-orange-500/20 to-orange-600/20"
     },
     {
       title: "Tools & DevOps",
@@ -25,7 +25,7 @@ export function Skills() {
         "Git", "Docker", "AWS", "Vercel", "Netlify", "GitHub Actions", 
         "Jest", "Cypress", "Webpack", "Vite", "ESLint", "Prettier"
       ],
-      color: "from-[rgba(204,97,0,0.18)] to-[rgba(255,122,0,0.22)]"
+      color: "from-orange-600/20 to-orange-700/20"
     },
     {
       title: "Design & Strategy",
@@ -33,15 +33,15 @@ export function Skills() {
         "Figma", "Adobe XD", "Responsive Design", "UI/UX Design", 
         "SEO", "Web Accessibility", "Performance Optimization", "Agile"
       ],
-      color: "from-[rgba(255,122,0,0.14)] to-[rgba(255,191,128,0.2)]"
+      color: "from-orange-500/20 to-amber-500/20"
     }
   ];
 
   return (
     <section id="skills" className="py-32 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-10 right-20 w-72 h-72 bg-primary/12 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 left-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-10 right-20 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 left-20 w-80 h-80 bg-orange-400/8 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
@@ -75,8 +75,8 @@ export function Skills() {
                 className="group relative"
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${category.color} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-                <div className="relative p-8 rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-300 bg-background/50 backdrop-blur-sm">
-                  <h3 className="text-xl mb-6 group-hover:text-primary transition-colors">
+                <div className="relative p-8 rounded-2xl border border-border/50 hover:border-orange-500/30 transition-all duration-300 bg-background/50 backdrop-blur-sm">
+                  <h3 className="text-xl mb-6 group-hover:text-orange-500 transition-colors">
                     {category.title}
                   </h3>
                   <div className="flex flex-wrap gap-3">
@@ -94,7 +94,7 @@ export function Skills() {
                       >
                         <Badge 
                           variant="secondary" 
-                          className="text-sm py-2 px-4 hover:bg-primary hover:text-primary-foreground transition-all duration-200 cursor-default"
+                          className="text-sm py-2 px-4 hover:bg-orange-500 hover:text-white transition-all duration-200 cursor-default"
                         >
                           {skill}
                         </Badge>
@@ -114,7 +114,7 @@ export function Skills() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <div className="max-w-4xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-primary/5 to-primary/10 border border-primary/20">
+            <div className="max-w-4xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-orange-500/5 to-orange-600/10 border border-orange-500/20">
               <h3 className="text-2xl mb-4">My Development Philosophy</h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 I believe in writing clean, maintainable code that scales. Every project is an 
@@ -124,19 +124,19 @@ export function Skills() {
               </p>
               <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
                 <span className="flex items-center">
-                  <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
                   Clean Code
                 </span>
                 <span className="flex items-center">
-                  <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
                   User-Centered Design
                 </span>
                 <span className="flex items-center">
-                  <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
                   Performance First
                 </span>
                 <span className="flex items-center">
-                  <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
                   Continuous Learning
                 </span>
               </div>

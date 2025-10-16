@@ -11,8 +11,8 @@ export function Projects() {
       description: "A comprehensive admin dashboard for managing products, orders, and analytics. Real-time data visualization and inventory management.",
       image: "https://images.unsplash.com/photo-1642132652860-471b4228023e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjB3ZWJzaXRlJTIwZGFzaGJvYXJkfGVufDF8fHx8MTc1OTY5NzA0NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "Chart.js"],
-      liveUrl: "https://mattroshay.com/work/ecommerce-dashboard",
-      githubUrl: "https://github.com/roshaym/ecommerce-dashboard",
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com",
       featured: true
     },
     {
@@ -20,8 +20,8 @@ export function Projects() {
       description: "A responsive SaaS application with user authentication, subscription management, and real-time data synchronization.",
       image: "https://images.unsplash.com/photo-1707836916010-3c4ad261936c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ24lMjBtb2NrdXB8ZW58MXx8fHwxNzU5NjgzNDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       technologies: ["Next.js", "Stripe", "Supabase", "Tailwind CSS"],
-      liveUrl: "https://mattroshay.com/work/saas-analytics-platform",
-      githubUrl: "https://github.com/roshaym/saas-analytics-platform",
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com",
       featured: false
     },
     {
@@ -29,8 +29,8 @@ export function Projects() {
       description: "A modern, responsive portfolio with smooth animations, dark mode support, and optimized performance.",
       image: "https://images.unsplash.com/photo-1557324232-b8917d3c3dcb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHh3ZWIlMjBkZXZlbG9wbWVudCUyMGNvZGluZyUyMHNjcmVlbnxlbnwxfHx8fDE3NTk3MjkxMjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       technologies: ["React", "Motion", "Tailwind CSS", "Vite"],
-      liveUrl: "https://mattroshay.com",
-      githubUrl: "https://github.com/roshaym/portfolio-site",
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com",
       featured: false
     }
   ];
@@ -38,8 +38,8 @@ export function Projects() {
   return (
     <section id="projects" className="py-32 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-      <div className="absolute top-20 right-10 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-20 right-10 w-80 h-80 bg-orange-400/8 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
@@ -70,7 +70,7 @@ export function Projects() {
             className="mb-20"
           >
             {projects.filter(p => p.featured).map((project, index) => (
-              <div key={index} className="group relative overflow-hidden rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-500">
+              <div key={index} className="group relative overflow-hidden rounded-2xl border border-border/50 hover:border-orange-500/30 transition-all duration-500">
                 <div className="grid lg:grid-cols-2 gap-0">
                   <div className="relative overflow-hidden">
                     <ImageWithFallback
@@ -78,12 +78,12 @@ export function Projects() {
                       alt={project.title}
                       className="w-full h-64 lg:h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
                   
                   <div className="p-8 lg:p-12 flex flex-col justify-center">
                     <div className="mb-4">
-                      <Badge variant="outline" className="mb-4 border-primary/30 text-primary">
+                      <Badge variant="outline" className="mb-4 border-orange-500/30 text-orange-500">
                         Featured Project
                       </Badge>
                       <h3 className="text-2xl lg:text-3xl mb-4 group-hover:text-primary transition-colors">
@@ -103,26 +103,14 @@ export function Projects() {
                     </div>
                     
                     <div className="flex space-x-4">
-                      <Button className="group/btn" asChild>
-                        <a
-                          href={project.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          View Live
-                          <ArrowUpRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
-                        </a>
+                      <Button className="group/btn">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        View Live
+                        <ArrowUpRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
                       </Button>
-                      <Button variant="outline" asChild>
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github className="w-4 h-4 mr-2" />
-                          Code
-                        </a>
+                      <Button variant="outline">
+                        <Github className="w-4 h-4 mr-2" />
+                        Code
                       </Button>
                     </div>
                   </div>
@@ -169,26 +157,12 @@ export function Projects() {
                   </div>
                   
                   <div className="flex space-x-3">
-                    <Button size="sm" className="flex-1 group/btn" asChild>
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Live Demo
-                      </a>
+                    <Button size="sm" className="flex-1 group/btn">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Live Demo
                     </Button>
-                    <Button size="sm" variant="outline" className="aspect-square p-0" asChild>
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${project.title} source on GitHub`}
-                        className="flex items-center justify-center size-full"
-                      >
-                        <Github className="w-4 h-4" />
-                      </a>
+                    <Button size="sm" variant="outline" className="aspect-square p-0">
+                      <Github className="w-4 h-4" />
                     </Button>
                   </div>
                 </div>
@@ -204,16 +178,10 @@ export function Projects() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <Button variant="outline" size="lg" className="group" asChild>
-              <a
-                href="https://github.com/roshaym"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="w-4 h-4 mr-2" />
-                View All Projects on GitHub
-                <ArrowUpRight className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </a>
+            <Button variant="outline" size="lg" className="group">
+              <Github className="w-4 h-4 mr-2" />
+              View All Projects on GitHub
+              <ArrowUpRight className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </Button>
           </motion.div>
         </div>

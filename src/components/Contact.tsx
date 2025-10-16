@@ -32,22 +32,22 @@ export function Contact() {
     {
       icon: <Mail className="w-5 h-5" />,
       title: "Email",
-      value: "hello@mattroshay.com",
-      description: "Drop me a line anytime.",
-      link: "mailto:hello@mattroshay.com"
+      value: "alex@example.com",
+      description: "Drop me a line anytime",
+      link: "mailto:alex@example.com"
     },
     {
       icon: <Phone className="w-5 h-5" />,
-      title: "Discovery Calls",
-      value: "Request a consultation",
-      description: "Share a few windows and I’ll send over a calendar invite.",
-      link: "mailto:hello@mattroshay.com?subject=Discovery%20Call%20with%20Matt"
+      title: "Phone",
+      value: "+1 (555) 123-4567",
+      description: "Available Mon-Fri, 9AM-6PM PST",
+      link: "tel:+15551234567"
     },
     {
       icon: <MapPin className="w-5 h-5" />,
       title: "Location",
-      value: "Remote · Pacific Time (PT)",
-      description: "Collaborating with teams across the globe.",
+      value: "San Francisco, CA",
+      description: "Open to remote projects worldwide",
       link: null
     }
   ];
@@ -56,10 +56,10 @@ export function Contact() {
     <section id="contact" className="py-32 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-20 left-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-
+      
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-
+          
           {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -72,8 +72,8 @@ export function Contact() {
               Let's Build Something Amazing
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Have a project in mind? I'd love to hear about it. Let's discuss
-              how we can bring your vision to life with cutting-edge technology
+              Have a project in mind? I'd love to hear about it. Let's discuss 
+              how we can bring your vision to life with cutting-edge technology 
               and thoughtful design.
             </p>
           </motion.div>
@@ -92,7 +92,7 @@ export function Contact() {
                   <MessageCircle className="w-6 h-6 text-primary mr-3" />
                   <h3 className="text-2xl">Send a Message</h3>
                 </div>
-
+                
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
@@ -122,7 +122,7 @@ export function Contact() {
                       />
                     </div>
                   </div>
-
+                  
                   <div className="space-y-2">
                     <label htmlFor="subject" className="text-sm text-muted-foreground">Subject *</label>
                     <Input
@@ -136,7 +136,7 @@ export function Contact() {
                       className="border-border/50 focus:border-primary"
                     />
                   </div>
-
+                  
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-sm text-muted-foreground">Message *</label>
                     <Textarea
@@ -149,7 +149,7 @@ export function Contact() {
                       className="min-h-[150px] resize-none border-border/50 focus:border-primary"
                     />
                   </div>
-
+                  
                   <Button type="submit" className="w-full group">
                     <Send className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     Send Message
@@ -169,7 +169,7 @@ export function Contact() {
               <div>
                 <h3 className="text-2xl mb-6">Get in Touch</h3>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Whether you're a startup looking to build your first product or an
+                  Whether you're a startup looking to build your first product or an 
                   established company needing to modernize your web presence, I'm here to help.
                 </p>
               </div>
@@ -189,8 +189,8 @@ export function Contact() {
                       <div className="flex-1">
                         <h4 className="text-sm text-muted-foreground mb-1">{info.title}</h4>
                         {info.link ? (
-                          <a
-                            href={info.link}
+                          <a 
+                            href={info.link} 
                             className="block hover:text-primary transition-colors mb-1"
                           >
                             {info.value}
@@ -215,7 +215,8 @@ export function Contact() {
                   <h4>Quick Response</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  I typically respond within 24 hours. For urgent projects, flag the timeline in your message and I’ll set up a quick video chat.
+                  I typically respond within 24 hours. For urgent projects, 
+                  feel free to call directly and we can set up a quick chat.
                 </p>
               </motion.div>
             </motion.div>

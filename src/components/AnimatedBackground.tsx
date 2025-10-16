@@ -28,8 +28,8 @@ export function AnimatedBackground() {
           className="absolute inset-0"
           style={{
             background: `
-              linear-gradient(90deg, transparent 0%, rgba(255, 122, 0, 0.1) 1px, transparent 1px),
-              linear-gradient(0deg, transparent 0%, rgba(255, 122, 0, 0.1) 1px, transparent 1px)
+              linear-gradient(90deg, transparent 0%, rgba(249, 115, 22, 0.1) 1px, transparent 1px),
+              linear-gradient(0deg, transparent 0%, rgba(249, 115, 22, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '100px 100px',
           }}
@@ -48,7 +48,7 @@ export function AnimatedBackground() {
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute bg-primary/80 rounded-full"
+          className="absolute bg-orange-500 rounded-full"
           style={{
             left: `${particle.x}%`,
             top: `${particle.y}%`,
@@ -74,7 +74,7 @@ export function AnimatedBackground() {
       {geometricShapes.map((shape) => (
         <motion.div
           key={shape.id}
-          className="absolute border border-primary/20 rounded-full"
+          className="absolute border border-orange-500/20 rounded-full"
           style={{
             left: `${shape.x}%`,
             top: `${shape.y}%`,
@@ -97,7 +97,7 @@ export function AnimatedBackground() {
 
       {/* Pulsing Gradient Orbs */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-primary/12 to-[rgba(255,151,64,0.12)] rounded-full blur-3xl"
+        className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-orange-500/10 to-orange-400/5 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.3, 1],
           opacity: [0.3, 0.6, 0.3],
@@ -112,7 +112,7 @@ export function AnimatedBackground() {
       />
 
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-l from-[rgba(204,97,0,0.12)] to-[rgba(255,179,107,0.16)] rounded-full blur-3xl"
+        className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-l from-orange-600/8 to-orange-300/10 rounded-full blur-3xl"
         animate={{
           scale: [1.2, 0.8, 1.2],
           opacity: [0.2, 0.5, 0.2],
@@ -164,32 +164,28 @@ export function AnimatedBackground() {
         />
         <defs>
           <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#ff7a00" stopOpacity="0" />
-            <stop offset="50%" stopColor="#ff7a00" stopOpacity="1" />
-            <stop offset="100%" stopColor="#ff7a00" stopOpacity="0" />
+            <stop offset="0%" stopColor="#f97316" stopOpacity="0" />
+            <stop offset="50%" stopColor="#f97316" stopOpacity="1" />
+            <stop offset="100%" stopColor="#f97316" stopOpacity="0" />
           </linearGradient>
           <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#ff9b40" stopOpacity="0" />
-            <stop offset="50%" stopColor="#ff9b40" stopOpacity="1" />
-            <stop offset="100%" stopColor="#ff9b40" stopOpacity="0" />
+            <stop offset="0%" stopColor="#fb923c" stopOpacity="0" />
+            <stop offset="50%" stopColor="#fb923c" stopOpacity="1" />
+            <stop offset="100%" stopColor="#fb923c" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
 
       {/* Circuit-like Connection Points */}
       <motion.div
-        className="absolute top-1/3 left-1/5 w-2 h-2 rounded-full"
-        style={{
-          backgroundColor: "#ff7a00",
-          boxShadow: "0 0 10px rgba(255, 122, 0, 0.3)",
-        }}
+        className="absolute top-1/3 left-1/5 w-2 h-2 bg-orange-500 rounded-full shadow-lg shadow-orange-500/50"
         animate={{
           opacity: [0.3, 1, 0.3],
           scale: [1, 1.5, 1],
           boxShadow: [
-            '0 0 10px rgba(255, 122, 0, 0.3)',
-            '0 0 20px rgba(255, 122, 0, 0.7)',
-            '0 0 10px rgba(255, 122, 0, 0.3)',
+            '0 0 10px rgba(249, 115, 22, 0.3)',
+            '0 0 20px rgba(249, 115, 22, 0.8)',
+            '0 0 10px rgba(249, 115, 22, 0.3)',
           ],
         }}
         transition={{
@@ -200,18 +196,14 @@ export function AnimatedBackground() {
       />
 
       <motion.div
-        className="absolute bottom-1/3 right-1/5 w-1.5 h-1.5 rounded-full"
-        style={{
-          backgroundColor: "#ff9b40",
-          boxShadow: "0 0 8px rgba(255, 155, 64, 0.4)",
-        }}
+        className="absolute bottom-1/3 right-1/5 w-1.5 h-1.5 bg-orange-400 rounded-full shadow-md shadow-orange-400/50"
         animate={{
           opacity: [0.4, 0.9, 0.4],
           scale: [1, 1.3, 1],
           boxShadow: [
-            '0 0 8px rgba(255, 155, 64, 0.4)',
-            '0 0 16px rgba(255, 155, 64, 0.8)',
-            '0 0 8px rgba(255, 155, 64, 0.4)',
+            '0 0 8px rgba(251, 146, 60, 0.4)',
+            '0 0 16px rgba(251, 146, 60, 0.9)',
+            '0 0 8px rgba(251, 146, 60, 0.4)',
           ],
         }}
         transition={{
@@ -223,18 +215,14 @@ export function AnimatedBackground() {
       />
 
       <motion.div
-        className="absolute top-2/3 left-1/3 w-1 h-1 rounded-full"
-        style={{
-          backgroundColor: "#ffb36b",
-          boxShadow: "0 0 6px rgba(255, 179, 107, 0.5)",
-        }}
+        className="absolute top-2/3 left-1/3 w-1 h-1 bg-orange-300 rounded-full shadow-sm shadow-orange-300/50"
         animate={{
           opacity: [0.5, 1, 0.5],
           scale: [1, 1.8, 1],
           boxShadow: [
-            '0 0 6px rgba(255, 179, 107, 0.5)',
-            '0 0 12px rgba(255, 179, 107, 0.9)',
-            '0 0 6px rgba(255, 179, 107, 0.5)',
+            '0 0 6px rgba(253, 186, 116, 0.5)',
+            '0 0 12px rgba(253, 186, 116, 1)',
+            '0 0 6px rgba(253, 186, 116, 0.5)',
           ],
         }}
         transition={{
@@ -247,7 +235,7 @@ export function AnimatedBackground() {
 
       {/* Scanning Line Effect */}
       <motion.div
-        className="absolute left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"
+        className="absolute left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent"
         animate={{
           top: ['-2px', '100%'],
           opacity: [0, 1, 0],

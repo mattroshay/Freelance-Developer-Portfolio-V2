@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import logo from "../assets/mr-logo.png";
+import logo from "figma:asset/34a5fadfce0c33b5681d5bdf10379722f562ddef.png";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,7 +50,7 @@ export function Header() {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="text-lg bg-gradient-to-r from-[#ff7a00] via-[#ff8f33] to-[#cc6100] bg-clip-text text-transparent hidden sm:block">
+              <span className="text-lg bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent hidden sm:block">
                 Matt Roshay
               </span>
             </button>
