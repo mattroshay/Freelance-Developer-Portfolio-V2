@@ -1,7 +1,6 @@
 import { Button } from "./ui/button";
 import { ArrowDown, Github, Linkedin, Twitter, Mail } from "lucide-react";
 import { motion } from "motion/react";
-import profileImage from "figma:asset/485b8f5b568bc074af10535bc4a94cb70c982c9a.png";
 
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -160,6 +159,13 @@ export function Hero() {
                   <Mail className="w-4 h-4 mr-2" />
                   Get in touch
                 </Button>
+
+                <a href="/Matt%20Roshay%20-%20Full%20Stack%20Developer%20EN%20-%20Oct%202025.pdf" download className="w-full sm:w-auto">
+                  <Button variant="secondary" size="lg" className="group border-muted-foreground/20 hover:border-primary flex items-center">
+                    <ArrowDown className="w-4 h-4 mr-2" />
+                    Download CV
+                  </Button>
+                </a>
               </motion.div>
 
               <motion.div

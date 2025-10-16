@@ -23,7 +23,7 @@ export function About() {
     {
       icon: <BrainCircuit className="w-6 h-6" />,
       title: "AI Consulting & Integration",
-      description: "Help teams understand, prototype, and integrate AI features — from OpenAI APIs to workflow automation."
+      description: "Help teams explore and integrate AI features that enhance user experience — from OpenAI-powered chat and recommendations to image and data analysis tools."
     },
     {
       icon: <Layers3Icon className="w-6 h-6" />,
@@ -33,7 +33,7 @@ export function About() {
     {
       icon: <Workflow className="w-6 h-6" />,
       title: "Automation & Workflow Integration",
-      description: "Streamline repetitive tasks and connect apps through APIs and automation — from bots to custom internal dashboards."
+      description: "Automate repetitive processes and connect tools through APIs and webhooks — from Slack bots to internal dashboards and reporting pipelines."
     },
     {
       icon: <Zap className="w-6 h-6" />,

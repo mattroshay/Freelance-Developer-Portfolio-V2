@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Heart, ArrowUp } from "lucide-react";
+import { Github, Linkedin, Twitter, Heart, ArrowUp, Coffee } from "lucide-react";
 import { motion } from "motion/react";
 
 export function Footer() {
@@ -12,7 +12,7 @@ export function Footer() {
     <footer className="relative bg-gradient-to-br from-background to-muted/30 border-t border-border/50">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-6xl mx-auto">
-          
+
           {/* Main Footer Content */}
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div className="md:col-span-2">
@@ -23,18 +23,16 @@ export function Footer() {
                 viewport={{ once: true }}
               >
                 <h3 className="text-2xl mb-4 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
-                  Alex Johnson
+                  Matt Roshay
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6 max-w-md">
-                  Full-stack developer crafting exceptional digital experiences. 
-                  Always exploring new technologies and pushing the boundaries 
-                  of what's possible on the web.
+                  Full-stack developer crafting modern, performant web applications with a focus on usability and maintainability.
                 </p>
                 <div className="flex space-x-4">
                   {[
-                    { icon: Github, href: "https://github.com", label: "GitHub" },
-                    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-                    { icon: Twitter, href: "https://twitter.com", label: "Twitter" }
+                    { icon: Github, href: "https://github.com/mattroshay", label: "GitHub" },
+                    { icon: Linkedin, href: "https://linkedin.com/mattroshay", label: "LinkedIn" },
+                    // { icon: Twitter, href: "https://twitter.com", label: "Twitter" }
                   ].map((social, index) => (
                     <motion.a
                       key={index}
@@ -52,7 +50,7 @@ export function Footer() {
                 </div>
               </motion.div>
             </div>
-            
+            <div></div>
             <div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -64,8 +62,8 @@ export function Footer() {
                 <ul className="space-y-3">
                   {['About', 'Skills', 'Projects', 'Contact'].map((item, index) => (
                     <li key={index}>
-                      <a 
-                        href={`#${item.toLowerCase()}`} 
+                      <a
+                        href={`#${item.toLowerCase()}`}
                         className="text-muted-foreground hover:text-foreground transition-colors inline-flex items-center group"
                       >
                         <span className="w-0 group-hover:w-2 h-px bg-primary transition-all duration-300 mr-0 group-hover:mr-2"></span>
@@ -76,36 +74,9 @@ export function Footer() {
                 </ul>
               </motion.div>
             </div>
-            
-            <div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <h4 className="mb-6">Say Hello</h4>
-                <div className="space-y-3 text-sm">
-                  <a 
-                    href="mailto:alex@example.com" 
-                    className="block text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    alex@example.com
-                  </a>
-                  <a 
-                    href="tel:+15551234567" 
-                    className="block text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    +1 (555) 123-4567
-                  </a>
-                  <p className="text-muted-foreground">
-                    San Francisco, CA
-                  </p>
-                </div>
-              </motion.div>
-            </div>
+
           </div>
-          
+
           {/* Bottom Bar */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -115,11 +86,11 @@ export function Footer() {
             className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border/50"
           >
             <p className="text-muted-foreground text-sm flex items-center mb-4 md:mb-0">
-              © {currentYear} Alex Johnson. Made with 
-              <Heart className="w-4 h-4 mx-1 text-red-500" /> 
-              and lots of coffee.
+              © {currentYear} Matt Roshay. Made with
+              <Heart className="w-4 h-4 mx-1 text-red-500" />
+              and lots of <Coffee className="w-4 h-4 mx-1 text-red-500" />.
             </p>
-            
+
             <motion.button
               onClick={scrollToTop}
               className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-foreground transition-colors group"
