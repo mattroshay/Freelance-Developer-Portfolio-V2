@@ -100,7 +100,7 @@ export function Hero() {
               >
                 <span className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm mb-6 border border-primary/20">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
-                  Available for freelance work & collaborations
+                  Available for freelance work, collaborations & consultations
                 </span>
               </motion.div>
 
@@ -127,7 +127,7 @@ export function Hero() {
                 <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
                   <span className="text-orange-600">Create. Innovate. Code.</span><br />
                   A full-stack developer who builds
-                  <span className="text-foreground"> scalable web solutions</span> for startups and SMEs.
+                  <span className="text-foreground"> scalable web solutions.</span>
                 </p>
               </motion.div>
 
