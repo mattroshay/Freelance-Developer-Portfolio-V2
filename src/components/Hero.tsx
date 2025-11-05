@@ -4,13 +4,20 @@ import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 
 export function Hero() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  // Get CV path based on current language
+  const getCVPath = () => {
+    return i18n.language === 'fr'
+      ? '/public/Matt%20Roshay%20-%20Développeur%20Full%20Stack%20FR%20-%20Oct%202025.pdf'
+      : '/public/Matt Roshay - Full Stack Developer EN - Oct 2025.pdf';
   };
 
   return (
@@ -163,7 +170,7 @@ export function Hero() {
                   {t('hero.getInTouch')}
                 </Button>
 
-                <a href="/Matt%20Roshay%20-%20Full%20Stack%20Developer%20EN%20-%20Oct%202025.pdf" download className="w-full sm:w-auto">
+                <a href={getCVPath()} download className="w-full sm:w-auto">
                   <Button variant="secondary" size="lg" className="group border-muted-foreground/20 hover:border-primary flex items-center">
                     <ArrowDown className="w-4 h-4 mr-2" />
                     {t('hero.downloadCV')}
