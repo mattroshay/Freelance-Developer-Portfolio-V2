@@ -3,31 +3,34 @@ import { Badge } from "./ui/badge";
 import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 export function Projects() {
+  const { t } = useTranslation();
+
   const projects = [
     {
-      title: "B-itconsulting",
-      description: "Portfolio + blog CMS for an IT infrastructure consultant with LinkedIn auto-posting, content management, and responsive design.",
-  image: "/images/projects/b-itconsulting.png",
+      title: t('projects.list.bitconsulting.title'),
+      description: t('projects.list.bitconsulting.description'),
+      image: "/images/projects/b-itconsulting.png",
       technologies: ["Ruby on rails", "SCSS", "Javascript", "PostgreSQL", "Heroku", "Cloudinary"],
       liveUrl: "https://www.b-itconsulting.com",
       // githubUrl: "https://github.com",
       featured: true
     },
     {
-      title: "MatchMeal",
-      description: "AI-powered recipe app that identifies ingredients and suggests personalized meals using OpenAI API. Features image uploads, favorites, and adaptive UI.",
-  image: "/images/projects/matchmeal-screen.png",
+      title: t('projects.list.matchmeal.title'),
+      description: t('projects.list.matchmeal.description'),
+      image: "/images/projects/matchmeal-screen.png",
       technologies: ["Ruby on rails", "SCSS", "Javascript", "PostgreSQL", "Heroku", "Cloudinary", "Postman", "OpenAI API", "Spoonacular API"],
       liveUrl: "https://www.matchmeal.eu",
       githubUrl: "https://github.com/mattroshay/MatchMeal",
       featured: false
     },
     {
-      title: "FlatRent",
-      description: "Full-stack booking platform inspired by Airbnb, with property listings, authentication, search filters, and reservation management. Deployed on Heroku.",
-  image: "/images/projects/flatrent.png",
+      title: t('projects.list.flatrent.title'),
+      description: t('projects.list.flatrent.description'),
+      image: "/images/projects/flatrent.png",
       technologies: ["Ruby on Rails", "PostgreSQL", "SCSS", "JavaScript", "Heroku", "Cloudinary", "Mapbox API", "Stripe API"],
       liveUrl: "https://airbnb-roshaym-5f0f5ed33d88.herokuapp.com",
       githubUrl: "https://github.com/mattroshay/CEMY-AirBNB",
@@ -53,11 +56,10 @@ export function Projects() {
             className="max-w-3xl mb-20"
           >
             <h2 className="text-4xl md:text-5xl mb-6">
-              Featured Work
+              {t('projects.title')}
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              A collection of projects that showcase my passion for creating
-              exceptional digital experiences with modern technologies.
+              {t('projects.description')}
             </p>
           </motion.div>
 
@@ -84,7 +86,7 @@ export function Projects() {
                   <div className="p-8 lg:p-12 flex flex-col justify-center">
                     <div className="mb-4">
                       <Badge variant="outline" className="mb-4 border-orange-500/30 text-orange-500">
-                        Featured Project
+                        {t('projects.featuredProject')}
                       </Badge>
                       <h3 className="text-2xl lg:text-3xl mb-4 group-hover:text-primary transition-colors">
                         {project.title}
@@ -105,13 +107,13 @@ export function Projects() {
                     <div className="flex space-x-4">
                       <Button className="group/btn" onClick={() => window.open(project.liveUrl, "_blank") }>
                         <ExternalLink className="w-4 h-4 mr-2" />
-                        View Live
+                        {t('projects.viewLive')}
                         <ArrowUpRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
                       </Button>
                       {project.githubUrl && (
                         <Button variant="outline" onClick={() => window.open(project.githubUrl, "_blank") }>
                           <Github className="w-4 h-4 mr-2" />
-                          Code
+                          {t('projects.code')}
                         </Button>
                       )}
                     </div>
@@ -161,7 +163,7 @@ export function Projects() {
                   <div className="flex space-x-3">
                     <Button size="sm" className="flex-1 group/btn" onClick={() => window.open(project.liveUrl, "_blank") }>
                       <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
+                      {t('projects.liveDemo')}
                     </Button>
                     {project.githubUrl && (
                       <Button size="sm" variant="outline" className="aspect-square p-0" onClick={() => window.open(project.githubUrl, "_blank") }>
@@ -184,7 +186,7 @@ export function Projects() {
           >
             <Button variant="outline" size="lg" className="group" onClick={() => window.open("https://github.com/mattroshay", "_blank") }>
               <Github className="w-4 h-4 mr-2" />
-              View All Projects on GitHub
+              {t('projects.viewAllGithub')}
               <ArrowUpRight className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </Button>
           </motion.div>

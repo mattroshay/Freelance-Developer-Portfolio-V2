@@ -1,0 +1,140 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "letsTalk": "Let's talk"
+  },
+  "hero": {
+    "availability": "Available for freelance work, collaborations & consultations",
+    "greeting": "Hi, I'm",
+    "name": "Matt Roshay",
+    "tagline": "Create. Innovate. Code.",
+    "description": "A full-stack developer who builds",
+    "descriptionBold": "scalable web solutions.",
+    "exploreWork": "Explore My Work",
+    "getInTouch": "Get in touch",
+    "downloadCV": "Download CV"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm a full-stack developer with 15 years' experience in business development and client relationship management, now helping professionals, startups and SMEs transform their ideas into intuitive, scalable digital products. Beyond code, I guide clients on technical strategy, AI adoption, and performance optimization to ensure every project is impactful, maintainable, and future-ready.",
+    "stats": {
+      "certification": "Le Wagon Certified Web Developer (RNCP 39261)",
+      "founder": "Founder of MatchMeal",
+      "location": "Based near Bordeaux, working remotely",
+      "fuel": "Fueled by curiosity & coffee"
+    },
+    "whatIDo": "What I Do",
+    "services": {
+      "webDev": {
+        "title": "Web & App Development",
+        "description": "From modern websites to custom web applications — I design and build reliable, responsive, and scalable digital products using modern frameworks and cloud deployment."
+      },
+      "uiux": {
+        "title": "UI/UX Design",
+        "description": "Beautiful, intuitive interfaces that users love to interact with."
+      },
+      "aiConsulting": {
+        "title": "AI Consulting & Integration",
+        "description": "Help teams explore and integrate AI features that enhance user experience — from OpenAI-powered chat and recommendations to image and data analysis tools."
+      },
+      "strategy": {
+        "title": "Digital Strategy & Innovation",
+        "description": "Translate business goals into actionable technical plans: system design, scalability, and tool selection."
+      },
+      "automation": {
+        "title": "Automation & Workflow Integration",
+        "description": "Automate repetitive processes and connect tools through APIs and webhooks — from Slack bots to internal dashboards and reporting pipelines."
+      },
+      "performance": {
+        "title": "Performance Optimization",
+        "description": "Lightning-fast websites that convert visitors into customers."
+      }
+    },
+    "cta": {
+      "title": "Ready to build something amazing?",
+      "description": "Let's collaborate to bring your ideas to life with cutting-edge technology and thoughtful design."
+    }
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "description": "A carefully curated toolkit that enables me to build exceptional digital experiences from concept to deployment.",
+    "categories": {
+      "backend": "Backend & Database",
+      "frontend": "Frontend Development",
+      "tools": "Tools & DevOps",
+      "ai": "AI & Automation",
+      "design": "Design & Strategy"
+    },
+    "philosophy": {
+      "title": "My Development Philosophy",
+      "description": "I believe in writing clean, maintainable code that scales. Every project is an opportunity to learn something new and push the boundaries of what's possible on the web. I stay current with emerging technologies while maintaining a strong foundation in proven solutions. My goal is to deliver not just functional software, but delightful user experiences that drive real value.",
+      "tags": {
+        "cleanCode": "Clean Code",
+        "userCentered": "User-Centered Design",
+        "performance": "Performance First",
+        "learning": "Continuous Learning"
+      }
+    }
+  },
+  "projects": {
+    "title": "Featured Work",
+    "description": "A collection of projects that showcase my passion for creating exceptional digital experiences with modern technologies.",
+    "featuredProject": "Featured Project",
+    "viewLive": "View Live",
+    "code": "Code",
+    "liveDemo": "Live Demo",
+    "viewAllGithub": "View All Projects on GitHub",
+    "list": {
+      "bitconsulting": {
+        "title": "B-itconsulting",
+        "description": "Portfolio + blog CMS for an IT infrastructure consultant with LinkedIn auto-posting, content management, and responsive design."
+      },
+      "matchmeal": {
+        "title": "MatchMeal",
+        "description": "AI-powered recipe app that identifies ingredients and suggests personalized meals using OpenAI API. Features image uploads, favorites, and adaptive UI."
+      },
+      "flatrent": {
+        "title": "FlatRent",
+        "description": "Full-stack booking platform inspired by Airbnb, with property listings, authentication, search filters, and reservation management. Deployed on Heroku."
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's Build Something Amazing",
+    "description": "Have a project in mind? I'd love to hear about it. Let's discuss how we can bring your vision to life with cutting-edge technology and thoughtful design.",
+    "form": {
+      "title": "Send a Message",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "your@email.com",
+      "subjectPlaceholder": "Project inquiry",
+      "messagePlaceholder": "Tell me about your project, timeline, and any specific requirements...",
+      "send": "Send Message"
+    },
+    "info": {
+      "title": "Get in Touch",
+      "description": "Whether you're a startup looking to build your first product or an established company needing to modernize your web presence, I'm here to help.",
+      "phone": "Phone",
+      "phoneValue": "+33 6 74 94 12 49",
+      "phoneDescription": "Available Mon-Fri, 9AM-6PM CET",
+      "location": "Location",
+      "locationValue": "Saint Médard en Jalles, France / Remote",
+      "locationDescription": "Open to remote projects worldwide",
+      "quickResponse": "Quick Response",
+      "quickResponseDescription": "I typically respond within 24 hours. For urgent projects, feel free to call directly and we can set up a quick chat."
+    }
+  },
+  "footer": {
+    "description": "Full-stack developer building modern web applications with an emphasis on user experience and sustainability.",
+    "navigation": "Navigation",
+    "copyright": "Matt Roshay. Made with",
+    "and": "and lots of",
+    "backToTop": "Back to top"
+  }
+}

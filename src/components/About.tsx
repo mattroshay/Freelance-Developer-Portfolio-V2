@@ -1,44 +1,47 @@
 import { motion } from "motion/react";
 import { Code, Palette, Zap, Coffee, Users, Rocket, Icon, ShieldCheck, MapPin, BrainCircuit, Layers3Icon, Terminal, Workflow } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export function About() {
+  const { t } = useTranslation();
+
   const stats = [
-    { icon: <ShieldCheck className="w-6 h-6" />, text: "Le Wagon Certified Web Developer (RNCP 39261)" },
-    { icon: <Zap className="w-6 h-6" />, text: "Founder of MatchMeal" },
-    { icon: <MapPin className="w-6 h-6" />, text: "Based near Bordeaux, working remotely" },
-    { icon: <Coffee className="w-6 h-6" />, text: "Fueled by curiosity & coffee" },
+    { icon: <ShieldCheck className="w-6 h-6" />, text: t('about.stats.certification') },
+    { icon: <Zap className="w-6 h-6" />, text: t('about.stats.founder') },
+    { icon: <MapPin className="w-6 h-6" />, text: t('about.stats.location') },
+    { icon: <Coffee className="w-6 h-6" />, text: t('about.stats.fuel') },
   ];
 
   const services = [
     {
       icon: <Terminal className="w-6 h-6" />,
-      title: "Web & App Development",
-      description: "From modern websites to custom web applications — I design and build reliable, responsive, and scalable digital products using modern frameworks and cloud deployment."
+      title: t('about.services.webDev.title'),
+      description: t('about.services.webDev.description')
     },
     {
       icon: <Palette className="w-6 h-6" />,
-      title: "UI/UX Design",
-      description: "Beautiful, intuitive interfaces that users love to interact with."
+      title: t('about.services.uiux.title'),
+      description: t('about.services.uiux.description')
     },
     {
       icon: <BrainCircuit className="w-6 h-6" />,
-      title: "AI Consulting & Integration",
-      description: "Help teams explore and integrate AI features that enhance user experience — from OpenAI-powered chat and recommendations to image and data analysis tools."
+      title: t('about.services.aiConsulting.title'),
+      description: t('about.services.aiConsulting.description')
     },
     {
       icon: <Layers3Icon className="w-6 h-6" />,
-      title: "Digital Strategy & Innovation",
-      description: "Translate business goals into actionable technical plans: system design, scalability, and tool selection."
+      title: t('about.services.strategy.title'),
+      description: t('about.services.strategy.description')
     },
     {
       icon: <Workflow className="w-6 h-6" />,
-      title: "Automation & Workflow Integration",
-      description: "Automate repetitive processes and connect tools through APIs and webhooks — from Slack bots to internal dashboards and reporting pipelines."
+      title: t('about.services.automation.title'),
+      description: t('about.services.automation.description')
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Performance Optimization",
-      description: "Lightning-fast websites that convert visitors into customers."
+      title: t('about.services.performance.title'),
+      description: t('about.services.performance.description')
     }
   ];
 
@@ -60,12 +63,10 @@ export function About() {
             className="max-w-3xl mb-20"
           >
             <h2 className="text-4xl md:text-5xl mb-6">
-              About Me
+              {t('about.title')}
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              I’m a full-stack developer with 15 years’ experience in business development and client relationship management,
-              now helping professionals, startups and SMEs transform their ideas into intuitive, scalable digital products.
-              Beyond code, I guide clients on technical strategy, AI adoption, and performance optimization to ensure every project is impactful, maintainable, and future-ready.
+              {t('about.description')}
             </p>
           </motion.div>
 
@@ -93,7 +94,7 @@ export function About() {
           </motion.div>
 
           {/* Main Content Grid */}
-          <h3 className="text-2xl mb-8">What I Do</h3>
+          <h3 className="text-2xl mb-8">{t('about.whatIDo')}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
             {services.map((service, index) => (
               <motion.div
@@ -137,9 +138,9 @@ export function About() {
             aria-label="Scroll to contact section"
           >
             <Rocket className="w-8 h-8 text-orange-500 mx-auto mb-4" />
-            <h3 className="text-xl mb-3">Ready to build something amazing?</h3>
+            <h3 className="text-xl mb-3">{t('about.cta.title')}</h3>
             <p className="text-muted-foreground">
-              Let's collaborate to bring your ideas to life with cutting-edge technology and thoughtful design.
+              {t('about.cta.description')}
             </p>
           </motion.div>
         </div>

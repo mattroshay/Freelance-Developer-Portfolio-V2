@@ -4,23 +4,25 @@ import { Textarea } from "./ui/textarea";
 import { Mail, Phone, MapPin, Send, MessageCircle, Calendar } from "lucide-react";
 import { useState } from "react";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 export function Contact() {
+  const { t } = useTranslation();
   // Formspree handles submission, so no local state or handlers needed
 
   const contactInfo = [
     {
       icon: <Phone className="w-5 h-5" />,
-      title: "Phone",
-      value: "+33 6 74 94 12 49",
-      description: "Available Mon-Fri, 9AM-6PM CET",
+      title: t('contact.info.phone'),
+      value: t('contact.info.phoneValue'),
+      description: t('contact.info.phoneDescription'),
       link: "tel:+33674941249"
     },
     {
       icon: <MapPin className="w-5 h-5" />,
-      title: "Location",
-      value: "Saint Médard en Jalles, France / Remote",
-      description: "Open to remote projects worldwide",
+      title: t('contact.info.location'),
+      value: t('contact.info.locationValue'),
+      description: t('contact.info.locationDescription'),
       link: null
     }
   ];
@@ -42,12 +44,10 @@ export function Contact() {
             className="max-w-3xl mb-20"
           >
             <h2 className="text-4xl md:text-5xl mb-6">
-              Let's Build Something Amazing
+              {t('contact.title')}
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Have a project in mind? I'd love to hear about it. Let's discuss
-              how we can bring your vision to life with cutting-edge technology
-              and thoughtful design.
+              {t('contact.description')}
             </p>
           </motion.div>
 
@@ -63,61 +63,61 @@ export function Contact() {
               <div className="p-8 rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-300 bg-background/50 backdrop-blur-sm">
                 <div className="flex items-center mb-6">
                   <MessageCircle className="w-6 h-6 text-primary mr-3" />
-                  <h3 className="text-2xl">Send a Message</h3>
+                  <h3 className="text-2xl">{t('contact.form.title')}</h3>
                 </div>
 
                   <form action="https://formspree.io/f/xvgwdlje" method="POST" className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm text-muted-foreground">Name *</label>
+                      <label htmlFor="name" className="text-sm text-muted-foreground">{t('contact.form.name')} *</label>
                       <Input
                         id="name"
                         name="name"
                         type="text"
                         required
-                        placeholder="Your name"
+                        placeholder={t('contact.form.namePlaceholder')}
                         className="border-border/50 focus:border-primary"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm text-muted-foreground">Email *</label>
+                      <label htmlFor="email" className="text-sm text-muted-foreground">{t('contact.form.email')} *</label>
                       <Input
                         id="email"
                         name="email"
                         type="email"
                         required
-                        placeholder="your@email.com"
+                        placeholder={t('contact.form.emailPlaceholder')}
                         className="border-border/50 focus:border-primary"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="subject" className="text-sm text-muted-foreground">Subject *</label>
+                    <label htmlFor="subject" className="text-sm text-muted-foreground">{t('contact.form.subject')} *</label>
                     <Input
                       id="subject"
                       name="subject"
                       type="text"
                       required
-                      placeholder="Project inquiry"
+                      placeholder={t('contact.form.subjectPlaceholder')}
                       className="border-border/50 focus:border-primary"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm text-muted-foreground">Message *</label>
+                    <label htmlFor="message" className="text-sm text-muted-foreground">{t('contact.form.message')} *</label>
                     <Textarea
                       id="message"
                       name="message"
                       required
-                      placeholder="Tell me about your project, timeline, and any specific requirements..."
+                      placeholder={t('contact.form.messagePlaceholder')}
                       className="min-h-[150px] resize-none border-border/50 focus:border-primary"
                     />
                   </div>
 
                   <Button type="submit" className="w-full group">
                     <Send className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                    Send Message
+                    {t('contact.form.send')}
                   </Button>
                 </form>
               </div>
@@ -132,10 +132,9 @@ export function Contact() {
               className="lg:col-span-2 space-y-8"
             >
               <div>
-                <h3 className="text-2xl mb-6">Get in Touch</h3>
+                <h3 className="text-2xl mb-6">{t('contact.info.title')}</h3>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Whether you're a startup looking to build your first product or an
-                  established company needing to modernize your web presence, I'm here to help.
+                  {t('contact.info.description')}
                 </p>
               </div>
 
@@ -177,11 +176,10 @@ export function Contact() {
               >
                 <div className="flex items-center mb-3">
                   <Calendar className="w-5 h-5 text-primary mr-2" />
-                  <h4>Quick Response</h4>
+                  <h4>{t('contact.info.quickResponse')}</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  I typically respond within 24 hours. For urgent projects,
-                  feel free to call directly and we can set up a quick chat.
+                  {t('contact.info.quickResponseDescription')}
                 </p>
               </motion.div>
             </motion.div>

@@ -1,7 +1,9 @@
 import { Github, Linkedin, Twitter, Heart, ArrowUp, Coffee } from "lucide-react";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 export function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   const scrollToTop = () => {
@@ -26,7 +28,7 @@ export function Footer() {
                   Matt Roshay
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6 max-w-md">
-                  Full-stack developer building modern web applications with an emphasis on user experience and sustainability.
+                  {t('footer.description')}
                 </p>
                 <div className="flex space-x-4">
                   {[
@@ -58,16 +60,21 @@ export function Footer() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <h4 className="mb-6">Navigation</h4>
+                <h4 className="mb-6">{t('footer.navigation')}</h4>
                 <ul className="space-y-3">
-                  {['About', 'Skills', 'Projects', 'Contact'].map((item, index) => (
+                  {[
+                    { key: 'about', label: t('nav.about') },
+                    { key: 'skills', label: t('nav.skills') },
+                    { key: 'projects', label: t('nav.projects') },
+                    { key: 'contact', label: t('nav.contact') }
+                  ].map((item, index) => (
                     <li key={index}>
                       <a
-                        href={`#${item.toLowerCase()}`}
+                        href={`#${item.key}`}
                         className="text-muted-foreground hover:text-foreground transition-colors inline-flex items-center group"
                       >
                         <span className="w-0 group-hover:w-2 h-px bg-primary transition-all duration-300 mr-0 group-hover:mr-2"></span>
-                        {item}
+                        {item.label}
                       </a>
                     </li>
                   ))}
@@ -86,9 +93,9 @@ export function Footer() {
             className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border/50"
           >
             <p className="text-muted-foreground text-sm flex items-center mb-4 md:mb-0">
-              © {currentYear} Matt Roshay. Made with
+              © {currentYear} {t('footer.copyright')}
               <Heart className="w-4 h-4 mx-1 text-red-500" />
-              and lots of <Coffee className="w-4 h-4 mx-1 text-red-500" />.
+              {t('footer.and')} <Coffee className="w-4 h-4 mx-1 text-red-500" />.
             </p>
 
             <motion.button
@@ -97,7 +104,7 @@ export function Footer() {
               whileHover={{ y: -2 }}
               transition={{ duration: 0.2 }}
             >
-              <span>Back to top</span>
+              <span>{t('footer.backToTop')}</span>
               <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
             </motion.button>
           </motion.div>

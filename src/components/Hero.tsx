@@ -1,8 +1,11 @@
 import { Button } from "./ui/button";
 import { ArrowDown, Github, Linkedin, Twitter, Mail } from "lucide-react";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 export function Hero() {
+  const { t } = useTranslation();
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -100,7 +103,7 @@ export function Hero() {
               >
                 <span className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm mb-6 border border-primary/20">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
-                  Available for freelance work, collaborations & consultations
+                  {t('hero.availability')}
                 </span>
               </motion.div>
 
@@ -111,9 +114,9 @@ export function Hero() {
                 className="mb-8"
               >
                 <h1 className="text-5xl md:text-7xl lg:text-7xl mb-6 leading-tight">
-                  <span className="block">Hi, I'm</span>
+                  <span className="block">{t('hero.greeting')}</span>
                   <span className="block bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 bg-clip-text text-transparent">
-                    Matt Roshay
+                    {t('hero.name')}
                   </span>
                 </h1>
               </motion.div>
@@ -125,9 +128,9 @@ export function Hero() {
                 className="mb-12"
               >
                 <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-                  <span className="text-orange-600">Create. Innovate. Code.</span><br />
-                  A full-stack developer who builds
-                  <span className="text-foreground"> scalable web solutions.</span>
+                  <span className="text-orange-600">{t('hero.tagline')}</span><br />
+                  {t('hero.description')}
+                  <span className="text-foreground"> {t('hero.descriptionBold')}</span>
                 </p>
               </motion.div>
 
@@ -142,7 +145,7 @@ export function Hero() {
                   onClick={() => scrollToSection('projects')}
                   className="group relative overflow-hidden"
                 >
-                  <span className="relative z-10">Explore My Work</span>
+                  <span className="relative z-10">{t('hero.exploreWork')}</span>
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80"
                     whileHover={{ scale: 1.05 }}
@@ -157,13 +160,13 @@ export function Hero() {
                   className="group border-muted-foreground/20 hover:border-primary"
                 >
                   <Mail className="w-4 h-4 mr-2" />
-                  Get in touch
+                  {t('hero.getInTouch')}
                 </Button>
 
                 <a href="/Matt%20Roshay%20-%20Full%20Stack%20Developer%20EN%20-%20Oct%202025.pdf" download className="w-full sm:w-auto">
                   <Button variant="secondary" size="lg" className="group border-muted-foreground/20 hover:border-primary flex items-center">
                     <ArrowDown className="w-4 h-4 mr-2" />
-                    Download CV
+                    {t('hero.downloadCV')}
                   </Button>
                 </a>
               </motion.div>

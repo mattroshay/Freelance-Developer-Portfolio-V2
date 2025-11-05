@@ -1,0 +1,140 @@
+{
+  "nav": {
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact",
+    "letsTalk": "Discutons"
+  },
+  "hero": {
+    "availability": "Disponible pour du travail freelance, collaborations & consultations",
+    "greeting": "Salut, je suis",
+    "name": "Matt Roshay",
+    "tagline": "Créer. Innover. Coder.",
+    "description": "Un développeur full-stack qui construit des",
+    "descriptionBold": "solutions web évolutives.",
+    "exploreWork": "Découvrir mon travail",
+    "getInTouch": "Me contacter",
+    "downloadCV": "Télécharger le CV"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "description": "Je suis un développeur full-stack avec 15 ans d'expérience en développement commercial et gestion de la relation client, j'aide maintenant les professionnels, startups et PME à transformer leurs idées en produits numériques intuitifs et évolutifs. Au-delà du code, je guide mes clients sur la stratégie technique, l'adoption de l'IA et l'optimisation pour garantir que chaque projet soit impactant, maintenable et prêt pour l'avenir.",
+    "stats": {
+      "certification": "Développeur Web Certifié Le Wagon (RNCP 39261)",
+      "founder": "Fondateur de MatchMeal",
+      "location": "Basé près de Bordeaux, travaillant à distance",
+      "fuel": "Alimenté par la curiosité & le café"
+    },
+    "whatIDo": "Ce que je fais",
+    "services": {
+      "webDev": {
+        "title": "Développement Web & App",
+        "description": "Des sites web modernes aux applications web personnalisées — je conçois et construis des produits numériques fiables, responsifs et évolutifs en utilisant des frameworks modernes et un déploiement cloud."
+      },
+      "uiux": {
+        "title": "Design UI/UX",
+        "description": "De belles interfaces intuitives que les utilisateurs adorent."
+      },
+      "aiConsulting": {
+        "title": "Conseil & Intégration IA",
+        "description": "J'aide les équipes à explorer et intégrer des fonctionnalités IA qui améliorent l'expérience utilisateur — du chat et recommandations propulsés par OpenAI aux outils d'analyse d'images et de données."
+      },
+      "strategy": {
+        "title": "Stratégie Digitale & Innovation",
+        "description": "Traduire les objectifs commerciaux en plans techniques actionnables : conception de systèmes, évolutivité et sélection d'outils."
+      },
+      "automation": {
+        "title": "Automatisation & Intégration de Workflows",
+        "description": "Automatiser les processus répétitifs et connecter les outils via des APIs et webhooks — des bots Slack aux tableaux de bord internes et pipelines de reporting."
+      },
+      "performance": {
+        "title": "Optimisation des Performances",
+        "description": "Des sites web ultra-rapides qui convertissent les visiteurs en clients."
+      }
+    },
+    "cta": {
+      "title": "Prêt à construire quelque chose d'incroyable ?",
+      "description": "Collaborons pour donner vie à vos idées avec une technologie de pointe et un design réfléchi."
+    }
+  },
+  "skills": {
+    "title": "Compétences & Technologies",
+    "description": "Une boîte à outils soigneusement sélectionnée qui me permet de créer des expériences numériques exceptionnelles du concept au déploiement.",
+    "categories": {
+      "backend": "Backend & Base de données",
+      "frontend": "Développement Frontend",
+      "tools": "Outils & DevOps",
+      "ai": "IA & Automatisation",
+      "design": "Design & Stratégie"
+    },
+    "philosophy": {
+      "title": "Ma philosophie de développement",
+      "description": "Je crois en l'écriture de code propre et maintenable qui évolue. Chaque projet est une opportunité d'apprendre quelque chose de nouveau et de repousser les limites de ce qui est possible sur le web. Je reste à jour avec les technologies émergentes tout en maintenant une base solide dans les solutions éprouvées. Mon objectif est de fournir non seulement des logiciels fonctionnels, mais des expériences utilisateur agréables qui créent une réelle valeur.",
+      "tags": {
+        "cleanCode": "Code Propre",
+        "userCentered": "Design Centré Utilisateur",
+        "performance": "Performance d'Abord",
+        "learning": "Apprentissage Continu"
+      }
+    }
+  },
+  "projects": {
+    "title": "Projets Phares",
+    "description": "Une collection de projets qui démontrent ma passion pour créer des expériences numériques exceptionnelles avec des technologies modernes.",
+    "featuredProject": "Projet Phare",
+    "viewLive": "Voir en ligne",
+    "code": "Code",
+    "liveDemo": "Démo en ligne",
+    "viewAllGithub": "Voir tous les projets sur GitHub",
+    "list": {
+      "bitconsulting": {
+        "title": "B-itconsulting",
+        "description": "Portfolio + CMS blog pour un consultant en infrastructure IT avec publication automatique LinkedIn, gestion de contenu et design responsive."
+      },
+      "matchmeal": {
+        "title": "MatchMeal",
+        "description": "Application de recettes propulsée par l'IA qui identifie les ingrédients et suggère des repas personnalisés en utilisant l'API OpenAI. Fonctionnalités : téléchargement d'images, favoris et interface adaptative."
+      },
+      "flatrent": {
+        "title": "FlatRent",
+        "description": "Plateforme de réservation full-stack inspirée d'Airbnb, avec listings de propriétés, authentification, filtres de recherche et gestion des réservations. Déployé sur Heroku."
+      }
+    }
+  },
+  "contact": {
+    "title": "Construisons quelque chose d'incroyable",
+    "description": "Vous avez un projet en tête ? J'aimerais en entendre parler. Discutons de la façon dont nous pouvons donner vie à votre vision avec une technologie de pointe et un design réfléchi.",
+    "form": {
+      "title": "Envoyer un message",
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "namePlaceholder": "Votre nom",
+      "emailPlaceholder": "votre@email.com",
+      "subjectPlaceholder": "Demande de projet",
+      "messagePlaceholder": "Parlez-moi de votre projet, du calendrier et de vos besoins spécifiques...",
+      "send": "Envoyer le message"
+    },
+    "info": {
+      "title": "Entrer en contact",
+      "description": "Que vous soyez une startup cherchant à créer votre premier produit ou une entreprise établie ayant besoin de moderniser votre présence web, je suis là pour vous aider.",
+      "phone": "Téléphone",
+      "phoneValue": "+33 6 74 94 12 49",
+      "phoneDescription": "Disponible Lun-Ven, 9h-18h CET",
+      "location": "Localisation",
+      "locationValue": "Saint Médard en Jalles, France / À distance",
+      "locationDescription": "Ouvert aux projets à distance dans le monde entier",
+      "quickResponse": "Réponse Rapide",
+      "quickResponseDescription": "Je réponds généralement dans les 24 heures. Pour les projets urgents, n'hésitez pas à appeler directement et nous pourrons organiser une discussion rapide."
+    }
+  },
+  "footer": {
+    "description": "Développeur full-stack construisant des applications web modernes avec un accent sur l'expérience utilisateur et la durabilité.",
+    "navigation": "Navigation",
+    "copyright": "Matt Roshay. Fait avec",
+    "and": "et beaucoup de",
+    "backToTop": "Retour en haut"
+  }
+}

@@ -1,17 +1,20 @@
 import { Badge } from "./ui/badge";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 export function Skills() {
+  const { t } = useTranslation();
+
   const skillCategories = [
     {
-      title: "Backend & Database",
+      title: t('skills.categories.backend'),
       skills: [
         "Ruby on Rails", "PostgreSQL", "Python", "REST APIs", "Cloudinary"
       ],
       color: "from-orange-500/20 to-orange-600/20"
     },
     {
-      title: "Frontend Development",
+      title: t('skills.categories.frontend'),
       skills: [
         "Javascript / TypeScript", "HTML5", "CSS3", "SASS",
         "Tailwind CSS", "Stimulus JS", "Hotwire / Turbo", "Responsive Design & Accessibility"
@@ -19,7 +22,7 @@ export function Skills() {
       color: "from-orange-400/20 to-orange-500/20"
     },
     {
-      title: "Tools & DevOps",
+      title: t('skills.categories.tools'),
       skills: [
         "Git / GitHub", "Docker", "Heroku",
         "VS Code", "Postman", "Google Analytics", "Plausible", "SEO Tools"
@@ -27,14 +30,14 @@ export function Skills() {
       color: "from-orange-600/20 to-orange-700/20"
     },
     {
-      title: "AI & Automation",
+      title: t('skills.categories.ai'),
       skills: [
         "OpenAI API", "RAG patterns", "Python", "AI-driven workflows", "Web scraping & change detection tools"
       ],
       color: "from-orange-600/20 to-orange-700/20"
     },
     {
-      title: "Design & Strategy",
+      title: t('skills.categories.design'),
       skills: [
         "Figma / Canva", "Responsive Design", "UI/UX Design", "Product Strategy & MVP scoping",
         "Client discovery & technical architecture", "Brand positioning & storytelling", "SEO & content strategy"
@@ -61,11 +64,10 @@ export function Skills() {
             className="max-w-3xl mb-20"
           >
             <h2 className="text-4xl md:text-5xl mb-6">
-              Skills & Technologies
+              {t('skills.title')}
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              A carefully curated toolkit that enables me to build exceptional
-              digital experiences from concept to deployment.
+              {t('skills.description')}
             </p>
           </motion.div>
 
@@ -121,30 +123,26 @@ export function Skills() {
             className="text-center"
           >
             <div className="max-w-4xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-orange-500/5 to-orange-600/10 border border-orange-500/20">
-              <h3 className="text-2xl mb-4">My Development Philosophy</h3>
+              <h3 className="text-2xl mb-4">{t('skills.philosophy.title')}</h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I believe in writing clean, maintainable code that scales. Every project is an
-                opportunity to learn something new and push the boundaries of what's possible
-                on the web. I stay current with emerging technologies while maintaining a
-                strong foundation in proven solutions. My goal is to deliver not just
-                functional software, but delightful user experiences that drive real value. 
+                {t('skills.philosophy.description')}
               </p>
               <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
                 <span className="flex items-center">
                   <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-                  Clean Code
+                  {t('skills.philosophy.tags.cleanCode')}
                 </span>
                 <span className="flex items-center">
                   <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-                  User-Centered Design
+                  {t('skills.philosophy.tags.userCentered')}
                 </span>
                 <span className="flex items-center">
                   <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-                  Performance First
+                  {t('skills.philosophy.tags.performance')}
                 </span>
                 <span className="flex items-center">
                   <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-                  Continuous Learning
+                  {t('skills.philosophy.tags.learning')}
                 </span>
               </div>
             </div>

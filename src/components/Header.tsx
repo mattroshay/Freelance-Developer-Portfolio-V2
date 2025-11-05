@@ -2,9 +2,11 @@ import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 import logo from "figma:asset/34a5fadfce0c33b5681d5bdf10379722f562ddef.png";
 
 export function Header() {
+  const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -58,17 +60,22 @@ export function Header() {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
-            {['About', 'Skills', 'Projects', 'Contact'].map((item, index) => (
+            {[
+              { key: 'about', label: t('nav.about') },
+              { key: 'skills', label: t('nav.skills') },
+              { key: 'projects', label: t('nav.projects') },
+              { key: 'contact', label: t('nav.contact') }
+            ].map((item, index) => (
               <motion.button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
+                key={item.key}
+                onClick={() => scrollToSection(item.key)}
                 className="px-4 py-2 text-muted-foreground hover:text-foreground transition-colors relative group"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -2 }}
               >
-                {item}
+                {item.label}
                 <motion.div
                   className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
                 />
@@ -76,24 +83,58 @@ export function Header() {
             ))}
           </nav>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <Button 
-              onClick={() => scrollToSection('contact')}
-              className="hidden md:flex group relative overflow-hidden"
-              size="sm"
+          <div className="hidden md:flex items-center space-x-4">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <span className="relative z-10">Let's talk</span>
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
-              />
-            </Button>
-          </motion.div>
+              <Button
+                onClick={() => scrollToSection('contact')}
+                className="group relative overflow-hidden"
+                size="sm"
+              >
+                <span className="relative z-10">{t('nav.letsTalk')}</span>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                />
+              </Button>
+            </motion.div>
+
+            {/* Language Toggle */}
+            <motion.div
+              className="flex items-center gap-1 text-sm"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <button
+                onClick={() => i18n.changeLanguage('en')}
+                className={`px-2 py-1 transition-colors ${
+                  i18n.language === 'en'
+                    ? 'text-orange-500 font-medium'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+                aria-label="Switch to English"
+              >
+                EN
+              </button>
+              <span className="text-muted-foreground">/</span>
+              <button
+                onClick={() => i18n.changeLanguage('fr')}
+                className={`px-2 py-1 transition-colors ${
+                  i18n.language === 'fr'
+                    ? 'text-orange-500 font-medium'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+                aria-label="Switch to French"
+              >
+                FR
+              </button>
+            </motion.div>
+          </div>
 
           {/* Mobile Menu Button */}
           <motion.button
@@ -115,36 +156,76 @@ export function Header() {
         <motion.div
           className="md:hidden overflow-hidden"
           initial={false}
-          animate={{ 
+          animate={{
             height: isMenuOpen ? 'auto' : 0,
-            opacity: isMenuOpen ? 1 : 0 
+            opacity: isMenuOpen ? 1 : 0
           }}
           transition={{ duration: 0.3 }}
         >
           <nav className="py-4 space-y-2 border-t border-border/50 mt-4">
-            {['About', 'Skills', 'Projects', 'Contact'].map((item, index) => (
+            {[
+              { key: 'about', label: t('nav.about') },
+              { key: 'skills', label: t('nav.skills') },
+              { key: 'projects', label: t('nav.projects') },
+              { key: 'contact', label: t('nav.contact') }
+            ].map((item, index) => (
               <motion.button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
+                key={item.key}
+                onClick={() => scrollToSection(item.key)}
                 className="block w-full text-left px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
               >
-                {item}
+                {item.label}
               </motion.button>
             ))}
+
+            {/* Language Toggle for Mobile */}
+            <motion.div
+              className="px-4 py-3"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
+            >
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => i18n.changeLanguage('en')}
+                  className={`px-3 py-2 rounded-lg transition-colors ${
+                    i18n.language === 'en'
+                      ? 'text-orange-500 bg-orange-500/10 font-medium'
+                      : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
+                  }`}
+                  aria-label="Switch to English"
+                >
+                  English
+                </button>
+                <span className="text-muted-foreground">/</span>
+                <button
+                  onClick={() => i18n.changeLanguage('fr')}
+                  className={`px-3 py-2 rounded-lg transition-colors ${
+                    i18n.language === 'fr'
+                      ? 'text-orange-500 bg-orange-500/10 font-medium'
+                      : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
+                  }`}
+                  aria-label="Switch to French"
+                >
+                  Français
+                </button>
+              </div>
+            </motion.div>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.4 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
               className="pt-4"
             >
-              <Button 
+              <Button
                 onClick={() => scrollToSection('contact')}
                 className="w-full"
               >
-                Let's talk
+                {t('nav.letsTalk')}
               </Button>
             </motion.div>
           </nav>
