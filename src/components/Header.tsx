@@ -84,10 +84,42 @@ export function Header() {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
+            {/* Language Toggle */}
             <motion.div
+              className="flex items-center gap-1 text-sm"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <button
+                onClick={() => i18n.changeLanguage('en')}
+                className={`px-2 py-1 transition-colors ${
+                  i18n.language?.startsWith('en') || !i18n.language
+                    ? 'text-orange-500 font-medium'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+                aria-label="Switch to English"
+              >
+                EN
+              </button>
+              <span className="text-muted-foreground">/</span>
+              <button
+                onClick={() => i18n.changeLanguage('fr')}
+                className={`px-2 py-1 transition-colors ${
+                  i18n.language?.startsWith('fr')
+                    ? 'text-orange-500 font-medium'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+                aria-label="Switch to French"
+              >
+                FR
+              </button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
             >
               <Button
                 onClick={() => scrollToSection('contact')}
@@ -102,8 +134,11 @@ export function Header() {
                 />
               </Button>
             </motion.div>
+          </div>
 
-            {/* Language Toggle */}
+          {/* Mobile Language Toggle & Menu Button */}
+          <div className="md:hidden flex items-center gap-3">
+            {/* Language Toggle for Mobile/Tablet */}
             <motion.div
               className="flex items-center gap-1 text-sm"
               initial={{ opacity: 0, x: 20 }}
@@ -134,22 +169,22 @@ export function Header() {
                 FR
               </button>
             </motion.div>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <motion.button
-            className="md:hidden p-2 rounded-lg hover:bg-accent transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            whileTap={{ scale: 0.95 }}
-          >
-            <motion.div
-              initial={false}
-              animate={{ rotate: isMenuOpen ? 180 : 0 }}
-              transition={{ duration: 0.3 }}
+            {/* Menu Button */}
+            <motion.button
+              className="p-2 rounded-lg hover:bg-accent transition-colors"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              whileTap={{ scale: 0.95 }}
             >
-              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
-            </motion.div>
-          </motion.button>
+              <motion.div
+                initial={false}
+                animate={{ rotate: isMenuOpen ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              </motion.div>
+            </motion.button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -180,40 +215,6 @@ export function Header() {
                 {item.label}
               </motion.button>
             ))}
-
-            {/* Language Toggle for Mobile */}
-            <motion.div
-              className="px-4 py-3"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.3, delay: 0.4 }}
-            >
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => i18n.changeLanguage('en')}
-                  className={`px-3 py-2 rounded-lg transition-colors ${
-                    i18n.language?.startsWith('en') || !i18n.language
-                      ? 'text-orange-500 bg-orange-500/10 font-medium'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
-                  }`}
-                  aria-label="Switch to English"
-                >
-                  English
-                </button>
-                <span className="text-muted-foreground">/</span>
-                <button
-                  onClick={() => i18n.changeLanguage('fr')}
-                  className={`px-3 py-2 rounded-lg transition-colors ${
-                    i18n.language?.startsWith('fr')
-                      ? 'text-orange-500 bg-orange-500/10 font-medium'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
-                  }`}
-                  aria-label="Switch to French"
-                >
-                  Français
-                </button>
-              </div>
-            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
