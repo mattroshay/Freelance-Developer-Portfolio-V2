@@ -18,6 +18,13 @@ i18n
       }
     },
     fallbackLng: 'en',
+    supportedLngs: ['en', 'fr'],
+    load: 'languageOnly', // Use 'fr' instead of 'fr-FR'
+    detection: {
+      order: ['navigator', 'htmlTag', 'path', 'subdomain'],
+      caches: ['localStorage'],
+      lookupFromPathIndex: 0,
+    },
     debug: false,
     interpolation: {
       escapeValue: false
