@@ -1,6 +1,6 @@
 {
   "nav": {
-    "about": "À propos",
+    "about": "Mon profile",
     "skills": "Compétences",
     "projects": "Projets",
     "contact": "Contact",
@@ -8,18 +8,18 @@
   },
   "hero": {
     "availability": "Disponible pour du travail freelance, collaborations & consultations",
-    "greeting": "Salut, je suis",
+    "greeting": "Hello, je suis",
     "name": "Matt Roshay",
     "tagline": "Créer. Innover. Coder.",
     "description": "Un développeur full-stack qui construit des",
     "descriptionBold": "solutions web évolutives.",
-    "exploreWork": "Découvrir mon travail",
+    "exploreWork": "Mon travail",
     "getInTouch": "Me contacter",
-    "downloadCV": "Télécharger le CV"
+    "downloadCV": "Télécharger mon CV"
   },
   "about": {
-    "title": "À propos de moi",
-    "description": "Développeur full-stack avec 15 ans d'expérience en développement commercial et gestion de la relation client, j'aide maintenant les professionnels, startups et PME à transformer leurs idées en produits numériques intuitifs et évolutifs. Au-delà du code, je guide mes clients sur la stratégie technique, l'adoption de l'IA et l'optimisation pour garantir que chaque projet soit impactant, maintenable et prêt pour l'avenir.",
+    "title": "Qui suis-je ?",
+    "description": "Développeur full-stack avec 15 ans d'expérience en développement commercial et gestion de la relation client, j'aide maintenant les professionnels, startups et PME à transformer leurs idées en produits numériques intuitifs et évolutifs. Au-delà du code, je guide mes clients sur la stratégie technique, l'adoption de l'IA et l'optimisation pour garantir que chaque projet soit impactant, évolutif et prêt pour l'avenir.",
     "stats": {
       "certification": "Développeur Web Certifié Le Wagon (RNCP 39261)",
       "founder": "Fondateur de MatchMeal",
@@ -38,7 +38,7 @@
       },
       "aiConsulting": {
         "title": "Conseil & Intégration IA",
-        "description": "J'aide les équipes à explorer et intégrer des fonctionnalités IA qui améliorent l'expérience utilisateur — du chat et recommandations propulsés par OpenAI aux outils d'analyse d'images et de données."
+        "description": "J'aide les équipes à explorer et intégrer des fonctionnalités IA qui améliorent l'expérience utilisateur — du chat et recommandations alimentée par OpenAI aux outils d'analyse et de données."
       },
       "strategy": {
         "title": "Stratégie Digitale & Innovation",
@@ -55,7 +55,7 @@
     },
     "cta": {
       "title": "Prêt à construire quelque chose d'incroyable ?",
-      "description": "Collaborons pour donner vie à vos idées avec une technologie de pointe et un design réfléchi."
+      "description": "Collaborons pour donner vie à vos idées avec une technologie de pointe et un design correspondant à vos besoin."
     }
   },
   "skills": {
@@ -70,12 +70,12 @@
     },
     "philosophy": {
       "title": "Ma philosophie de développement",
-      "description": "Je crois en l'écriture de code propre et maintenable qui évolue. Chaque projet est une opportunité d'apprendre quelque chose de nouveau et de repousser les limites de ce qui est possible sur le web. Je reste à jour avec les technologies émergentes tout en maintenant une base solide dans les solutions éprouvées. Mon objectif est de fournir non seulement des logiciels fonctionnels, mais des expériences utilisateur agréables qui créent une réelle valeur.",
+      "description": "Je crois en l'écriture de code propre, maintenable et évolutive. Chaque projet est une opportunité d'apprendre quelque chose de nouveau et de repousser les limites de ce qui est possible sur le web. Je reste à jour avec les technologies émergentes tout en maintenant une base solide dans les solutions fiables. Mon objectif est de fournir non seulement des logiciels fonctionnels, mais des expériences utilisateur agréables qui créent une valeur ajoutée.",
       "tags": {
         "cleanCode": "Code Propre",
         "userCentered": "Design Centré Utilisateur",
-        "performance": "Performance d'Abord",
-        "learning": "Apprentissage Continu"
+        "performance": "Performance",
+        "learning": "Formations Continue"
       }
     }
   },
@@ -83,9 +83,9 @@
     "title": "Projets Phares",
     "description": "Une collection de projets qui démontrent ma passion pour créer des expériences numériques exceptionnelles avec des technologies modernes.",
     "featuredProject": "Projet Phare",
-    "viewLive": "Voir en ligne",
+    "viewLive": "Lien",
     "code": "Code",
-    "liveDemo": "Démo en ligne",
+    "liveDemo": "Lien",
     "viewAllGithub": "Voir tous les projets sur GitHub",
     "list": {
       "bitconsulting": {
@@ -94,17 +94,17 @@
       },
       "matchmeal": {
         "title": "MatchMeal",
-        "description": "Application de recettes propulsée par l'IA qui identifie les ingrédients et suggère des repas personnalisés en utilisant l'API OpenAI. Fonctionnalités : téléchargement d'images, favoris et interface adaptative."
+        "description": "Application de recettes alimentée par l'IA qui identifie les ingrédients et suggère des repas personnalisés en utilisant l'API OpenAI. Fonctionnalités : téléchargement d'images, favoris et interface adaptative."
       },
       "flatrent": {
         "title": "FlatRent",
-        "description": "Plateforme de réservation full-stack inspirée d'Airbnb, avec listings de propriétés, authentification, filtres de recherche et gestion des réservations. Déployé sur Heroku."
+        "description": "Plateforme de réservation full-stack inspirée par Airbnb, avec listings de propriétés, authentification, filtres de recherche et gestion des réservations. Déployé sur Heroku."
       }
     }
   },
   "contact": {
     "title": "Construisons quelque chose d'incroyable",
-    "description": "Vous avez un projet en tête ? J'aimerais en entendre parler. Discutons de la façon dont nous pouvons donner vie à votre vision avec une technologie de pointe et un design réfléchi.",
+    "description": "Vous avez un projet en tête ? J'aimerais en entendre parler. Discutons de la façon dont nous pouvons donner vie à votre vision avec une technologie de pointe et un design correspondant à vos besoins.",
     "form": {
       "title": "Envoyer un message",
       "name": "Nom",
@@ -131,7 +131,7 @@
     }
   },
   "footer": {
-    "description": "Développeur full-stack construisant des applications web modernes avec un accent sur l'expérience utilisateur et la durabilité.",
+    "description": "Développeur full-stack construisant des applications web modernes mettant l'accent sur l'expérience utilisateur et la durabilité.",
     "navigation": "Navigation",
     "copyright": "Matt Roshay. Fait avec",
     "and": "et beaucoup de",

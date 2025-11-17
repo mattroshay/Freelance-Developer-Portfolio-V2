@@ -196,8 +196,9 @@ export function Header() {
             opacity: isMenuOpen ? 1 : 0
           }}
           transition={{ duration: 0.3 }}
+          style={{ pointerEvents: isMenuOpen ? 'auto' : 'none' }}
         >
-          <nav className="py-4 space-y-2 border-t border-border/50 mt-4">
+          <nav className="py-4 space-y-2 border-t border-border/50 mt-4 relative z-20">
             {[
               { key: 'about', label: t('nav.about') },
               { key: 'skills', label: t('nav.skills') },

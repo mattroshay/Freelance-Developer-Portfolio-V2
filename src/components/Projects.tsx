@@ -182,7 +182,7 @@ export function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="text-center relative z-10"
           >
             <Button variant="outline" size="lg" className="group" onClick={() => window.open("https://github.com/mattroshay", "_blank") }>
               <Github className="w-4 h-4 mr-2" />
