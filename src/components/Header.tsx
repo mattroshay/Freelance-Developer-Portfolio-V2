@@ -217,8 +217,8 @@ export function Header() {
             ))}
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={isMenuOpen ? { opacity: 0, y: 20 } : false}
+              animate={isMenuOpen ? { opacity: 1, y: 0 } : false}
               transition={{ duration: 0.3, delay: 0.5 }}
               className="pt-4"
             >
