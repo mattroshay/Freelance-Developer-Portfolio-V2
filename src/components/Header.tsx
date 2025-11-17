@@ -33,20 +33,20 @@ export function Header() {
     >
       <div className="container mx-auto px-4 py-4 relative">
         <div className="flex items-center justify-between">
-          <motion.div 
+          <motion.div
             className="relative"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <button 
+            <button
               onClick={() => scrollToSection('hero')}
               className="flex items-center space-x-3 group"
             >
               {/* Logo */}
               <div className="relative w-10 h-10 group-hover:scale-110 transition-transform duration-300">
-                <img 
-                  src={logo} 
-                  alt="Matt Roshay Logo" 
+                <img
+                  src={logo}
+                  alt="Matt Roshay Logo"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -55,7 +55,7 @@ export function Header() {
               </span>
             </button>
           </motion.div>
-          
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
             {[
