@@ -49,8 +49,7 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="py-32 relative overflow-hidden"
-      style={{ scrollMarginTop: '6rem' }}
+      className="py-32 relative overflow-hidden scroll-mt-24"
     >
       {/* Background decoration */}
       <div className="absolute top-10 right-20 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"></div>
