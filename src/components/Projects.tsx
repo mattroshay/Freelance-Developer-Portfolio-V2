@@ -39,7 +39,11 @@ export function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-32 relative overflow-hidden">
+    <section
+      id="projects"
+      className="py-32 relative overflow-hidden"
+      style={{ scrollMarginTop: '6rem' }}
+    >
       {/* Background decoration */}
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"></div>
       <div className="absolute top-20 right-10 w-80 h-80 bg-orange-400/8 rounded-full blur-3xl"></div>

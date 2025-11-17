@@ -1,0 +1,16 @@
+node_modules/
+/.pnp/
+.pnp.js
+/.cache
+/dist
+/build
+.DS_Store
+*.log
+.env
+.env.local
+.npmrc
+coverage/
+/.idea
+.vscode
+/.history
+/.parcel-cache

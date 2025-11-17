@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import logo from "figma:asset/34a5fadfce0c33b5681d5bdf10379722f562ddef.png";
+import { scrollToSection as scrollToSectionUtil } from "../utils/scrollToSection";
 
 export function Header() {
   const { t, i18n } = useTranslation();
@@ -19,21 +20,19 @@ export function Header() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
+    scrollToSectionUtil(sectionId);
+    setIsMenuOpen(false);
   };
 
   return (
-    <motion.header 
+    <motion.header
       className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-border/50 backdrop-blur-sm"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
+      style={{ isolation: 'isolate' }}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-4 relative">
         <div className="flex items-center justify-between">
           <motion.div 
             className="relative"
@@ -198,38 +197,34 @@ export function Header() {
           transition={{ duration: 0.3 }}
           style={{ pointerEvents: isMenuOpen ? 'auto' : 'none' }}
         >
-          <nav className="py-4 space-y-2 border-t border-border/50 mt-4 relative z-20">
+          <nav className="py-4 space-y-2 border-t border-border/50 mt-4 relative z-[100]">
             {[
               { key: 'about', label: t('nav.about') },
               { key: 'skills', label: t('nav.skills') },
               { key: 'projects', label: t('nav.projects') },
               { key: 'contact', label: t('nav.contact') }
-            ].map((item, index) => (
-              <motion.button
+            ].map((item) => (
+              <a
                 key={item.key}
+                href={`#${item.key}`}
                 onClick={() => scrollToSection(item.key)}
-                className="block w-full text-left px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
+                className="block w-full text-left px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors relative z-[100]"
+                style={{ touchAction: 'manipulation', WebkitTapHighlightColor: 'transparent' }}
               >
                 {item.label}
-              </motion.button>
+              </a>
             ))}
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.5 }}
-              className="pt-4"
-            >
-              <Button
-                onClick={() => scrollToSection('contact')}
-                className="w-full"
-              >
-                {t('nav.letsTalk')}
-              </Button>
-            </motion.div>
+            <div className="pt-4 relative z-[100]">
+              <a href="#contact" onClick={() => scrollToSection('contact')}>
+                <Button
+                  className="w-full"
+                  style={{ touchAction: 'manipulation', WebkitTapHighlightColor: 'transparent' }}
+                >
+                  {t('nav.letsTalk')}
+                </Button>
+              </a>
+            </div>
           </nav>
         </motion.div>
       </div>

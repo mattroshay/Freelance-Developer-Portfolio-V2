@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Code, Palette, Zap, Coffee, Users, Rocket, Icon, ShieldCheck, MapPin, BrainCircuit, Layers3Icon, Terminal, Workflow } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { scrollToSection } from "../utils/scrollToSection";
 
 export function About() {
   const { t } = useTranslation();
@@ -46,7 +47,11 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="py-32 relative overflow-hidden">
+    <section
+      id="about"
+      className="py-32 relative overflow-hidden"
+      style={{ scrollMarginTop: '6rem' }}
+    >
       {/* Background decoration */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-orange-400/5 rounded-full blur-3xl"></div>
@@ -127,12 +132,7 @@ export function About() {
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
             className="text-center mt-20 p-8 rounded-2xl bg-gradient-to-r from-orange-500/5 to-orange-600/10 border border-orange-500/20 cursor-pointer hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300"
-            onClick={() => {
-              const contactSection = document.getElementById('contact');
-              if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
+            onClick={() => scrollToSection('contact')}
             role="button"
             tabIndex={0}
             aria-label="Scroll to contact section"
