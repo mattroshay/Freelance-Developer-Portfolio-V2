@@ -204,16 +204,20 @@ export function Header() {
               { key: 'projects', label: t('nav.projects') },
               { key: 'contact', label: t('nav.contact') }
             ].map((item, index) => (
-              <motion.button
+              <motion.a
                 key={item.key}
-                onClick={() => scrollToSection(item.key)}
+                href={`#${item.key}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(item.key);
+                }}
                 className="block w-full text-left px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={isMenuOpen ? { opacity: 0, x: -20 } : false}
+                animate={isMenuOpen ? { opacity: 1, x: 0 } : false}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
               >
                 {item.label}
-              </motion.button>
+              </motion.a>
             ))}
 
             <motion.div
