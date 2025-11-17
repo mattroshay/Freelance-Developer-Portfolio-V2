@@ -216,7 +216,7 @@ export function Header() {
             ))}
 
             <div className="pt-4 relative z-[100]">
-              <a href="#contact" onClick={() => scrollToSection('contact')}>
+              <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>
                 <Button
                   className="w-full"
                   style={{ touchAction: 'manipulation', WebkitTapHighlightColor: 'transparent' }}
