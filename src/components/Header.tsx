@@ -207,7 +207,7 @@ export function Header() {
               <a
                 key={item.key}
                 href={`#${item.key}`}
-                onClick={() => scrollToSection(item.key)}
+                onClick={(e) => { e.preventDefault(); scrollToSection(item.key); }}
                 className="block w-full text-left px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors relative z-[100]"
                 style={{ touchAction: 'manipulation', WebkitTapHighlightColor: 'transparent' }}
               >
