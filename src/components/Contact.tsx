@@ -28,7 +28,10 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-32 relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-32 relative overflow-hidden scroll-mt-24"
+    >
       {/* Background decoration */}
       <div className="absolute top-20 left-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
 

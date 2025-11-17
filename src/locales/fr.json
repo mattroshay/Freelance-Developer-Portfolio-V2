@@ -1,6 +1,6 @@
 {
   "nav": {
-    "about": "Mon profile",
+    "about": "Mon profil",
     "skills": "Compétences",
     "projects": "Projets",
     "contact": "Contact",
@@ -38,7 +38,7 @@
       },
       "aiConsulting": {
         "title": "Conseil & Intégration IA",
-        "description": "J'aide les équipes à explorer et intégrer des fonctionnalités IA qui améliorent l'expérience utilisateur — du chat et recommandations alimentée par OpenAI aux outils d'analyse et de données."
+        "description": "J'aide les équipes à explorer et intégrer des fonctionnalités IA qui améliorent l'expérience utilisateur — du chat et recommandations alimentées par OpenAI aux outils d'analyse et de données."
       },
       "strategy": {
         "title": "Stratégie Digitale & Innovation",
@@ -55,7 +55,7 @@
     },
     "cta": {
       "title": "Prêt à construire quelque chose d'incroyable ?",
-      "description": "Collaborons pour donner vie à vos idées avec une technologie de pointe et un design correspondant à vos besoin."
+      "description": "Collaborons pour donner vie à vos idées avec une technologie de pointe et un design correspondant à vos besoins."
     }
   },
   "skills": {
@@ -70,12 +70,12 @@
     },
     "philosophy": {
       "title": "Ma philosophie de développement",
-      "description": "Je crois en l'écriture de code propre, maintenable et évolutive. Chaque projet est une opportunité d'apprendre quelque chose de nouveau et de repousser les limites de ce qui est possible sur le web. Je reste à jour avec les technologies émergentes tout en maintenant une base solide dans les solutions fiables. Mon objectif est de fournir non seulement des logiciels fonctionnels, mais des expériences utilisateur agréables qui créent une valeur ajoutée.",
+      "description": "Je crois en l'écriture de code propre, maintenable et évolutif. Chaque projet est une opportunité d'apprendre quelque chose de nouveau et de repousser les limites de ce qui est possible sur le web. Je reste à jour avec les technologies émergentes tout en maintenant une base solide dans les solutions fiables. Mon objectif est de fournir non seulement des logiciels fonctionnels, mais des expériences utilisateur agréables qui créent une valeur ajoutée.",
       "tags": {
         "cleanCode": "Code Propre",
         "userCentered": "Design Centré Utilisateur",
         "performance": "Performance",
-        "learning": "Formations Continue"
+        "learning": "Formation Continue"
       }
     }
   },

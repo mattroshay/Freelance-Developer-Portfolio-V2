@@ -2,16 +2,10 @@ import { Button } from "./ui/button";
 import { ArrowDown, Github, Linkedin, Twitter, Mail } from "lucide-react";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
+import { scrollToSection } from "../utils/scrollToSection";
 
 export function Hero() {
   const { t, i18n } = useTranslation();
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   // Get CV path based on current language
   const getCVPath = () => {

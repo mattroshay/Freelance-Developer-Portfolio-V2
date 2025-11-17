@@ -1,37 +1,16 @@
-# Dependencies
 node_modules/
-/.pnp
+/.pnp/
 .pnp.js
-
-# Production build
-/build
+/.cache
 /dist
-
-# Testing
-/coverage
-
-# Misc
+/build
 .DS_Store
+*.log
+.env
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Debug logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# Vite
-.vite/
+.npmrc
+coverage/
+/.idea
+.vscode
+/.history
+/.parcel-cache

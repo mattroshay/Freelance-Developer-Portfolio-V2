@@ -1,9 +1,10 @@
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { useTranslation } from "react-i18next";
 import logo from "figma:asset/34a5fadfce0c33b5681d5bdf10379722f562ddef.png";
+import { scrollToSection as scrollToSectionUtil } from "../utils/scrollToSection";
 
 export function Header() {
   const { t, i18n } = useTranslation();
@@ -19,21 +20,18 @@ export function Header() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
+    scrollToSectionUtil(sectionId);
+    setIsMenuOpen(false);
   };
 
   return (
-    <motion.header 
-      className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-border/50 backdrop-blur-sm"
+    <motion.header
+      className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-border/50 backdrop-blur-sm isolate"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-4 relative">
         <div className="flex items-center justify-between">
           <motion.div 
             className="relative"
@@ -188,50 +186,57 @@ export function Header() {
         </div>
 
         {/* Mobile Navigation */}
-        <motion.div
-          className="md:hidden overflow-hidden"
-          initial={false}
-          animate={{
-            height: isMenuOpen ? 'auto' : 0,
-            opacity: isMenuOpen ? 1 : 0
-          }}
-          transition={{ duration: 0.3 }}
-          style={{ pointerEvents: isMenuOpen ? 'auto' : 'none' }}
-        >
-          <nav className="py-4 space-y-2 border-t border-border/50 mt-4 relative z-20">
-            {[
-              { key: 'about', label: t('nav.about') },
-              { key: 'skills', label: t('nav.skills') },
-              { key: 'projects', label: t('nav.projects') },
-              { key: 'contact', label: t('nav.contact') }
-            ].map((item, index) => (
-              <motion.button
-                key={item.key}
-                onClick={() => scrollToSection(item.key)}
-                className="block w-full text-left px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-              >
-                {item.label}
-              </motion.button>
-            ))}
-
+        <AnimatePresence>
+          {isMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.5 }}
-              className="pt-4"
+              className="md:hidden overflow-hidden"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
             >
-              <Button
-                onClick={() => scrollToSection('contact')}
-                className="w-full"
-              >
-                {t('nav.letsTalk')}
-              </Button>
+              <nav className="py-4 space-y-2 border-t border-border/50 mt-4 relative z-20">
+                {[
+                  { key: 'about', label: t('nav.about') },
+                  { key: 'skills', label: t('nav.skills') },
+                  { key: 'projects', label: t('nav.projects') },
+                  { key: 'contact', label: t('nav.contact') }
+                ].map((item, index) => (
+                  <motion.a
+                    key={item.key}
+                    href={`#${item.key}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(item.key);
+                    }}
+                    className="block w-full text-left px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                  >
+                    {item.label}
+                  </motion.a>
+                ))}
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.3, delay: 0.5 }}
+                  className="pt-4"
+                >
+                  <Button
+                    onClick={() => scrollToSection('contact')}
+                    className="w-full"
+                  >
+                    {t('nav.letsTalk')}
+                  </Button>
+                </motion.div>
+              </nav>
             </motion.div>
-          </nav>
-        </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </motion.header>
   );
