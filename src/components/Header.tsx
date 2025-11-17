@@ -197,34 +197,42 @@ export function Header() {
           transition={{ duration: 0.3 }}
           style={{ pointerEvents: isMenuOpen ? 'auto' : 'none' }}
         >
-          <nav className="py-4 space-y-2 border-t border-border/50 mt-4 relative z-[100]">
+          <nav className="py-4 space-y-2 border-t border-border/50 mt-4 relative z-20">
             {[
               { key: 'about', label: t('nav.about') },
               { key: 'skills', label: t('nav.skills') },
               { key: 'projects', label: t('nav.projects') },
               { key: 'contact', label: t('nav.contact') }
-            ].map((item) => (
-              <a
+            ].map((item, index) => (
+              <motion.a
                 key={item.key}
                 href={`#${item.key}`}
-                onClick={(e) => { e.preventDefault(); scrollToSection(item.key); }}
-                className="block w-full text-left px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors relative z-[100]"
-                style={{ touchAction: 'manipulation', WebkitTapHighlightColor: 'transparent' }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(item.key);
+                }}
+                className="block w-full text-left px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
+                initial={isMenuOpen ? { opacity: 0, x: -20 } : false}
+                animate={isMenuOpen ? { opacity: 1, x: 0 } : false}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
               >
                 {item.label}
-              </a>
+              </motion.a>
             ))}
 
-            <div className="pt-4 relative z-[100]">
-              <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>
-                <Button
-                  className="w-full"
-                  style={{ touchAction: 'manipulation', WebkitTapHighlightColor: 'transparent' }}
-                >
-                  {t('nav.letsTalk')}
-                </Button>
-              </a>
-            </div>
+            <motion.div
+              initial={isMenuOpen ? { opacity: 0, y: 20 } : false}
+              animate={isMenuOpen ? { opacity: 1, y: 0 } : false}
+              transition={{ duration: 0.3, delay: 0.5 }}
+              className="pt-4"
+            >
+              <Button
+                onClick={() => scrollToSection('contact')}
+                className="w-full"
+              >
+                {t('nav.letsTalk')}
+              </Button>
+            </motion.div>
           </nav>
         </motion.div>
       </div>
