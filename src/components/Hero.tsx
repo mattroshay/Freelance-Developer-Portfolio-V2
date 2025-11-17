@@ -10,8 +10,8 @@ export function Hero() {
   // Get CV path based on current language
   const getCVPath = () => {
     return i18n.language === 'fr'
-      ? '/public/Matt%20Roshay%20-%20Développeur%20Full%20Stack%20FR%20-%20Oct%202025.pdf'
-      : '/public/Matt Roshay - Full Stack Developer EN - Oct 2025.pdf';
+      ? '/Matt%20Roshay%20-%20Développeur%20Full%20Stack%20FR%20-%20Oct%202025.pdf'
+      : '/Matt Roshay - Full Stack Developer EN - Oct 2025.pdf';
   };
 
   return (
