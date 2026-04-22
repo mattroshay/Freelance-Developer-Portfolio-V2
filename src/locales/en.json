@@ -11,14 +11,14 @@
     "greeting": "Hi, I'm",
     "name": "Matt Roshay",
     "tagline": "Create. Innovate. Code.",
-    "description": "A full-stack developer who builds",
-    "descriptionBold": "scalable web solutions.",
+    "description": "An AI Enablement & Product Builder designing",
+    "descriptionBold": "workflows that ship.",
     "exploreWork": "Explore My Work",
     "getInTouch": "Get in touch"
   },
   "about": {
     "title": "About Me",
-    "description": "I'm a full-stack developer with 15 years' experience in business development and client relationship management, now helping professionals, startups and SMEs transform their ideas into intuitive, scalable digital products. Beyond code, I guide clients on technical strategy, AI adoption, and performance optimization to ensure every project is impactful, maintainable, and future-ready.",
+    "description": "I'm an AI Enablement specialist and full-stack developer. After 15 years in business development and client relationship management at international law firms (Herbert Smith Freehills, Freshfields & Covington), I now help teams design and ship AI-enabled workflows — translating fuzzy business asks into working automations, integrations, and products. I build with APIs, n8n, Make, Dust, Claude, and modern web frameworks, and bring senior-stakeholder experience most freelance devs don't.",
     "stats": {
       "certification": "Le Wagon Certified Web Developer (RNCP 39261)",
       "founder": "Founder of MatchMeal",
@@ -27,29 +27,21 @@
     },
     "whatIDo": "What I Do",
     "services": {
-      "webDev": {
-        "title": "Web & App Development",
-        "description": "From modern websites to custom web applications — I design and build reliable, responsive, and scalable digital products using modern frameworks and cloud deployment."
+      "aiWorkflow": {
+        "title": "AI Workflow Design & Implementation",
+        "description": "Designing AI-enabled workflows that think — from first webhook to final action. APIs, n8n, Make, Dust, Claude. I build automations that actually get used, not dashboards that collect dust."
       },
-      "uiux": {
-        "title": "UI/UX Design",
-        "description": "Beautiful, intuitive interfaces that users love to interact with."
+      "webDev": {
+        "title": "Full-Stack Web & App Development",
+        "description": "Modern web apps and internal tools — Ruby on Rails, React/TypeScript, PostgreSQL. From MVPs to production-ready products."
       },
       "aiConsulting": {
-        "title": "AI Consulting & Integration",
-        "description": "Help teams explore and integrate AI features that enhance user experience — from OpenAI-powered chat and recommendations to image and data analysis tools."
+        "title": "AI Integration & Consulting",
+        "description": "Adding AI features to existing products — OpenAI, Claude APIs, RAG patterns, prompt engineering. I help teams go from AI curiosity to shipped features."
       },
-      "strategy": {
-        "title": "Digital Strategy & Innovation",
-        "description": "Translate business goals into actionable technical plans: system design, scalability, and tool selection."
-      },
-      "automation": {
-        "title": "Automation & Workflow Integration",
-        "description": "Automate repetitive processes and connect tools through APIs and webhooks — from Slack bots to internal dashboards and reporting pipelines."
-      },
-      "performance": {
-        "title": "Performance Optimization",
-        "description": "Lightning-fast websites that convert visitors into customers."
+      "discovery": {
+        "title": "Discovery & Scoping",
+        "description": "Figuring out what to build is often harder than building it. I help teams map current workflows, surface real inefficiencies, and scope realistic AI and automation projects — with clear success criteria — before any code gets written. 15+ years translating fuzzy business asks into concrete deliverables inside complex organisations."
       }
     },
     "cta": {
@@ -61,11 +53,11 @@
     "title": "Skills & Technologies",
     "description": "A carefully curated toolkit that enables me to build exceptional digital experiences from concept to deployment.",
     "categories": {
+      "ai": "AI & Automation",
       "backend": "Backend & Database",
       "frontend": "Frontend Development",
       "tools": "Tools & DevOps",
-      "ai": "AI & Automation",
-      "design": "Design & Strategy"
+      "design": "Business & Strategy"
     },
     "philosophy": {
       "title": "My Development Philosophy",
@@ -97,7 +89,7 @@
       },
       "flatrent": {
         "title": "FlatRent",
-        "description": "Full-stack booking platform inspired by Airbnb, with property listings, authentication, search filters, and reservation management. Deployed on Heroku."
+        "description": "Full-stack booking platform inspired by Airbnb — my Le Wagon capstone, built with Ruby on Rails. Property listings, authentication, search filters, and reservation management. Deployed on Heroku."
       }
     }
   },
@@ -130,7 +122,7 @@
     }
   },
   "footer": {
-    "description": "Full-stack developer building modern web applications with an emphasis on user experience and sustainability.",
+    "description": "AI Enablement & Product Builder — shipping AI-enabled workflows, integrations, and full-stack web applications.",
     "navigation": "Navigation",
     "copyright": "Matt Roshay. Made with",
     "and": "and lots of",

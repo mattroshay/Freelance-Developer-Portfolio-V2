@@ -7,6 +7,14 @@ export function Skills() {
 
   const skillCategories = [
     {
+      title: t('skills.categories.ai'),
+      skills: [
+        "n8n", "Make", "Dust", "Claude", "OpenAI API", "Prompt Engineering",
+        "RAG patterns", "AI-driven workflows", "APIs & Webhooks"
+      ],
+      color: "from-orange-600/20 to-orange-700/20"
+    },
+    {
       title: t('skills.categories.backend'),
       skills: [
         "Ruby on Rails", "PostgreSQL", "Python", "REST APIs", "Cloudinary"
@@ -16,7 +24,7 @@ export function Skills() {
     {
       title: t('skills.categories.frontend'),
       skills: [
-        "Javascript / TypeScript", "HTML5", "CSS3", "SASS",
+        "JavaScript / TypeScript", "React", "HTML5", "CSS3",
         "Tailwind CSS", "Stimulus JS", "Hotwire / Turbo", "Responsive Design & Accessibility"
       ],
       color: "from-orange-400/20 to-orange-500/20"
@@ -25,22 +33,16 @@ export function Skills() {
       title: t('skills.categories.tools'),
       skills: [
         "Git / GitHub", "Docker", "Heroku",
-        "VS Code", "Postman", "Google Analytics", "Plausible", "SEO Tools"
-      ],
-      color: "from-orange-600/20 to-orange-700/20"
-    },
-    {
-      title: t('skills.categories.ai'),
-      skills: [
-        "OpenAI API", "RAG patterns", "Python", "AI-driven workflows", "Web scraping & change detection tools"
+        "VS Code", "Postman", "Google Analytics", "SEO Tools"
       ],
       color: "from-orange-600/20 to-orange-700/20"
     },
     {
       title: t('skills.categories.design'),
       skills: [
-        "Figma / Canva", "Responsive Design", "UI/UX Design", "Product Strategy & MVP scoping",
-        "Client discovery & technical architecture", "Brand positioning & storytelling", "SEO & content strategy"
+        "Workflow Design", "Stakeholder Management", "Process Optimization",
+        "Client Discovery & Technical Architecture", "Product Strategy & MVP Scoping",
+        "Brand Positioning & Storytelling", "SEO & Content Strategy"
       ],
       color: "from-orange-500/20 to-amber-500/20"
     }

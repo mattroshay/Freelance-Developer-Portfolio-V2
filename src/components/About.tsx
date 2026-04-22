@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Code, Palette, Zap, Coffee, Users, Rocket, Icon, ShieldCheck, MapPin, BrainCircuit, Layers3Icon, Terminal, Workflow } from "lucide-react";
+import { Zap, Coffee, Rocket, ShieldCheck, MapPin, BrainCircuit, Terminal, Workflow, Target } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { scrollToSection } from "../utils/scrollToSection";
 
@@ -15,14 +15,14 @@ export function About() {
 
   const services = [
     {
+      icon: <Workflow className="w-6 h-6" />,
+      title: t('about.services.aiWorkflow.title'),
+      description: t('about.services.aiWorkflow.description')
+    },
+    {
       icon: <Terminal className="w-6 h-6" />,
       title: t('about.services.webDev.title'),
       description: t('about.services.webDev.description')
-    },
-    {
-      icon: <Palette className="w-6 h-6" />,
-      title: t('about.services.uiux.title'),
-      description: t('about.services.uiux.description')
     },
     {
       icon: <BrainCircuit className="w-6 h-6" />,
@@ -30,19 +30,9 @@ export function About() {
       description: t('about.services.aiConsulting.description')
     },
     {
-      icon: <Layers3Icon className="w-6 h-6" />,
-      title: t('about.services.strategy.title'),
-      description: t('about.services.strategy.description')
-    },
-    {
-      icon: <Workflow className="w-6 h-6" />,
-      title: t('about.services.automation.title'),
-      description: t('about.services.automation.description')
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: t('about.services.performance.title'),
-      description: t('about.services.performance.description')
+      icon: <Target className="w-6 h-6" />,
+      title: t('about.services.discovery.title'),
+      description: t('about.services.discovery.description')
     }
   ];
 
@@ -99,7 +89,7 @@ export function About() {
 
           {/* Main Content Grid */}
           <h3 className="text-2xl mb-8">{t('about.whatIDo')}</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             {services.map((service, index) => (
               <motion.div
                 key={index}

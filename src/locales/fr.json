@@ -11,14 +11,14 @@
     "greeting": "Hello, je suis",
     "name": "Matt Roshay",
     "tagline": "Créer. Innover. Coder.",
-    "description": "Un développeur full-stack qui construit des",
-    "descriptionBold": "solutions web évolutives.",
+    "description": "Spécialiste en AI Enablement et développeur qui conçoit",
+    "descriptionBold": "des workflows qui aboutissent.",
     "exploreWork": "Mon travail",
     "getInTouch": "Me contacter"
   },
   "about": {
     "title": "Qui suis-je ?",
-    "description": "Développeur full-stack avec 15 ans d'expérience en développement commercial et gestion de la relation client, j'aide maintenant les professionnels, startups et PME à transformer leurs idées en produits numériques intuitifs et évolutifs. Au-delà du code, je guide mes clients sur la stratégie technique, l'adoption de l'IA et l'optimisation pour garantir que chaque projet soit impactant, évolutif et prêt pour l'avenir.",
+    "description": "Spécialiste AI Enablement et développeur full-stack. Après 15 ans en business development et gestion de la relation client dans des cabinets d'avocats internationaux (Herbert Smith Freehills, Freshfields & Covington), j'aide aujourd'hui des équipes à concevoir et déployer des workflows IA — en traduisant des demandes métier floues en automatisations, intégrations et produits concrets. Je construis avec APIs, n8n, Make, Dust, Claude et des frameworks web modernes, et j'apporte une expérience de pilotage de parties prenantes rare chez les freelances.",
     "stats": {
       "certification": "Développeur Web Certifié Le Wagon (RNCP 39261)",
       "founder": "Fondateur de MatchMeal",
@@ -27,29 +27,21 @@
     },
     "whatIDo": "Ce que je fais",
     "services": {
-      "webDev": {
-        "title": "Développement Web & App",
-        "description": "Des sites web modernes aux applications web personnalisées — je conçois et construis des produits numériques fiables, responsifs et évolutifs en utilisant des frameworks modernes et un déploiement cloud."
+      "aiWorkflow": {
+        "title": "Conception & mise en œuvre de workflows IA",
+        "description": "Des workflows IA qui raisonnent, du premier webhook à l'action finale. APIs, n8n, Make, Dust, Claude. Je construis des automatisations réellement utilisées, pas des tableaux de bord qui prennent la poussière."
       },
-      "uiux": {
-        "title": "Design UI/UX",
-        "description": "De belles interfaces intuitives que les utilisateurs adorent."
+      "webDev": {
+        "title": "Développement Web & Apps Full-Stack",
+        "description": "Applications web modernes et outils internes — Ruby on Rails, React/TypeScript, PostgreSQL. Du MVP au produit prêt pour la production."
       },
       "aiConsulting": {
-        "title": "Conseil & Intégration IA",
-        "description": "J'aide les équipes à explorer et intégrer des fonctionnalités IA qui améliorent l'expérience utilisateur — du chat et recommandations alimentées par OpenAI aux outils d'analyse et de données."
+        "title": "Intégration & Conseil IA",
+        "description": "Ajouter de l'IA à des produits existants — OpenAI, Claude APIs, RAG, prompt engineering. J'aide les équipes à passer de la curiosité IA aux fonctionnalités déployées."
       },
-      "strategy": {
-        "title": "Stratégie Digitale & Innovation",
-        "description": "Traduire les objectifs commerciaux en plans techniques actionnables : conception de systèmes, évolutivité et sélection d'outils."
-      },
-      "automation": {
-        "title": "Automatisation & Intégration de Workflows",
-        "description": "Automatiser les processus répétitifs et connecter les outils via des APIs et webhooks — des bots Slack aux tableaux de bord internes et pipelines de reporting."
-      },
-      "performance": {
-        "title": "Optimisation des Performances",
-        "description": "Des sites web ultra-rapides qui convertissent les visiteurs en clients."
+      "discovery": {
+        "title": "Discovery & Cadrage",
+        "description": "Déterminer quoi construire est souvent plus difficile que de le construire. J'aide les équipes à cartographier leurs workflows actuels, à identifier les vraies inefficacités et à cadrer des projets IA et d'automatisation réalistes — avec des critères de succès clairs — avant d'écrire la moindre ligne de code. 15+ années à traduire des demandes métier floues en livrables concrets dans des organisations complexes."
       }
     },
     "cta": {
@@ -61,11 +53,11 @@
     "title": "Compétences & Technologies",
     "description": "Une boîte à outils soigneusement sélectionnée qui me permet de créer des expériences numériques exceptionnelles du concept au déploiement.",
     "categories": {
+      "ai": "IA & Automatisation",
       "backend": "Backend & Base de données",
       "frontend": "Développement Frontend",
       "tools": "Outils & DevOps",
-      "ai": "IA & Automatisation",
-      "design": "Design & Stratégie"
+      "design": "Business & Stratégie"
     },
     "philosophy": {
       "title": "Ma philosophie de développement",
@@ -97,7 +89,7 @@
       },
       "flatrent": {
         "title": "FlatRent",
-        "description": "Plateforme de réservation full-stack inspirée par Airbnb, avec listings de propriétés, authentification, filtres de recherche et gestion des réservations. Déployé sur Heroku."
+        "description": "Plateforme de réservation full-stack inspirée d'Airbnb — mon projet de fin d'études Le Wagon, construit avec Ruby on Rails. Listings, authentification, filtres de recherche et gestion des réservations. Déployé sur Heroku."
       }
     }
   },
@@ -130,7 +122,7 @@
     }
   },
   "footer": {
-    "description": "Développeur full-stack construisant des applications web modernes mettant l'accent sur l'expérience utilisateur et la durabilité.",
+    "description": "AI Enablement & Product Builder — des workflows IA, intégrations et applications web qui aboutissent.",
     "navigation": "Navigation",
     "copyright": "Matt Roshay. Fait avec",
     "and": "et beaucoup de",
