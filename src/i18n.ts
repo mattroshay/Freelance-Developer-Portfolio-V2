@@ -21,7 +21,11 @@ i18n
     supportedLngs: ['en', 'fr'],
     load: 'languageOnly', // Use 'fr' instead of 'fr-FR'
     detection: {
-      order: ['navigator', 'htmlTag', 'path', 'subdomain'],
+      // Respect ?lang=fr / ?lang=en first so hreflang links in Google results
+      // (and shared URLs) land visitors in the right language; then
+      // fall back to previously-chosen language, then browser preference.
+      order: ['querystring', 'localStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
+      lookupQuerystring: 'lang',
       caches: ['localStorage'],
       lookupFromPathIndex: 0,
     },

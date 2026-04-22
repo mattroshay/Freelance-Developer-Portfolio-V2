@@ -1,18 +1,11 @@
 import { Button } from "./ui/button";
-import { ArrowDown, Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { scrollToSection } from "../utils/scrollToSection";
 
 export function Hero() {
-  const { t, i18n } = useTranslation();
-
-  // Get CV path based on current language
-  const getCVPath = () => {
-    return i18n.language === 'fr'
-      ? '/Matt%20Roshay%20-%20Développeur%20Full%20Stack%20FR%20-%20Oct%202025.pdf'
-      : '/Matt Roshay - Full Stack Developer EN - Oct 2025.pdf';
-  };
+  const { t } = useTranslation();
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative">
@@ -143,10 +136,11 @@ export function Hero() {
               >
                 <Button
                   size="lg"
-                  onClick={() => scrollToSection('projects')}
+                  onClick={() => scrollToSection('contact')}
                   className="group relative overflow-hidden"
                 >
-                  <span className="relative z-10">{t('hero.exploreWork')}</span>
+                  <Mail className="w-4 h-4 mr-2 relative z-10" />
+                  <span className="relative z-10">{t('hero.getInTouch')}</span>
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80"
                     whileHover={{ scale: 1.05 }}
@@ -157,19 +151,12 @@ export function Hero() {
                 <Button
                   variant="outline"
                   size="lg"
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => scrollToSection('projects')}
                   className="group border-muted-foreground/20 hover:border-primary"
                 >
-                  <Mail className="w-4 h-4 mr-2" />
-                  {t('hero.getInTouch')}
+                  {t('hero.exploreWork')}
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
-
-                <a href={getCVPath()} download className="w-full sm:w-auto">
-                  <Button variant="secondary" size="lg" className="group border-muted-foreground/20 hover:border-primary flex items-center">
-                    <ArrowDown className="w-4 h-4 mr-2" />
-                    {t('hero.downloadCV')}
-                  </Button>
-                </a>
               </motion.div>
 
               <motion.div
