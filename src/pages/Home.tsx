@@ -1,208 +1,171 @@
-import { motion } from "motion/react";
-import { ArrowRight, Rocket, Workflow, BrainCircuit, Terminal, Target } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Hero } from "../components/Hero";
-import { Badge } from "../components/ui/badge";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useRevealGroup } from "../hooks/useReveal";
 
-const SERVICE_KEYS = [
-  { key: 'aiWorkflow', icon: <Workflow className="w-6 h-6" /> },
-  { key: 'aiIntegration', icon: <BrainCircuit className="w-6 h-6" /> },
-  { key: 'webDev', icon: <Terminal className="w-6 h-6" /> },
-  { key: 'discovery', icon: <Target className="w-6 h-6" /> }
+// Order per copy deck: the two AI offerings lead, Discovery closes.
+const SERVICE_KEYS = ["aiWorkflow", "aiIntegration", "webDev", "discovery"];
+
+// Home work teasers: featured + two cards (deck order).
+const WORK_TEASERS = [
+  { key: "petHealth", mark: "AI", featured: true, tags: ["Next.js", "React", "Supabase", "OpenAI"] },
+  { key: "sarahPsy", mark: "SC" },
+  { key: "bitconsulting", mark: "B-it" },
 ];
 
-const WORK_TEASER_KEYS = ['petHealth', 'sarahPsy', 'bitconsulting'];
+const ABOUT_FACT_KEYS = ["experience", "certification", "tooling", "location"];
 
 export function Home() {
   const { t } = useTranslation();
-  usePageMeta('home');
+  usePageMeta("home");
+
+  const servicesRef = useRevealGroup<HTMLElement>();
+  const workRef = useRevealGroup<HTMLElement>();
+  const aboutRef = useRevealGroup<HTMLElement>();
+  const ctaRef = useRevealGroup<HTMLElement>();
+
+  const featured = WORK_TEASERS.find((w) => w.featured)!;
+  const others = WORK_TEASERS.filter((w) => !w.featured);
 
   return (
     <>
       <Hero />
 
-      {/* What I do — teaser for Services */}
-      <section id="what-i-do" className="py-32 relative overflow-hidden scroll-mt-24">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"></div>
-
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-3xl mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl mb-6">{t('home.whatIDo.title')}</h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                {t('home.whatIDo.subtext')}
+      {/* Services preview — numbered 2x2 grid */}
+      <section id="what-i-do" ref={servicesRef} className="ds-section">
+        <div className="ds-container">
+          <div className="ds-section-head">
+            <div className="ds-section-head__text">
+              <div data-reveal className="ds-eyebrow">
+                {t("home.whatIDo.title")}
+              </div>
+              <h2 data-reveal className="ds-h2">
+                {t("hero.brandLine")}
+              </h2>
+              <p data-reveal className="ds-dim">
+                {t("home.whatIDo.subtext")}
               </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-12">
-              {SERVICE_KEYS.map((service, index) => (
-                <motion.div
-                  key={service.key}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group p-6 rounded-xl border border-border/50 hover:border-orange-500/20 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/5"
-                  whileHover={{ y: -2 }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 p-3 rounded-lg bg-orange-500/10 text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
-                      {service.icon}
-                    </div>
-                    <div>
-                      <h3 className="mb-2 group-hover:text-orange-500 transition-colors">
-                        {t(`services.list.${service.key}.title`)}
-                      </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        {t(`services.list.${service.key}.hook`)}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
             </div>
+            <Link data-reveal to="/services" className="ds-mono-link">
+              {t("home.whatIDo.link")} →
+            </Link>
+          </div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <Link
-                to="/services"
-                className="inline-flex items-center text-orange-500 hover:text-orange-400 transition-colors group"
-              >
-                {t('home.whatIDo.link')}
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+          <div className="ds-cellgrid">
+            {SERVICE_KEYS.map((key, i) => (
+              <Link data-reveal key={key} to="/services" className="ds-cell">
+                <span className="ds-cell__num">{String(i + 1).padStart(2, "0")}</span>
+                <span className="ds-cell__body">
+                  <span className="ds-cell__title">{t(`services.list.${key}.title`)}</span>
+                  <span className="ds-dim">{t(`services.list.${key}.hook`)}</span>
+                </span>
               </Link>
-            </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Selected work — teaser for Work */}
-      <section className="py-32 relative overflow-hidden">
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-orange-400/8 rounded-full blur-3xl"></div>
-
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-3xl mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl mb-6">{t('home.work.title')}</h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                {t('home.work.subtext')}
+      {/* Work preview — featured card + two cards */}
+      <section ref={workRef} className="ds-section ds-section--alt">
+        <div className="ds-container">
+          <div className="ds-section-head">
+            <div className="ds-section-head__text">
+              <div data-reveal className="ds-eyebrow">
+                {t("home.work.title")}
+              </div>
+              <p data-reveal className="ds-lede">
+                {t("home.work.subtext")}
               </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              {WORK_TEASER_KEYS.map((key, index) => (
-                <motion.div
-                  key={key}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
-                >
-                  <Link
-                    to="/work"
-                    className="block h-full p-6 rounded-xl border border-border/50 hover:border-orange-500/30 hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-300 group"
-                  >
-                    <Badge variant="outline" className="mb-4 border-orange-500/30 text-orange-500 text-xs">
-                      {t(`projects.list.${key}.label`)}
-                    </Badge>
-                    <h3 className="text-lg group-hover:text-orange-500 transition-colors">
-                      {t(`projects.list.${key}.title`)}
-                    </h3>
-                  </Link>
-                </motion.div>
-              ))}
             </div>
+            <Link data-reveal to="/work" className="ds-mono-link">
+              {t("home.work.link")} →
+            </Link>
+          </div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <Link
-                to="/work"
-                className="inline-flex items-center text-orange-500 hover:text-orange-400 transition-colors group"
-              >
-                {t('home.work.link')}
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+          <Link
+            data-reveal
+            to="/work"
+            className="ds-card ds-card--featured"
+            style={{ marginBottom: 24 }}
+          >
+            <div className="ds-card__media">
+              <span className="ds-watermark ds-watermark--lg" aria-hidden="true">
+                {featured.mark}
+              </span>
+            </div>
+            <div className="ds-card__content">
+              <span className="ds-card__label">{t(`projects.list.${featured.key}.label`)}</span>
+              <h3 className="ds-card__title">{t(`projects.list.${featured.key}.title`)}</h3>
+              <p className="ds-card__desc">{t(`projects.list.${featured.key}.description`)}</p>
+              <div className="ds-tags" style={{ marginTop: 4 }}>
+                {featured.tags!.map((tag) => (
+                  <span key={tag} className="ds-tag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </Link>
+
+          <div className="ds-cardgrid">
+            {others.map((proj) => (
+              <Link data-reveal key={proj.key} to="/work" className="ds-card">
+                <div className="ds-card__media">
+                  <span className="ds-watermark" aria-hidden="true">
+                    {proj.mark}
+                  </span>
+                </div>
+                <div className="ds-card__content">
+                  <h3 className="ds-card__title">{t(`projects.list.${proj.key}.title`)}</h3>
+                  <p className="ds-card__desc">{t(`projects.list.${proj.key}.description`)}</p>
+                </div>
               </Link>
-            </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* About — teaser for About */}
-      <section className="py-32 relative overflow-hidden">
-        <div className="absolute top-20 right-10 w-80 h-80 bg-orange-500/8 rounded-full blur-3xl"></div>
-
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-3xl"
-            >
-              <h2 className="text-4xl md:text-5xl mb-6">{t('home.about.title')}</h2>
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                {t('about.paragraph1')}
-              </p>
-              <Link
-                to="/about"
-                className="inline-flex items-center text-orange-500 hover:text-orange-400 transition-colors group"
-              >
-                {t('home.about.link')}
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </motion.div>
+      {/* About strip — statement + fact list */}
+      <section ref={aboutRef} className="ds-section">
+        <div className="ds-container ds-strip">
+          <div className="ds-strip__text">
+            <div data-reveal className="ds-eyebrow">
+              {t("home.about.title")}
+            </div>
+            <h2 data-reveal className="ds-h2 ds-h2--strip">
+              {t("about.paragraph1")}
+            </h2>
+            <Link data-reveal to="/about" className="ds-mono-link">
+              {t("home.about.link")} →
+            </Link>
+          </div>
+          <div data-reveal className="ds-facts">
+            {ABOUT_FACT_KEYS.map((key) => (
+              <div key={key} className="ds-facts__row">
+                <span>{t(`about.stats.${key}`)}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Closing book-a-call CTA */}
-      <section className="pb-32 relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center p-8 md:p-12 rounded-2xl bg-gradient-to-r from-orange-500/5 to-orange-600/10 border border-orange-500/20 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300"
-            >
-              <Rocket className="w-8 h-8 text-orange-500 mx-auto mb-4" />
-              <h2 className="text-2xl mb-3">{t('home.cta.title')}</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-                {t('home.cta.description')}
-              </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all outline-none bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6 group"
-              >
-                {t('home.cta.button')}
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </motion.div>
+      {/* Contact CTA — centered */}
+      <section ref={ctaRef} className="ds-section ds-section--alt">
+        <div className="ds-container ds-cta">
+          <h2 data-reveal className="ds-h2 ds-h2--cta">
+            {t("home.cta.title")}
+          </h2>
+          <p data-reveal className="ds-lede">
+            {t("home.cta.description")}
+          </p>
+          <div data-reveal className="ds-btn-row" style={{ marginTop: 8 }}>
+            <Link to="/contact" className="ds-btn ds-btn--primary">
+              {t("home.cta.button")}
+            </Link>
+            <Link to="/work" className="ds-btn ds-btn--secondary">
+              {t("hero.seeWork")}
+            </Link>
           </div>
         </div>
       </section>
