@@ -143,7 +143,7 @@
     "description": "Le meilleur premier pas, c'est un court appel. Dites-moi ce qui est lent, manuel ou sur votre feuille de route — je vous dirai honnêtement si je suis la bonne personne et ce que cela implique.",
     "calendly": {
       "title": "Réserver un appel découverte gratuit",
-      "subtitle": "20 minutes, sans engagement. On fait le tour de votre besoin et de ce qui vaut la peine d'être construit.",
+      "subtitle": "30 minutes, sans engagement. On fait le tour de votre besoin et de ce qui vaut la peine d'être construit.",
       "perk1": "Gratuit & sans pression",
       "perk2": "EN ou FR, au choix",
       "perk3": "Réponse claire sur l'adéquation & le budget",
@@ -201,7 +201,7 @@
     },
     "contact": {
       "title": "Contact — Réservez un appel découverte IA gratuit",
-      "description": "Dites-moi ce qui est lent, manuel ou sur votre feuille de route. Réservez un appel gratuit de 20 minutes (EN ou FR) pour une réponse claire."
+      "description": "Dites-moi ce qui est lent, manuel ou sur votre feuille de route. Réservez un appel gratuit de 30 minutes (EN ou FR) pour une réponse claire."
     }
   }
 }

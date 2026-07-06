@@ -143,7 +143,7 @@
     "description": "The best first step is a quick call. Tell me what's slow, manual, or on your roadmap — I'll tell you honestly whether I'm the right fit and what it would take.",
     "calendly": {
       "title": "Book a free discovery call",
-      "subtitle": "20 minutes, no obligation. We'll talk through your problem and whether it's worth building.",
+      "subtitle": "30 minutes, no obligation. We'll talk through your problem and whether it's worth building.",
       "perk1": "Free & no-pressure",
       "perk2": "EN or FR, your choice",
       "perk3": "Straight answer on fit & budget",
@@ -201,7 +201,7 @@
     },
     "contact": {
       "title": "Contact — Book a Free AI & Automation Discovery Call",
-      "description": "Tell me what's slow, manual, or on your roadmap. Book a free 20-minute call (EN or FR) for a straight answer on fit and budget."
+      "description": "Tell me what's slow, manual, or on your roadmap. Book a free 30-minute call (EN or FR) for a straight answer on fit and budget."
     }
   }
 }
