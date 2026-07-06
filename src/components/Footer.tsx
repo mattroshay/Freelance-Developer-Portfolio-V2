@@ -68,9 +68,11 @@ export function Footer() {
       <div className="ds-footer__bottom">
         <div style={{ display: "inline-flex", alignItems: "center", flexWrap: "wrap", gap: 4 }}>
           © {currentYear} {t("footer.copyright")}
-          <Heart size={12} color="#f7941e" aria-label="love" />
+          <Heart size={12} color="#f7941e" aria-hidden="true" />
+          <span className="ds-sr-only">{t("footer.love")}</span>
           {t("footer.and")}
-          <Coffee size={12} color="#f7941e" aria-label="coffee" />.
+          <Coffee size={12} color="#f7941e" aria-hidden="true" />
+          <span className="ds-sr-only">{t("footer.coffee")}</span>.
         </div>
         <div>{t("contact.info.locationValue")}</div>
       </div>
