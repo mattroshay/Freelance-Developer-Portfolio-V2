@@ -1,52 +1,81 @@
 {
   "nav": {
-    "about": "Mon profil",
-    "skills": "Compétences",
-    "projects": "Projets",
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "work": "Réalisations",
     "contact": "Contact",
-    "letsTalk": "Discutons"
+    "bookCall": "Réserver un appel"
   },
   "hero": {
-    "availability": "Disponible pour du travail freelance, collaborations & consultations",
-    "greeting": "Hello, je suis",
+    "availability": "Disponible pour des missions freelance — applications, produits IA & automatisation",
+    "greeting": "Bonjour, je suis",
     "name": "Matt Roshay",
-    "tagline": "Créer. Innover. Coder.",
-    "description": "Spécialiste en AI Enablement et développeur qui conçoit",
-    "descriptionBold": "des workflows qui aboutissent.",
-    "exploreWork": "Mon travail",
-    "getInTouch": "Me contacter"
+    "tagline": "Construire. Automatiser. Livrer.",
+    "brandLine": "De la première idée au produit livré.",
+    "description": "Je construis des",
+    "descriptionBold": "applications et produits IA réellement livrés",
+    "descriptionEnd": "— et les automatisations qui les font tourner.",
+    "bookCall": "Réserver un appel découverte",
+    "seeWork": "Voir mes réalisations"
   },
-  "about": {
-    "title": "Qui suis-je ?",
-    "description": "Spécialiste AI Enablement et développeur full-stack. Après 15 ans en business development et gestion de la relation client dans des cabinets d'avocats internationaux (Herbert Smith Freehills, Freshfields & Covington), j'aide aujourd'hui des équipes à concevoir et déployer des workflows IA — en traduisant des demandes métier floues en automatisations, intégrations et produits concrets. Je construis avec APIs, n8n, Make, Dust, Claude et des frameworks web modernes, et j'apporte une expérience de pilotage de parties prenantes rare chez les freelances.",
-    "stats": {
-      "certification": "Développeur Web Certifié Le Wagon (RNCP 39261)",
-      "founder": "Fondateur de MatchMeal",
-      "location": "Basé près de Bordeaux, travaillant à distance",
-      "fuel": "Alimenté par la curiosité & le café"
+  "home": {
+    "whatIDo": {
+      "title": "Ce que je fais",
+      "subtext": "Quatre façons d'aider les équipes à passer de la curiosité IA à des résultats livrés.",
+      "link": "Découvrir les services"
     },
-    "whatIDo": "Ce que je fais",
-    "services": {
-      "aiWorkflow": {
-        "title": "Conception & mise en œuvre de workflows IA",
-        "description": "Des workflows IA qui raisonnent, du premier webhook à l'action finale. APIs, n8n, Make, Dust, Claude. Je construis des automatisations réellement utilisées, pas des tableaux de bord qui prennent la poussière."
-      },
-      "webDev": {
-        "title": "Développement Web & Apps Full-Stack",
-        "description": "Applications web modernes et outils internes — Ruby on Rails, React/TypeScript, PostgreSQL. Du MVP au produit prêt pour la production."
-      },
-      "aiConsulting": {
-        "title": "Intégration & Conseil IA",
-        "description": "Ajouter de l'IA à des produits existants — OpenAI, Claude APIs, RAG, prompt engineering. J'aide les équipes à passer de la curiosité IA aux fonctionnalités déployées."
-      },
-      "discovery": {
-        "title": "Discovery & Cadrage",
-        "description": "Déterminer quoi construire est souvent plus difficile que de le construire. J'aide les équipes à cartographier leurs workflows actuels, à identifier les vraies inefficacités et à cadrer des projets IA et d'automatisation réalistes — avec des critères de succès clairs — avant d'écrire la moindre ligne de code. 15+ années à traduire des demandes métier floues en livrables concrets dans des organisations complexes."
-      }
+    "work": {
+      "title": "Réalisations sélectionnées",
+      "subtext": "Quelques projets clients et produits récents. Des applications de triage IA aux sites bilingues pensés pour le SEO.",
+      "link": "Voir toutes les réalisations"
+    },
+    "about": {
+      "title": "À propos",
+      "link": "En savoir plus sur moi"
     },
     "cta": {
-      "title": "Prêt à construire quelque chose d'incroyable ?",
-      "description": "Collaborons pour donner vie à vos idées avec une technologie de pointe et un design correspondant à vos besoins."
+      "title": "Un produit à construire — ou un processus qui devrait tourner tout seul ?",
+      "description": "Dites-moi ce que vous voulez construire — ou ce qui est lent, manuel et tenu par des copier-coller. Je vous dirai ce qui vaut la peine d'être construit, et ce qui peut tourner tout seul. Le premier appel est gratuit.",
+      "button": "Réserver un appel découverte gratuit"
+    }
+  },
+  "about": {
+    "title": "À propos",
+    "paragraph1": "Spécialiste en AI Enablement et développeur full-stack, basé près de Bordeaux, je travaille avec des équipes en France et au-delà.",
+    "paragraph2": "Pendant 15 ans, j'ai piloté le développement commercial et la relation client dans des cabinets d'avocats internationaux — Herbert Smith Freehills, Freshfields, Covington — où mon rôle consistait à transformer ce dont les associés et les clients avaient réellement besoin en quelque chose qu'une équipe pouvait livrer. Puis j'ai appris à le construire moi-même.",
+    "paragraph3": "Aujourd'hui, je fais les deux. Je traduis des demandes métier floues en automatisations, intégrations et produits concrets — avec des APIs, n8n, Make, Dust, Claude et des frameworks web modernes. Ce que la plupart des développeurs freelance ne peuvent pas offrir, ce n'est pas le code ; c'est savoir quel problème mérite d'être résolu, et comment parler à ceux qui le portent.",
+    "stats": {
+      "experience": "15+ ans auprès de décideurs dans des cabinets internationaux",
+      "certification": "Développeur Web Certifié Le Wagon (RNCP 39261)",
+      "tooling": "Certifié : n8n L1 · Make L3 · Claude Code",
+      "location": "Près de Bordeaux — à distance, EN & FR"
+    }
+  },
+  "services": {
+    "title": "Comment je vous aide",
+    "subtext": "Du premier webhook au produit livré — dites-moi où vous en êtes, je m'adapte.",
+    "list": {
+      "aiWorkflow": {
+        "title": "Conception & mise en œuvre de workflows IA",
+        "hook": "Des automatisations utilisées, pas des tableaux de bord qui prennent la poussière.",
+        "body": "Je conçois et construis des workflows IA de bout en bout — du premier webhook à l'action finale. APIs, n8n, Make, Dust, Claude. Le type d'automatisation qui supprime discrètement des heures de travail manuel chaque semaine."
+      },
+      "aiIntegration": {
+        "title": "Intégration & conseil IA",
+        "hook": "De « on devrait utiliser l'IA » à des fonctionnalités livrées.",
+        "body": "Ajouter de l'IA à un produit existant — APIs OpenAI et Claude, RAG, prompt engineering, évaluation. J'aide les équipes à dépasser la démo pour mettre des fonctionnalités IA fiables entre les mains de vrais utilisateurs."
+      },
+      "webDev": {
+        "title": "Développement web & applications full-stack",
+        "hook": "Des MVP et outils internes, prêts pour la production.",
+        "body": "Applications web modernes, PWA et outils internes — Next.js, React/TypeScript, Ruby on Rails, PostgreSQL, Supabase. Bilingue et optimisé SEO quand c'est utile. De la première version à un produit que vous pouvez assumer."
+      },
+      "discovery": {
+        "title": "Cadrage & discovery",
+        "hook": "Savoir quoi construire, c'est le plus dur.",
+        "body": "Souvent plus difficile que la construction elle-même. Je cartographie vos workflows actuels, identifie les vraies inefficacités et cadre des projets IA et d'automatisation réalistes, avec des critères de succès clairs — avant la moindre ligne de code. Quinze ans à traduire des demandes floues en livrables concrets dans des organisations complexes."
+      }
     }
   },
   "skills": {
@@ -71,61 +100,113 @@
     }
   },
   "projects": {
-    "title": "Projets Phares",
-    "description": "Une collection de projets qui démontrent ma passion pour créer des expériences numériques exceptionnelles avec des technologies modernes.",
-    "featuredProject": "Projet Phare",
-    "viewLive": "Lien",
+    "title": "Réalisations sélectionnées",
+    "description": "Missions clients et produits — applications IA, automatisations et sites conçus pour être livrés et utilisés.",
+    "viewLive": "Voir le site",
     "code": "Code",
-    "liveDemo": "Lien",
+    "liveDemo": "Voir le site",
+    "noLink": "Projet client — détails sur demande",
     "viewAllGithub": "Voir tous les projets sur GitHub",
     "list": {
+      "petHealth": {
+        "title": "Application de triage santé animale par IA",
+        "label": "Projet client · 2026",
+        "description": "Une PWA mobile-first construite autour d'un assistant conversationnel IA (RAG), ancré dans des données métier pour des réponses fiables et contextualisées. Autour de l'assistant : un système de dossiers numériques structurés, une recherche géolocalisée et la génération de documents PDF en un clic. Conçue d'abord en français, avec une couche i18n complète permettant de lancer la version anglaise sans refonte. Pensée pour la confidentialité et la confiance dès le premier jour — Supabase Auth (email/mot de passe + magic link), Row-Level Security sur chaque table, hébergement en région UE pour le RGPD, secrets côté serveur uniquement et routes protégées. Chaque changement est validé en CI : lint, type-check et build. Design, architecture et développement full-stack en solo.",
+        "descriptionShort": "Une PWA mobile-first construite autour d'un assistant IA (RAG) ancré dans des données métier — dossiers numériques structurés, recherche géolocalisée et génération de PDF en un clic. Conception et développement full-stack en solo.",
+        "imageAlt": "Illustration pixel-art 8-bit d'un chien et d'un chat — assistant santé animale par IA, conçu comme une PWA mobile-first"
+      },
+      "sarahPsy": {
+        "title": "Sarah Cousin Roshay — Cabinet de thérapie bilingue",
+        "label": "Projet client · En ligne",
+        "description": "Un site bilingue (EN/FR) pour une thérapeute TCC accompagnant expatriés, professionnels et parents. Conçu pour les deux choses qui convertissent en ligne : être trouvée et inspirer confiance. SEO page par page, routage multilingue propre, témoignages et réservation d'appel découverte en un clic. Design, développement, SEO et rédaction.",
+        "imageAlt": "Page d'accueil de sarah-psy.com : site bilingue de cabinet de thérapie avec réservation d'appel découverte"
+      },
       "bitconsulting": {
         "title": "B-itconsulting",
-        "description": "Portfolio + CMS blog pour un consultant en infrastructure IT avec publication automatique LinkedIn, gestion de contenu et design responsive."
+        "label": "Projet client · En ligne",
+        "description": "Portfolio et CMS blog pour un consultant en infrastructure IT, avec publication automatique sur LinkedIn, gestion de contenu et design responsive. Le contenu publié une fois part directement sur LinkedIn — une petite automatisation qui économise une étape manuelle à chaque publication.",
+        "imageAlt": "Page d'accueil du portfolio et CMS blog B-itconsulting"
       },
       "matchmeal": {
         "title": "MatchMeal",
-        "description": "Application de recettes alimentée par l'IA qui identifie les ingrédients et suggère des repas personnalisés en utilisant l'API OpenAI. Fonctionnalités : téléchargement d'images, favoris et interface adaptative."
+        "label": "Fondateur · Produit",
+        "description": "Une application de recettes IA que j'ai fondée : photographiez vos ingrédients, elle les identifie et suggère des repas personnalisés via l'API OpenAI. Upload d'images, favoris et interface adaptative. Conçue et livrée de bout en bout.",
+        "imageAlt": "Application de recettes IA MatchMeal montrant la reconnaissance d'ingrédients et les suggestions de repas"
       },
       "flatrent": {
         "title": "FlatRent",
-        "description": "Plateforme de réservation full-stack inspirée d'Airbnb — mon projet de fin d'études Le Wagon, construit avec Ruby on Rails. Listings, authentification, filtres de recherche et gestion des réservations. Déployé sur Heroku."
+        "label": "Projet de fin d'études Le Wagon",
+        "description": "Une plateforme de réservation full-stack inspirée d'Airbnb — mon projet de fin d'études Le Wagon. Annonces, authentification, filtres de recherche, réservations, cartes et paiements. La preuve que je pouvais livrer un produit complet.",
+        "imageAlt": "Page des annonces de la plateforme de réservation FlatRent"
       }
     }
   },
   "contact": {
-    "title": "Construisons quelque chose d'incroyable",
-    "description": "Vous avez un projet en tête ? J'aimerais en entendre parler. Discutons de la façon dont nous pouvons donner vie à votre vision avec une technologie de pointe et un design correspondant à vos besoins.",
+    "title": "Parlons de votre projet",
+    "description": "Le meilleur premier pas, c'est un court appel. Dites-moi ce qui est lent, manuel ou sur votre feuille de route — je vous dirai honnêtement si je suis la bonne personne et ce que cela implique.",
+    "calendly": {
+      "title": "Réserver un appel découverte gratuit",
+      "subtitle": "30 minutes, sans engagement. On fait le tour de votre besoin et de ce qui vaut la peine d'être construit.",
+      "perk1": "Gratuit & sans pression",
+      "perk2": "EN ou FR, au choix",
+      "perk3": "Réponse claire sur l'adéquation & le budget",
+      "button": "Réserver un appel découverte gratuit",
+      "fallback": "Vous préférez écrire d'abord ? Utilisez le formulaire ci-dessous."
+    },
     "form": {
-      "title": "Envoyer un message",
+      "title": "Ou envoyez un message",
       "name": "Nom",
       "email": "Email",
       "subject": "Sujet",
       "message": "Message",
       "namePlaceholder": "Votre nom",
       "emailPlaceholder": "votre@email.com",
-      "subjectPlaceholder": "Demande de projet",
-      "messagePlaceholder": "Parlez-moi de votre projet, du calendrier et de vos besoins spécifiques...",
+      "subjectPlaceholder": "C'est à quel sujet ?",
+      "messagePlaceholder": "Parlez-moi de votre projet, du calendrier et de ce à quoi ressemble la réussite.",
       "send": "Envoyer le message"
     },
     "info": {
       "title": "Entrer en contact",
-      "description": "Que vous soyez une startup cherchant à créer votre premier produit ou une entreprise établie ayant besoin de moderniser votre présence web, je suis là pour vous aider.",
+      "description": "Que vous cadriez une première fonctionnalité IA ou modernisiez un produit existant, je vous aide volontiers à y voir clair.",
       "phone": "Téléphone",
       "phoneValue": "+33 6 74 94 12 49",
-      "phoneDescription": "Disponible Lun-Ven, 9h-18h CET",
+      "phoneDescription": "Lun–Ven, 9h–18h CET",
       "location": "Localisation",
-      "locationValue": "Saint Médard en Jalles, France / À distance",
-      "locationDescription": "Ouvert aux projets à distance dans le monde entier",
-      "quickResponse": "Réponse Rapide",
-      "quickResponseDescription": "Je réponds généralement dans les 24 heures. Pour les projets urgents, n'hésitez pas à appeler directement et nous pourrons organiser une discussion rapide."
+      "locationValue": "Près de Bordeaux, France · À distance dans le monde entier",
+      "quickResponse": "Réponse rapide",
+      "quickResponseDescription": "Je réponds généralement sous 24 heures. Pour tout ce qui est urgent, appelez directement."
     }
   },
   "footer": {
-    "description": "AI Enablement & Product Builder — des workflows IA, intégrations et applications web qui aboutissent.",
+    "description": "AI Enablement & Product Builder. Je construis des applications full-stack et des produits IA — et les workflows et intégrations qui tournent autour.",
     "navigation": "Navigation",
-    "copyright": "Matt Roshay. Fait avec",
+    "getInTouch": "Me contacter",
+    "copyright": "Matt Roshay. Conçu avec",
+    "love": "amour",
+    "coffee": "café",
     "and": "et beaucoup de",
     "backToTop": "Retour en haut"
+  },
+  "meta": {
+    "home": {
+      "title": "Matt Roshay — Développeur produits IA & automatisation",
+      "description": "Spécialiste AI enablement et développeur full-stack freelance près de Bordeaux. Je construis des applications et produits IA — et les automatisations autour. Appel gratuit."
+    },
+    "about": {
+      "title": "À propos — De la BD en cabinet d'avocats au développeur IA",
+      "description": "15 ans à piloter des décideurs dans des cabinets internationaux, aujourd'hui je construis des workflows IA et des produits full-stack. L'histoire du virage."
+    },
+    "services": {
+      "title": "Services — Workflows IA, intégration & développement web",
+      "description": "Conception de workflows IA (n8n, Make, Dust, Claude), intégration IA, développement web/app full-stack, cadrage & discovery. Du premier webhook au produit livré."
+    },
+    "work": {
+      "title": "Réalisations — Apps IA, automatisations & sites bilingues",
+      "description": "Projets freelance sélectionnés : app de triage santé animale par IA, site de thérapie bilingue optimisé SEO, plateformes de contenu automatisées et produits IA."
+    },
+    "contact": {
+      "title": "Contact — Réservez un appel découverte IA gratuit",
+      "description": "Dites-moi ce qui est lent, manuel ou sur votre feuille de route. Réservez un appel gratuit de 30 minutes (EN ou FR) pour une réponse claire."
+    }
   }
 }

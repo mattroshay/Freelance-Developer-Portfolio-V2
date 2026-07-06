@@ -1,191 +1,206 @@
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
-import { Mail, Phone, MapPin, Send, MessageCircle, Calendar } from "lucide-react";
-import { useState } from "react";
-import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
+import { CALENDLY_URL, CONTACT_PHONE } from "../config/site";
+import { useRevealGroup } from "../hooks/useReveal";
 
 export function Contact() {
   const { t } = useTranslation();
-  // Formspree handles submission, so no local state or handlers needed
+  const headRef = useRevealGroup<HTMLDivElement>();
+  const bodyRef = useRevealGroup<HTMLDivElement>();
 
-  const contactInfo = [
-    {
-      icon: <Phone className="w-5 h-5" />,
-      title: t('contact.info.phone'),
-      value: t('contact.info.phoneValue'),
-      description: t('contact.info.phoneDescription'),
-      link: "tel:+33674941249"
-    },
-    {
-      icon: <MapPin className="w-5 h-5" />,
-      title: t('contact.info.location'),
-      value: t('contact.info.locationValue'),
-      description: t('contact.info.locationDescription'),
-      link: null
-    }
+  const perks = [
+    t("contact.calendly.perk1"),
+    t("contact.calendly.perk2"),
+    t("contact.calendly.perk3"),
   ];
 
   return (
-    <section
-      id="contact"
-      className="py-32 relative overflow-hidden scroll-mt-24"
-    >
-      {/* Background decoration */}
-      <div className="absolute top-20 left-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-
-          {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mb-20"
-          >
-            <h2 className="text-4xl md:text-5xl mb-6">
-              {t('contact.title')}
-            </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              {t('contact.description')}
+    <section id="contact">
+      <div className="ds-container">
+        <div ref={headRef} className="ds-section-head" style={{ marginBottom: 48 }}>
+          <div className="ds-section-head__text">
+            <div data-reveal className="ds-eyebrow">
+              {t("nav.contact")}
+            </div>
+            <h1 data-reveal className="ds-h1">
+              {t("contact.title")}
+            </h1>
+            <p data-reveal className="ds-lede">
+              {t("contact.description")}
             </p>
-          </motion.div>
+          </div>
+        </div>
 
-          <div className="grid lg:grid-cols-5 gap-12">
-            {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="lg:col-span-3"
-            >
-              <div className="p-8 rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-300 bg-background/50 backdrop-blur-sm">
-                <div className="flex items-center mb-6">
-                  <MessageCircle className="w-6 h-6 text-primary mr-3" />
-                  <h3 className="text-2xl">{t('contact.form.title')}</h3>
-                </div>
+        <div ref={bodyRef}>
+          {/* Calendly booking — the hero of this page */}
+          <div
+            data-reveal
+            id="book"
+            className="ds-panel"
+            style={{ marginBottom: 24, borderColor: "rgba(247,148,30,0.35)" }}
+          >
+            <div style={{ maxWidth: 640, display: "flex", flexDirection: "column", gap: 18 }}>
+              <h2 className="ds-h2 ds-h2--strip">{t("contact.calendly.title")}</h2>
+              <p className="ds-body">{t("contact.calendly.subtitle")}</p>
 
-                  <form action="https://formspree.io/f/xvgwdlje" method="POST" className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm text-muted-foreground">{t('contact.form.name')} *</label>
-                      <Input
-                        id="name"
-                        name="name"
-                        type="text"
-                        required
-                        placeholder={t('contact.form.namePlaceholder')}
-                        className="border-border/50 focus:border-primary"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm text-muted-foreground">{t('contact.form.email')} *</label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        required
-                        placeholder={t('contact.form.emailPlaceholder')}
-                        className="border-border/50 focus:border-primary"
-                      />
-                    </div>
-                  </div>
+              <ul style={{ display: "flex", flexWrap: "wrap", gap: "10px 28px", margin: 0 }}>
+                {perks.map((perk, index) => (
+                  <li
+                    key={index}
+                    style={{ display: "flex", alignItems: "center", gap: 10 }}
+                    className="ds-dim"
+                  >
+                    <span
+                      aria-hidden="true"
+                      style={{
+                        width: 5,
+                        height: 5,
+                        borderRadius: "50%",
+                        background: "#f7941e",
+                        flexShrink: 0,
+                      }}
+                    />
+                    {perk}
+                  </li>
+                ))}
+              </ul>
 
-                  <div className="space-y-2">
-                    <label htmlFor="subject" className="text-sm text-muted-foreground">{t('contact.form.subject')} *</label>
-                    <Input
-                      id="subject"
-                      name="subject"
+              <div className="ds-btn-row" style={{ marginTop: 6 }}>
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ds-btn ds-btn--primary"
+                >
+                  {t("contact.calendly.button")}
+                </a>
+              </div>
+
+              <p className="ds-dim" style={{ fontSize: 13 }}>
+                {t("contact.calendly.fallback")}
+              </p>
+            </div>
+          </div>
+
+          <div className="ds-strip" style={{ alignItems: "start", gap: 24 }}>
+            {/* Contact form */}
+            <div data-reveal className="ds-panel">
+              <h2 className="ds-cell__title" style={{ display: "block", marginBottom: 24 }}>
+                {t("contact.form.title")}
+              </h2>
+
+              <form
+                action="https://formspree.io/f/xvgwdlje"
+                method="POST"
+                style={{ display: "flex", flexDirection: "column", gap: 20 }}
+              >
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+                    gap: 20,
+                  }}
+                >
+                  <div className="ds-field">
+                    <label htmlFor="name">{t("contact.form.name")} *</label>
+                    <input
+                      id="name"
+                      name="name"
                       type="text"
                       required
-                      placeholder={t('contact.form.subjectPlaceholder')}
-                      className="border-border/50 focus:border-primary"
+                      placeholder={t("contact.form.namePlaceholder")}
+                      className="ds-input"
                     />
                   </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm text-muted-foreground">{t('contact.form.message')} *</label>
-                    <Textarea
-                      id="message"
-                      name="message"
+                  <div className="ds-field">
+                    <label htmlFor="email">{t("contact.form.email")} *</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
                       required
-                      placeholder={t('contact.form.messagePlaceholder')}
-                      className="min-h-[150px] resize-none border-border/50 focus:border-primary"
+                      placeholder={t("contact.form.emailPlaceholder")}
+                      className="ds-input"
                     />
                   </div>
-
-                  <Button type="submit" className="w-full group">
-                    <Send className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                    {t('contact.form.send')}
-                  </Button>
-                </form>
-              </div>
-            </motion.div>
-
-            {/* Contact Information */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="lg:col-span-2 space-y-8"
-            >
-              <div>
-                <h3 className="text-2xl mb-6">{t('contact.info.title')}</h3>
-                <p className="text-muted-foreground leading-relaxed mb-8">
-                  {t('contact.info.description')}
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                {contactInfo.map((info, index) => (
-                  <motion.div
-                    key={index}
-                    className="group p-4 rounded-xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
-                    whileHover={{ y: -2 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
-                        {info.icon}
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="text-sm text-muted-foreground mb-1">{info.title}</h4>
-                        {info.link ? (
-                          <a
-                            href={info.link}
-                            className="block hover:text-primary transition-colors mb-1"
-                          >
-                            {info.value}
-                          </a>
-                        ) : (
-                          <div className="mb-1">{info.value}</div>
-                        )}
-                        <p className="text-xs text-muted-foreground">{info.description}</p>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              <motion.div
-                className="p-6 rounded-xl bg-gradient-to-r from-primary/5 to-primary/10 border border-primary/20"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
-              >
-                <div className="flex items-center mb-3">
-                  <Calendar className="w-5 h-5 text-primary mr-2" />
-                  <h4>{t('contact.info.quickResponse')}</h4>
                 </div>
-                <p className="text-muted-foreground text-sm">
-                  {t('contact.info.quickResponseDescription')}
+
+                <div className="ds-field">
+                  <label htmlFor="subject">{t("contact.form.subject")} *</label>
+                  <input
+                    id="subject"
+                    name="subject"
+                    type="text"
+                    required
+                    placeholder={t("contact.form.subjectPlaceholder")}
+                    className="ds-input"
+                  />
+                </div>
+
+                <div className="ds-field">
+                  <label htmlFor="message">{t("contact.form.message")} *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    placeholder={t("contact.form.messagePlaceholder")}
+                    className="ds-textarea"
+                  />
+                </div>
+
+                <div>
+                  <button type="submit" className="ds-btn ds-btn--primary">
+                    {t("contact.form.send")}
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            {/* Contact information */}
+            <div data-reveal style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                <h2 className="ds-cell__title" style={{ display: "block" }}>
+                  {t("contact.info.title")}
+                </h2>
+                <p className="ds-dim">{t("contact.info.description")}</p>
+              </div>
+
+              <div className="ds-facts">
+                <div className="ds-facts__row">
+                  <span className="ds-footer__heading" style={{ width: 88, flexShrink: 0 }}>
+                    {t("contact.info.phone")}
+                  </span>
+                  <span style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                    <a
+                      href={`tel:${CONTACT_PHONE}`}
+                      style={{ color: "inherit", textDecoration: "none" }}
+                    >
+                      {t("contact.info.phoneValue")}
+                    </a>
+                    <span className="ds-dim" style={{ fontSize: 13 }}>
+                      {t("contact.info.phoneDescription")}
+                    </span>
+                  </span>
+                </div>
+                <div className="ds-facts__row">
+                  <span className="ds-footer__heading" style={{ width: 88, flexShrink: 0 }}>
+                    {t("contact.info.location")}
+                  </span>
+                  <span>{t("contact.info.locationValue")}</span>
+                </div>
+              </div>
+
+              <div className="ds-panel" style={{ padding: 24 }}>
+                <div
+                  className="ds-cell__title"
+                  style={{ display: "block", fontSize: 17, marginBottom: 10 }}
+                >
+                  {t("contact.info.quickResponse")}
+                </div>
+                <p className="ds-dim" style={{ fontSize: 14 }}>
+                  {t("contact.info.quickResponseDescription")}
                 </p>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
