@@ -19,19 +19,19 @@ interface Project {
 const PROJECTS: Project[] = [
   {
     key: "petHealth",
-    mark: "AI",
+    image: "/images/projects/pet-health.jpg",
     technologies: ["Next.js", "React", "Tailwind", "Supabase", "OpenAI (text + vision)", "Google Places", "PWA", "Vercel"],
     featured: true,
   },
   {
     key: "sarahPsy",
-    mark: "SC",
+    image: "/images/projects/sarah-psy.jpg",
     technologies: ["Next.js", "App Router", "i18n (EN/FR)", "SEO", "Calendly", "Vercel"],
     liveUrl: "https://www.sarah-psy.com",
   },
   {
     key: "bitconsulting",
-    image: "/images/projects/b-itconsulting.png",
+    image: "/images/projects/b-itconsulting.jpg",
     technologies: ["Ruby on Rails", "JavaScript", "PostgreSQL", "SCSS", "Heroku", "Cloudinary"],
     liveUrl: "https://www.b-itconsulting.com",
   },

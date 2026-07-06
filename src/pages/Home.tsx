@@ -9,9 +9,9 @@ const SERVICE_KEYS = ["aiWorkflow", "aiIntegration", "webDev", "discovery"];
 
 // Home work teasers: featured + two cards (deck order).
 const WORK_TEASERS = [
-  { key: "petHealth", mark: "AI", featured: true, tags: ["Next.js", "React", "Supabase", "OpenAI"] },
-  { key: "sarahPsy", mark: "SC" },
-  { key: "bitconsulting", mark: "B-it" },
+  { key: "petHealth", image: "/images/projects/pet-health.jpg", featured: true, tags: ["Next.js", "React", "Supabase", "OpenAI"] },
+  { key: "sarahPsy", image: "/images/projects/sarah-psy.jpg" },
+  { key: "bitconsulting", image: "/images/projects/b-itconsulting.jpg" },
 ];
 
 const ABOUT_FACT_KEYS = ["experience", "certification", "tooling", "location"];
@@ -90,9 +90,12 @@ export function Home() {
             style={{ marginBottom: 24 }}
           >
             <div className="ds-card__media">
-              <span className="ds-watermark ds-watermark--lg" aria-hidden="true">
-                {featured.mark}
-              </span>
+              <img
+                src={featured.image}
+                alt={t(`projects.list.${featured.key}.imageAlt`)}
+                loading="lazy"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
             </div>
             <div className="ds-card__content">
               <span className="ds-card__label">{t(`projects.list.${featured.key}.label`)}</span>
@@ -112,9 +115,12 @@ export function Home() {
             {others.map((proj) => (
               <Link data-reveal key={proj.key} to="/work" className="ds-card">
                 <div className="ds-card__media">
-                  <span className="ds-watermark" aria-hidden="true">
-                    {proj.mark}
-                  </span>
+                  <img
+                    src={proj.image}
+                    alt={t(`projects.list.${proj.key}.imageAlt`)}
+                    loading="lazy"
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  />
                 </div>
                 <div className="ds-card__content">
                   <h3 className="ds-card__title">{t(`projects.list.${proj.key}.title`)}</h3>

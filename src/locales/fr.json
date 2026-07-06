@@ -111,12 +111,14 @@
       "petHealth": {
         "title": "Application de triage santé animale par IA",
         "label": "Projet client · 2026",
-        "description": "Une PWA mobile-first qui aide les propriétaires d'animaux à réagir vite en cas d'inquiétude. Ils décrivent les symptômes et obtiennent un triage non diagnostique par IA avec un niveau d'urgence clair, trouvent des vétérinaires à proximité, génèrent une affiche « animal perdu » et consultent les options d'assurance — avec des garde-fous médicaux qui ne remplacent jamais un vétérinaire. Développeur full-stack unique, de l'architecture au lancement."
+        "description": "Une PWA mobile-first qui aide les propriétaires d'animaux à réagir vite en cas d'inquiétude. Ils décrivent les symptômes et obtiennent un triage non diagnostique par IA avec un niveau d'urgence clair, trouvent des vétérinaires à proximité, génèrent une affiche « animal perdu » et consultent les options d'assurance — avec des garde-fous médicaux qui ne remplacent jamais un vétérinaire. Développeur full-stack unique, de l'architecture au lancement.",
+        "imageAlt": "Illustration de l'app de triage santé animale par IA : un téléphone affichant un résultat de triage avec niveau d'urgence et vétérinaires à proximité"
       },
       "sarahPsy": {
         "title": "Sarah Cousin Roshay — Cabinet de thérapie bilingue",
         "label": "Projet client · En ligne",
-        "description": "Un site bilingue (EN/FR) pour une thérapeute TCC accompagnant expatriés, professionnels et parents. Conçu pour les deux choses qui convertissent en ligne : être trouvée et inspirer confiance. SEO page par page, routage multilingue propre, témoignages et réservation d'appel découverte en un clic. Design, développement, SEO et rédaction."
+        "description": "Un site bilingue (EN/FR) pour une thérapeute TCC accompagnant expatriés, professionnels et parents. Conçu pour les deux choses qui convertissent en ligne : être trouvée et inspirer confiance. SEO page par page, routage multilingue propre, témoignages et réservation d'appel découverte en un clic. Design, développement, SEO et rédaction.",
+        "imageAlt": "Page d'accueil de sarah-psy.com : site bilingue de cabinet de thérapie avec réservation d'appel découverte"
       },
       "bitconsulting": {
         "title": "B-itconsulting",

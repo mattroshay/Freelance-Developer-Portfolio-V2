@@ -111,12 +111,14 @@
       "petHealth": {
         "title": "AI Pet-Health Triage App",
         "label": "Client project · 2026",
-        "description": "A mobile-first PWA that helps pet owners act fast in a health scare. Owners describe symptoms and get AI-powered, non-diagnostic triage with a clear urgency level, find nearby vets, generate a lost-pet poster, and check insurance options — all with medical guardrails that never replace a real vet. Sole full-stack developer, from architecture to launch."
+        "description": "A mobile-first PWA that helps pet owners act fast in a health scare. Owners describe symptoms and get AI-powered, non-diagnostic triage with a clear urgency level, find nearby vets, generate a lost-pet poster, and check insurance options — all with medical guardrails that never replace a real vet. Sole full-stack developer, from architecture to launch.",
+        "imageAlt": "Illustration of the AI pet-health triage app: a phone showing a triage result with urgency level and nearby vets"
       },
       "sarahPsy": {
         "title": "Sarah Cousin Roshay — Bilingual Therapy Practice",
         "label": "Client project · Live",
-        "description": "A bilingual (EN/FR) website for a CBT therapist serving expats, professionals, and parents. Built for the two things that win clients online: being found and being trusted. Per-page SEO, clean multilingual routing, testimonials, and one-tap discovery-call booking. Design, build, SEO, and copy."
+        "description": "A bilingual (EN/FR) website for a CBT therapist serving expats, professionals, and parents. Built for the two things that win clients online: being found and being trusted. Per-page SEO, clean multilingual routing, testimonials, and one-tap discovery-call booking. Design, build, SEO, and copy.",
+        "imageAlt": "sarah-psy.com homepage: bilingual therapy practice website with discovery-call booking"
       },
       "bitconsulting": {
         "title": "B-itconsulting",
