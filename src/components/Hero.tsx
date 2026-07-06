@@ -1,11 +1,14 @@
 import { Button } from "./ui/button";
-import { ArrowDown, Github, Linkedin, Mail, ArrowRight } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Calendar, ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { scrollToSection } from "../utils/scrollToSection";
+import { GITHUB_URL, LINKEDIN_URL } from "../config/site";
 
 export function Hero() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative">
@@ -124,7 +127,8 @@ export function Hero() {
                 <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
                   <span className="text-orange-600">{t('hero.tagline')}</span><br />
                   {t('hero.description')}
-                  <span className="text-foreground"> {t('hero.descriptionBold')}</span>
+                  <span className="text-foreground"> {t('hero.descriptionBold')} </span>
+                  {t('hero.descriptionEnd')}
                 </p>
               </motion.div>
 
@@ -136,11 +140,11 @@ export function Hero() {
               >
                 <Button
                   size="lg"
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => navigate('/contact')}
                   className="group relative overflow-hidden"
                 >
-                  <Mail className="w-4 h-4 mr-2 relative z-10" />
-                  <span className="relative z-10">{t('hero.getInTouch')}</span>
+                  <Calendar className="w-4 h-4 mr-2 relative z-10" />
+                  <span className="relative z-10">{t('hero.bookCall')}</span>
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80"
                     whileHover={{ scale: 1.05 }}
@@ -151,10 +155,10 @@ export function Hero() {
                 <Button
                   variant="outline"
                   size="lg"
-                  onClick={() => scrollToSection('projects')}
+                  onClick={() => navigate('/work')}
                   className="group border-muted-foreground/20 hover:border-primary"
                 >
-                  {t('hero.exploreWork')}
+                  {t('hero.seeWork')}
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </motion.div>
@@ -166,7 +170,7 @@ export function Hero() {
                 className="flex space-x-6 mb-20 lg:mb-0"
               >
                 <motion.a
-                  href="https://github.com/mattroshay/"
+                  href={GITHUB_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-muted/50 hover:bg-accent transition-colors group"
@@ -176,7 +180,7 @@ export function Hero() {
                   <Github className="w-5 h-5 group-hover:text-primary transition-colors" />
                 </motion.a>
                 <motion.a
-                  href="https://linkedin.com/in/mattroshay/"
+                  href={LINKEDIN_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-muted/50 hover:bg-accent transition-colors group"
@@ -185,16 +189,6 @@ export function Hero() {
                 >
                   <Linkedin className="w-5 h-5 group-hover:text-primary transition-colors" />
                 </motion.a>
-                {/* <motion.a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 rounded-lg bg-muted/50 hover:bg-accent transition-colors group"
-                  whileHover={{ y: -2 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Twitter className="w-5 h-5 group-hover:text-primary transition-colors" />
-                </motion.a> */}
               </motion.div>
             </div>
 
@@ -218,7 +212,7 @@ export function Hero() {
                   transition={{ duration: 0.3 }}
                 >
                   <img
-                    src={"images/projects/Untitled design-4.svg"}
+                    src={"/images/projects/Untitled design-4.svg"}
                     alt="Matt Roshay"
                     className="w-full h-full object-cover opacity-90"
                   />
@@ -230,12 +224,13 @@ export function Hero() {
           </div>
 
           <motion.button
-            onClick={() => scrollToSection('about')}
+            onClick={() => scrollToSection('what-i-do')}
             className="mx-auto block text-muted-foreground hover:text-foreground transition-colors mt-20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             whileHover={{ y: 5 }}
+            aria-label="Scroll to next section"
           >
             <motion.div
               animate={{ y: [0, 10, 0] }}

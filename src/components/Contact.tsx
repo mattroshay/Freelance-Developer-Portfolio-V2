@@ -1,10 +1,10 @@
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Mail, Phone, MapPin, Send, MessageCircle, Calendar } from "lucide-react";
-import { useState } from "react";
+import { Phone, MapPin, Send, MessageCircle, Calendar, Check, ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
+import { CALENDLY_URL, CONTACT_PHONE } from "../config/site";
 
 export function Contact() {
   const { t } = useTranslation();
@@ -16,15 +16,21 @@ export function Contact() {
       title: t('contact.info.phone'),
       value: t('contact.info.phoneValue'),
       description: t('contact.info.phoneDescription'),
-      link: "tel:+33674941249"
+      link: `tel:${CONTACT_PHONE}`
     },
     {
       icon: <MapPin className="w-5 h-5" />,
       title: t('contact.info.location'),
       value: t('contact.info.locationValue'),
-      description: t('contact.info.locationDescription'),
+      description: null,
       link: null
     }
+  ];
+
+  const perks = [
+    t('contact.calendly.perk1'),
+    t('contact.calendly.perk2'),
+    t('contact.calendly.perk3')
   ];
 
   return (
@@ -44,14 +50,57 @@ export function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="max-w-3xl mb-20"
+            className="max-w-3xl mb-16"
           >
-            <h2 className="text-4xl md:text-5xl mb-6">
+            <h1 className="text-4xl md:text-5xl mb-6">
               {t('contact.title')}
-            </h2>
+            </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               {t('contact.description')}
             </p>
+          </motion.div>
+
+          {/* Calendly booking section — the hero of this page */}
+          <motion.div
+            id="book"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="mb-20 p-8 md:p-12 rounded-2xl bg-gradient-to-r from-orange-500/5 to-orange-600/10 border border-orange-500/20 scroll-mt-24"
+          >
+            <div className="max-w-3xl">
+              <div className="flex items-center mb-4">
+                <Calendar className="w-6 h-6 text-primary mr-3" />
+                <h2 className="text-2xl md:text-3xl">{t('contact.calendly.title')}</h2>
+              </div>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                {t('contact.calendly.subtitle')}
+              </p>
+
+              <ul className="flex flex-col sm:flex-row gap-3 sm:gap-8 mb-8">
+                {perks.map((perk, index) => (
+                  <li key={index} className="flex items-center text-sm text-muted-foreground">
+                    <Check className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0" />
+                    {perk}
+                  </li>
+                ))}
+              </ul>
+
+              <Button
+                size="lg"
+                className="group"
+                onClick={() => window.open(CALENDLY_URL, "_blank")}
+              >
+                <Calendar className="w-4 h-4 mr-2" />
+                {t('contact.calendly.button')}
+                <ArrowUpRight className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              </Button>
+
+              <p className="text-sm text-muted-foreground mt-6">
+                {t('contact.calendly.fallback')}
+              </p>
+            </div>
           </motion.div>
 
           <div className="grid lg:grid-cols-5 gap-12">
@@ -66,7 +115,7 @@ export function Contact() {
               <div className="p-8 rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-300 bg-background/50 backdrop-blur-sm">
                 <div className="flex items-center mb-6">
                   <MessageCircle className="w-6 h-6 text-primary mr-3" />
-                  <h3 className="text-2xl">{t('contact.form.title')}</h3>
+                  <h2 className="text-2xl">{t('contact.form.title')}</h2>
                 </div>
 
                   <form action="https://formspree.io/f/xvgwdlje" method="POST" className="space-y-6">
@@ -135,7 +184,7 @@ export function Contact() {
               className="lg:col-span-2 space-y-8"
             >
               <div>
-                <h3 className="text-2xl mb-6">{t('contact.info.title')}</h3>
+                <h2 className="text-2xl mb-6">{t('contact.info.title')}</h2>
                 <p className="text-muted-foreground leading-relaxed mb-8">
                   {t('contact.info.description')}
                 </p>
@@ -154,7 +203,7 @@ export function Contact() {
                         {info.icon}
                       </div>
                       <div className="flex-1">
-                        <h4 className="text-sm text-muted-foreground mb-1">{info.title}</h4>
+                        <h3 className="text-sm text-muted-foreground mb-1">{info.title}</h3>
                         {info.link ? (
                           <a
                             href={info.link}
@@ -165,7 +214,9 @@ export function Contact() {
                         ) : (
                           <div className="mb-1">{info.value}</div>
                         )}
-                        <p className="text-xs text-muted-foreground">{info.description}</p>
+                        {info.description && (
+                          <p className="text-xs text-muted-foreground">{info.description}</p>
+                        )}
                       </div>
                     </div>
                   </motion.div>
@@ -179,7 +230,7 @@ export function Contact() {
               >
                 <div className="flex items-center mb-3">
                   <Calendar className="w-5 h-5 text-primary mr-2" />
-                  <h4>{t('contact.info.quickResponse')}</h4>
+                  <h3>{t('contact.info.quickResponse')}</h3>
                 </div>
                 <p className="text-muted-foreground text-sm">
                   {t('contact.info.quickResponseDescription')}

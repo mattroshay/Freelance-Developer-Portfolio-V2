@@ -1,15 +1,23 @@
-import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
 import logo from "figma:asset/34a5fadfce0c33b5681d5bdf10379722f562ddef.png";
-import { scrollToSection as scrollToSectionUtil } from "../utils/scrollToSection";
+
+const NAV_ITEMS = [
+  { key: 'home', path: '/' },
+  { key: 'about', path: '/about' },
+  { key: 'services', path: '/services' },
+  { key: 'work', path: '/work' },
+  { key: 'contact', path: '/contact' }
+];
 
 export function Header() {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,10 +27,13 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    scrollToSectionUtil(sectionId);
+  // Close the mobile menu whenever the route changes
+  useEffect(() => {
     setIsMenuOpen(false);
-  };
+  }, [location.pathname]);
+
+  const isActive = (path: string) =>
+    path === '/' ? location.pathname === '/' : location.pathname.startsWith(path);
 
   return (
     <motion.header
@@ -38,10 +49,7 @@ export function Header() {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <button
-              onClick={() => scrollToSection('hero')}
-              className="flex items-center space-x-3 group"
-            >
+            <Link to="/" className="flex items-center space-x-3 group">
               {/* Logo */}
               <div className="relative w-10 h-10 group-hover:scale-110 transition-transform duration-300">
                 <img
@@ -53,31 +61,35 @@ export function Header() {
               <span className="text-lg bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent hidden sm:block">
                 Matt Roshay
               </span>
-            </button>
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
-            {[
-              { key: 'about', label: t('nav.about') },
-              { key: 'skills', label: t('nav.skills') },
-              { key: 'projects', label: t('nav.projects') },
-              { key: 'contact', label: t('nav.contact') }
-            ].map((item, index) => (
-              <motion.button
+            {NAV_ITEMS.map((item, index) => (
+              <motion.div
                 key={item.key}
-                onClick={() => scrollToSection(item.key)}
-                className="px-4 py-2 text-muted-foreground hover:text-foreground transition-colors relative group"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -2 }}
               >
-                {item.label}
-                <motion.div
-                  className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
-                />
-              </motion.button>
+                <Link
+                  to={item.path}
+                  className={`px-4 py-2 transition-colors relative group block ${
+                    isActive(item.path)
+                      ? 'text-foreground'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  {t(`nav.${item.key}`)}
+                  <span
+                    className={`absolute bottom-0 left-4 right-4 h-0.5 bg-primary origin-left transition-transform duration-300 ${
+                      isActive(item.path) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                    }`}
+                  />
+                </Link>
+              </motion.div>
             ))}
           </nav>
 
@@ -114,23 +126,23 @@ export function Header() {
               </button>
             </motion.div>
 
+            {/* Persistent booking CTA */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Button
-                onClick={() => scrollToSection('contact')}
-                className="group relative overflow-hidden"
-                size="sm"
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all shrink-0 outline-none bg-primary text-primary-foreground hover:bg-primary/90 h-8 px-3 relative overflow-hidden group"
               >
-                <span className="relative z-10">{t('nav.letsTalk')}</span>
+                <span className="relative z-10">{t('nav.bookCall')}</span>
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.2 }}
                 />
-              </Button>
+              </Link>
             </motion.div>
           </div>
 
@@ -173,6 +185,7 @@ export function Header() {
               className="p-2 rounded-lg hover:bg-accent transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               whileTap={{ scale: 0.95 }}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
               <motion.div
                 initial={false}
@@ -196,27 +209,26 @@ export function Header() {
               transition={{ duration: 0.3 }}
             >
               <nav className="py-4 space-y-2 border-t border-border/50 mt-4 relative z-20">
-                {[
-                  { key: 'about', label: t('nav.about') },
-                  { key: 'skills', label: t('nav.skills') },
-                  { key: 'projects', label: t('nav.projects') },
-                  { key: 'contact', label: t('nav.contact') }
-                ].map((item, index) => (
-                  <motion.a
+                {NAV_ITEMS.map((item, index) => (
+                  <motion.div
                     key={item.key}
-                    href={`#${item.key}`}
-                    onClick={(e) => {
-                      // e.preventDefault();
-                      scrollToSection(item.key);
-                    }}
-                    className="block w-full text-left px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                   >
-                    {item.label}
-                  </motion.a>
+                    <Link
+                      to={item.path}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`block w-full text-left px-4 py-3 hover:bg-accent/50 rounded-lg transition-colors ${
+                        isActive(item.path)
+                          ? 'text-foreground'
+                          : 'text-muted-foreground hover:text-foreground'
+                      }`}
+                    >
+                      {t(`nav.${item.key}`)}
+                    </Link>
+                  </motion.div>
                 ))}
 
                 <motion.div
@@ -226,18 +238,18 @@ export function Header() {
                   transition={{ duration: 0.3, delay: 0.5 }}
                   className="pt-4"
                 >
-                  <a
-                    href="#contact"
-                    onClick={() => scrollToSection('contact')}
-                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 shrink-0 outline-none bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-4 py-2 w-full relative overflow-hidden"
+                  <Link
+                    to="/contact"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all shrink-0 outline-none bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-4 py-2 w-full relative overflow-hidden"
                   >
-                    <span className="relative z-10">{t('nav.letsTalk')}</span>
+                    <span className="relative z-10">{t('nav.bookCall')}</span>
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80"
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.2 }}
                     />
-                  </a>
+                  </Link>
                 </motion.div>
               </nav>
             </motion.div>

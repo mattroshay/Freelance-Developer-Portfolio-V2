@@ -1,42 +1,77 @@
+import type { ReactNode } from "react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
+import { ExternalLink, Github, ArrowUpRight, HeartPulse, Globe, Lock } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
+import { GITHUB_URL } from "../config/site";
+
+interface Project {
+  key: string;
+  image?: string;
+  placeholderIcon?: ReactNode;
+  technologies: string[];
+  liveUrl?: string;
+  githubUrl?: string;
+  featured?: boolean;
+}
 
 export function Projects() {
   const { t } = useTranslation();
 
-  const projects = [
+  // Order per copy deck: strongest-first, bootcamp capstone last.
+  const projects: Project[] = [
     {
-      title: t('projects.list.bitconsulting.title'),
-      description: t('projects.list.bitconsulting.description'),
-      image: "/images/projects/b-itconsulting.png",
-      technologies: ["Ruby on rails", "SCSS", "Javascript", "PostgreSQL", "Heroku", "Cloudinary"],
-      liveUrl: "https://www.b-itconsulting.com",
-      // githubUrl: "https://github.com",
+      key: "petHealth",
+      placeholderIcon: <HeartPulse className="w-16 h-16" />,
+      technologies: ["Next.js", "React", "Tailwind", "Supabase", "OpenAI (text + vision)", "Google Places", "PWA", "Vercel"],
       featured: true
     },
     {
-      title: t('projects.list.matchmeal.title'),
-      description: t('projects.list.matchmeal.description'),
-      image: "/images/projects/matchmeal-screen.png",
-      technologies: ["Ruby on rails", "SCSS", "Javascript", "PostgreSQL", "Heroku", "Cloudinary", "Postman", "OpenAI API", "Spoonacular API"],
-      liveUrl: "https://www.matchmeal.eu",
-      githubUrl: "https://github.com/mattroshay/MatchMeal",
-      featured: false
+      key: "sarahPsy",
+      placeholderIcon: <Globe className="w-12 h-12" />,
+      technologies: ["Next.js", "App Router", "i18n (EN/FR)", "SEO", "Calendly", "Vercel"],
+      liveUrl: "https://www.sarah-psy.com"
     },
     {
-      title: t('projects.list.flatrent.title'),
-      description: t('projects.list.flatrent.description'),
+      key: "bitconsulting",
+      image: "/images/projects/b-itconsulting.png",
+      technologies: ["Ruby on Rails", "JavaScript", "PostgreSQL", "SCSS", "Heroku", "Cloudinary"],
+      liveUrl: "https://www.b-itconsulting.com"
+    },
+    {
+      key: "matchmeal",
+      image: "/images/projects/matchmeal-screen.png",
+      technologies: ["Ruby on Rails", "OpenAI API", "Spoonacular API", "PostgreSQL", "JavaScript", "Heroku"],
+      liveUrl: "https://www.matchmeal.eu",
+      githubUrl: "https://github.com/mattroshay/MatchMeal"
+    },
+    {
+      key: "flatrent",
       image: "/images/projects/flatrent.png",
-      technologies: ["Ruby on Rails", "PostgreSQL", "SCSS", "JavaScript", "Heroku", "Cloudinary", "Mapbox API", "Stripe API"],
+      technologies: ["Ruby on Rails", "PostgreSQL", "Mapbox API", "Stripe API", "Heroku"],
       liveUrl: "https://airbnb-roshaym-5f0f5ed33d88.herokuapp.com",
-      githubUrl: "https://github.com/mattroshay/CEMY-AirBNB",
-      featured: false
+      githubUrl: "https://github.com/mattroshay/CEMY-AirBNB"
     }
   ];
+
+  const renderVisual = (project: Project, className: string) =>
+    project.image ? (
+      <ImageWithFallback
+        src={project.image}
+        alt={t(`projects.list.${project.key}.imageAlt`)}
+        className={className}
+      />
+    ) : (
+      <div
+        className={`${className} flex items-center justify-center bg-gradient-to-br from-orange-500/20 via-orange-600/10 to-background text-orange-500`}
+        role="img"
+        aria-label={t(`projects.list.${project.key}.title`)}
+      >
+        {project.placeholderIcon}
+      </div>
+    );
 
   return (
     <section
@@ -58,9 +93,9 @@ export function Projects() {
             viewport={{ once: true }}
             className="max-w-3xl mb-20"
           >
-            <h2 className="text-4xl md:text-5xl mb-6">
+            <h1 className="text-4xl md:text-5xl mb-6">
               {t('projects.title')}
-            </h2>
+            </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               {t('projects.description')}
             </p>
@@ -74,28 +109,24 @@ export function Projects() {
             viewport={{ once: true }}
             className="mb-20"
           >
-            {projects.filter(p => p.featured).map((project, index) => (
-              <div key={index} className="group relative overflow-hidden rounded-2xl border border-border/50 hover:border-orange-500/30 transition-all duration-500">
+            {projects.filter(p => p.featured).map((project) => (
+              <div key={project.key} className="group relative overflow-hidden rounded-2xl border border-border/50 hover:border-orange-500/30 transition-all duration-500">
                 <div className="grid lg:grid-cols-2 gap-0">
                   <div className="relative overflow-hidden">
-                    <ImageWithFallback
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-64 lg:h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
+                    {renderVisual(project, "w-full h-64 lg:h-full object-cover group-hover:scale-105 transition-transform duration-700")}
                     <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
 
                   <div className="p-8 lg:p-12 flex flex-col justify-center">
                     <div className="mb-4">
                       <Badge variant="outline" className="mb-4 border-orange-500/30 text-orange-500">
-                        {t('projects.featuredProject')}
+                        {t(`projects.list.${project.key}.label`)}
                       </Badge>
-                      <h3 className="text-2xl lg:text-3xl mb-4 group-hover:text-primary transition-colors">
-                        {project.title}
-                      </h3>
+                      <h2 className="text-2xl lg:text-3xl mb-4 group-hover:text-primary transition-colors">
+                        {t(`projects.list.${project.key}.title`)}
+                      </h2>
                       <p className="text-muted-foreground leading-relaxed mb-6">
-                        {project.description}
+                        {t(`projects.list.${project.key}.description`)}
                       </p>
                     </div>
 
@@ -107,14 +138,21 @@ export function Projects() {
                       ))}
                     </div>
 
-                    <div className="flex space-x-4">
-                      <Button className="group/btn" onClick={() => window.open(project.liveUrl, "_blank") }>
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        {t('projects.viewLive')}
-                        <ArrowUpRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
-                      </Button>
+                    <div className="flex flex-wrap gap-4 items-center">
+                      {project.liveUrl ? (
+                        <Button className="group/btn" onClick={() => window.open(project.liveUrl, "_blank")}>
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          {t('projects.viewLive')}
+                          <ArrowUpRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+                        </Button>
+                      ) : (
+                        <span className="inline-flex items-center text-sm text-muted-foreground">
+                          <Lock className="w-4 h-4 mr-2 text-orange-500" />
+                          {t('projects.noLink')}
+                        </span>
+                      )}
                       {project.githubUrl && (
-                        <Button variant="outline" onClick={() => window.open(project.githubUrl, "_blank") }>
+                        <Button variant="outline" onClick={() => window.open(project.githubUrl, "_blank")}>
                           <Github className="w-4 h-4 mr-2" />
                           {t('projects.code')}
                         </Button>
@@ -130,7 +168,7 @@ export function Projects() {
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {projects.filter(p => !p.featured).map((project, index) => (
               <motion.div
-                key={index}
+                key={project.key}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -139,20 +177,19 @@ export function Projects() {
                 whileHover={{ y: -5 }}
               >
                 <div className="relative overflow-hidden">
-                  <ImageWithFallback
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                  {renderVisual(project, "w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500")}
                   <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl mb-3 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
+                  <Badge variant="outline" className="mb-3 border-orange-500/30 text-orange-500 text-xs">
+                    {t(`projects.list.${project.key}.label`)}
+                  </Badge>
+                  <h2 className="text-xl mb-3 group-hover:text-primary transition-colors">
+                    {t(`projects.list.${project.key}.title`)}
+                  </h2>
                   <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                    {project.description}
+                    {t(`projects.list.${project.key}.description`)}
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -164,12 +201,14 @@ export function Projects() {
                   </div>
 
                   <div className="flex space-x-3">
-                    <Button size="sm" className="flex-1 group/btn" onClick={() => window.open(project.liveUrl, "_blank") }>
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      {t('projects.liveDemo')}
-                    </Button>
+                    {project.liveUrl && (
+                      <Button size="sm" className="flex-1 group/btn" onClick={() => window.open(project.liveUrl, "_blank")}>
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        {t('projects.liveDemo')}
+                      </Button>
+                    )}
                     {project.githubUrl && (
-                      <Button size="sm" variant="outline" className="aspect-square p-0" onClick={() => window.open(project.githubUrl, "_blank") }>
+                      <Button size="sm" variant="outline" className="aspect-square p-0" onClick={() => window.open(project.githubUrl, "_blank")}>
                         <Github className="w-4 h-4" />
                       </Button>
                     )}
@@ -187,7 +226,7 @@ export function Projects() {
             viewport={{ once: true }}
             className="text-center relative z-10"
           >
-            <Button variant="outline" size="lg" className="group" onClick={() => window.open("https://github.com/mattroshay", "_blank") }>
+            <Button variant="outline" size="lg" className="group" onClick={() => window.open(GITHUB_URL, "_blank")}>
               <Github className="w-4 h-4 mr-2" />
               {t('projects.viewAllGithub')}
               <ArrowUpRight className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

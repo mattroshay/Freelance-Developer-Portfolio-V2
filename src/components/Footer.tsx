@@ -1,6 +1,16 @@
-import { Github, Linkedin, Twitter, Heart, ArrowUp, Coffee } from "lucide-react";
+import { Github, Linkedin, Heart, ArrowUp, Coffee, Mail, Phone } from "lucide-react";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { GITHUB_URL, LINKEDIN_URL, CONTACT_EMAIL, CONTACT_PHONE } from "../config/site";
+
+const NAV_ITEMS = [
+  { key: 'home', path: '/' },
+  { key: 'about', path: '/about' },
+  { key: 'services', path: '/services' },
+  { key: 'work', path: '/work' },
+  { key: 'contact', path: '/contact' }
+];
 
 export function Footer() {
   const { t } = useTranslation();
@@ -32,9 +42,8 @@ export function Footer() {
                 </p>
                 <div className="flex space-x-4">
                   {[
-                    { icon: Github, href: "https://github.com/mattroshay", label: "GitHub" },
-                    { icon: Linkedin, href: "https://linkedin.com/in/mattroshay", label: "LinkedIn" },
-                    // { icon: Twitter, href: "https://twitter.com", label: "Twitter" }
+                    { icon: Github, href: GITHUB_URL, label: "GitHub" },
+                    { icon: Linkedin, href: LINKEDIN_URL, label: "LinkedIn" }
                   ].map((social, index) => (
                     <motion.a
                       key={index}
@@ -52,7 +61,6 @@ export function Footer() {
                 </div>
               </motion.div>
             </div>
-            <div></div>
             <div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -62,22 +70,47 @@ export function Footer() {
               >
                 <h4 className="mb-6">{t('footer.navigation')}</h4>
                 <ul className="space-y-3">
-                  {[
-                    { key: 'about', label: t('nav.about') },
-                    { key: 'skills', label: t('nav.skills') },
-                    { key: 'projects', label: t('nav.projects') },
-                    { key: 'contact', label: t('nav.contact') }
-                  ].map((item, index) => (
-                    <li key={index}>
-                      <a
-                        href={`#${item.key}`}
+                  {NAV_ITEMS.map((item) => (
+                    <li key={item.key}>
+                      <Link
+                        to={item.path}
                         className="text-muted-foreground hover:text-foreground transition-colors inline-flex items-center group"
                       >
                         <span className="w-0 group-hover:w-2 h-px bg-primary transition-all duration-300 mr-0 group-hover:mr-2"></span>
-                        {item.label}
-                      </a>
+                        {t(`nav.${item.key}`)}
+                      </Link>
                     </li>
                   ))}
+                </ul>
+              </motion.div>
+            </div>
+            <div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <h4 className="mb-6">{t('footer.getInTouch')}</h4>
+                <ul className="space-y-3">
+                  <li>
+                    <a
+                      href={`mailto:${CONTACT_EMAIL}`}
+                      className="text-muted-foreground hover:text-foreground transition-colors inline-flex items-center"
+                    >
+                      <Mail className="w-4 h-4 mr-2" />
+                      {CONTACT_EMAIL}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href={`tel:${CONTACT_PHONE}`}
+                      className="text-muted-foreground hover:text-foreground transition-colors inline-flex items-center"
+                    >
+                      <Phone className="w-4 h-4 mr-2" />
+                      {t('contact.info.phoneValue')}
+                    </a>
+                  </li>
                 </ul>
               </motion.div>
             </div>

@@ -1,39 +1,15 @@
 import { motion } from "motion/react";
-import { Zap, Coffee, Rocket, ShieldCheck, MapPin, BrainCircuit, Terminal, Workflow, Target } from "lucide-react";
+import { Briefcase, ShieldCheck, MapPin, Workflow } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { scrollToSection } from "../utils/scrollToSection";
 
 export function About() {
   const { t } = useTranslation();
 
   const stats = [
+    { icon: <Briefcase className="w-6 h-6" />, text: t('about.stats.experience') },
     { icon: <ShieldCheck className="w-6 h-6" />, text: t('about.stats.certification') },
-    { icon: <Zap className="w-6 h-6" />, text: t('about.stats.founder') },
+    { icon: <Workflow className="w-6 h-6" />, text: t('about.stats.tooling') },
     { icon: <MapPin className="w-6 h-6" />, text: t('about.stats.location') },
-    { icon: <Coffee className="w-6 h-6" />, text: t('about.stats.fuel') },
-  ];
-
-  const services = [
-    {
-      icon: <Workflow className="w-6 h-6" />,
-      title: t('about.services.aiWorkflow.title'),
-      description: t('about.services.aiWorkflow.description')
-    },
-    {
-      icon: <Terminal className="w-6 h-6" />,
-      title: t('about.services.webDev.title'),
-      description: t('about.services.webDev.description')
-    },
-    {
-      icon: <BrainCircuit className="w-6 h-6" />,
-      title: t('about.services.aiConsulting.title'),
-      description: t('about.services.aiConsulting.description')
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: t('about.services.discovery.title'),
-      description: t('about.services.discovery.description')
-    }
   ];
 
   return (
@@ -48,7 +24,7 @@ export function About() {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
 
-          {/* Section Header */}
+          {/* Section Header + Narrative */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -56,12 +32,14 @@ export function About() {
             viewport={{ once: true }}
             className="max-w-3xl mb-20"
           >
-            <h2 className="text-4xl md:text-5xl mb-6">
+            <h1 className="text-4xl md:text-5xl mb-6">
               {t('about.title')}
-            </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              {t('about.description')}
-            </p>
+            </h1>
+            <div className="space-y-6 text-xl text-muted-foreground leading-relaxed">
+              <p>{t('about.paragraph1')}</p>
+              <p>{t('about.paragraph2')}</p>
+              <p>{t('about.paragraph3')}</p>
+            </div>
           </motion.div>
 
           {/* Stats Grid */}
@@ -70,7 +48,7 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -85,52 +63,6 @@ export function About() {
                 <div className="text-muted-foreground text-sm">{stat.text}</div>
               </motion.div>
             ))}
-          </motion.div>
-
-          {/* Main Content Grid */}
-          <h3 className="text-2xl mb-8">{t('about.whatIDo')}</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                className="group p-6 rounded-xl border border-border/50 hover:border-orange-500/20 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/5"
-                whileHover={{ y: -2 }}
-                transition={{ duration: 0.2 }}
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 p-3 rounded-lg bg-orange-500/10 text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
-                    {service.icon}
-                  </div>
-                  <div>
-                    <h4 className="mb-2 group-hover:text-orange-500 transition-colors">
-                      {service.title}
-                    </h4>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Call to action */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center mt-20 p-8 rounded-2xl bg-gradient-to-r from-orange-500/5 to-orange-600/10 border border-orange-500/20 cursor-pointer hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300"
-            onClick={() => scrollToSection('contact')}
-            role="button"
-            tabIndex={0}
-            aria-label="Scroll to contact section"
-          >
-            <Rocket className="w-8 h-8 text-orange-500 mx-auto mb-4" />
-            <h3 className="text-xl mb-3">{t('about.cta.title')}</h3>
-            <p className="text-muted-foreground">
-              {t('about.cta.description')}
-            </p>
           </motion.div>
         </div>
       </div>
