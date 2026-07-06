@@ -1,52 +1,81 @@
 {
   "nav": {
+    "home": "Home",
     "about": "About",
-    "skills": "Skills",
-    "projects": "Projects",
+    "services": "Services",
+    "work": "Work",
     "contact": "Contact",
-    "letsTalk": "Let's talk"
+    "bookCall": "Book a call"
   },
   "hero": {
-    "availability": "Available for freelance work, collaborations & consultations",
+    "availability": "Available for freelance projects — AI workflows, automation & product builds",
     "greeting": "Hi, I'm",
     "name": "Matt Roshay",
-    "tagline": "Create. Innovate. Code.",
-    "description": "An AI Enablement & Product Builder designing",
-    "descriptionBold": "workflows that ship.",
-    "exploreWork": "Explore My Work",
-    "getInTouch": "Get in touch"
+    "tagline": "Translate. Automate. Ship.",
+    "brandLine": "From fuzzy ask to working workflow.",
+    "description": "I help teams turn manual, messy processes into",
+    "descriptionBold": "AI-enabled workflows that actually get used",
+    "descriptionEnd": "— and build the apps and products around them.",
+    "bookCall": "Book a free discovery call",
+    "seeWork": "See my work"
+  },
+  "home": {
+    "whatIDo": {
+      "title": "What I do",
+      "subtext": "Four ways I help teams go from AI curiosity to shipped results.",
+      "link": "Explore services"
+    },
+    "work": {
+      "title": "Selected work",
+      "subtext": "A few recent client and product builds. From AI triage apps to bilingual, SEO-first websites.",
+      "link": "See all work"
+    },
+    "about": {
+      "title": "About",
+      "link": "More about me"
+    },
+    "cta": {
+      "title": "Have a process that should run itself?",
+      "description": "Tell me what's slow, manual, or held together by copy-paste. I'll tell you what's automatable — and what's worth building. First call is free.",
+      "button": "Book a free discovery call"
+    }
   },
   "about": {
-    "title": "About Me",
-    "description": "I'm an AI Enablement specialist and full-stack developer. After 15 years in business development and client relationship management at international law firms (Herbert Smith Freehills, Freshfields & Covington), I now help teams design and ship AI-enabled workflows — translating fuzzy business asks into working automations, integrations, and products. I build with APIs, n8n, Make, Dust, Claude, and modern web frameworks, and bring senior-stakeholder experience most freelance devs don't.",
+    "title": "About me",
+    "paragraph1": "I'm an AI Enablement specialist and full-stack developer based near Bordeaux, working with teams across France and beyond.",
+    "paragraph2": "For 15 years I ran business development and client relationships inside international law firms — Herbert Smith Freehills, Freshfields, Covington — where my job was to turn what senior partners and clients actually needed into something a team could deliver. Then I learned to build it myself.",
+    "paragraph3": "Today I do both. I translate fuzzy business asks into working automations, integrations, and products — built with APIs, n8n, Make, Dust, Claude, and modern web frameworks. The difference most freelance developers can't offer isn't the code; it's knowing which problem is worth solving in the first place, and how to talk to the people who own it.",
     "stats": {
+      "experience": "15+ years with senior stakeholders in international firms",
       "certification": "Le Wagon Certified Web Developer (RNCP 39261)",
-      "founder": "Founder of MatchMeal",
-      "location": "Based near Bordeaux, working remotely",
-      "fuel": "Fueled by curiosity & coffee"
-    },
-    "whatIDo": "What I Do",
-    "services": {
+      "tooling": "Certified: n8n L1 · Make L3 · Claude Code",
+      "location": "Near Bordeaux — working remotely, EN & FR"
+    }
+  },
+  "services": {
+    "title": "How I help",
+    "subtext": "From first webhook to shipped product — pick where you are, and I'll meet you there.",
+    "list": {
       "aiWorkflow": {
         "title": "AI Workflow Design & Implementation",
-        "description": "Designing AI-enabled workflows that think — from first webhook to final action. APIs, n8n, Make, Dust, Claude. I build automations that actually get used, not dashboards that collect dust."
+        "hook": "Automations that get used, not dashboards that collect dust.",
+        "body": "I design and build AI-enabled workflows end to end — from the first webhook to the final action. APIs, n8n, Make, Dust, Claude. The kind of automation that quietly removes hours of manual work every week."
+      },
+      "aiIntegration": {
+        "title": "AI Integration & Consulting",
+        "hook": "From \"we should use AI\" to shipped features.",
+        "body": "Adding AI to an existing product — OpenAI and Claude APIs, RAG patterns, prompt engineering, evaluation. I help teams move past the demo and put reliable AI features in front of real users."
       },
       "webDev": {
         "title": "Full-Stack Web & App Development",
-        "description": "Modern web apps and internal tools — Ruby on Rails, React/TypeScript, PostgreSQL. From MVPs to production-ready products."
-      },
-      "aiConsulting": {
-        "title": "AI Integration & Consulting",
-        "description": "Adding AI features to existing products — OpenAI, Claude APIs, RAG patterns, prompt engineering. I help teams go from AI curiosity to shipped features."
+        "hook": "MVPs and internal tools, production-ready.",
+        "body": "Modern web apps, PWAs, and internal tools — Next.js, React/TypeScript, Ruby on Rails, PostgreSQL, Supabase. Bilingual and SEO-ready when it matters. From first version to something you can put your name on."
       },
       "discovery": {
         "title": "Discovery & Scoping",
-        "description": "Figuring out what to build is often harder than building it. I help teams map current workflows, surface real inefficiencies, and scope realistic AI and automation projects — with clear success criteria — before any code gets written. 15+ years translating fuzzy business asks into concrete deliverables inside complex organisations."
+        "hook": "Figuring out what to build is the hard part.",
+        "body": "Often harder than building it. I map your current workflows, surface the real inefficiencies, and scope realistic AI and automation projects with clear success criteria — before a line of code is written. Fifteen years translating fuzzy asks into concrete deliverables inside complex organisations."
       }
-    },
-    "cta": {
-      "title": "Ready to build something amazing?",
-      "description": "Let's collaborate to bring your ideas to life with cutting-edge technology and thoughtful design."
     }
   },
   "skills": {
@@ -71,61 +100,108 @@
     }
   },
   "projects": {
-    "title": "Featured Work",
-    "description": "A collection of projects that showcase my passion for creating exceptional digital experiences with modern technologies.",
-    "featuredProject": "Featured Project",
+    "title": "Selected work",
+    "description": "Client engagements and products — AI apps, automations, and websites built to ship and be used.",
     "viewLive": "View Live",
     "code": "Code",
-    "liveDemo": "Live Demo",
-    "viewAllGithub": "View All Projects on GitHub",
+    "liveDemo": "View Live",
+    "noLink": "Client project — details on request",
+    "viewAllGithub": "View all projects on GitHub",
     "list": {
+      "petHealth": {
+        "title": "AI Pet-Health Triage App",
+        "label": "Client project · 2026",
+        "description": "A mobile-first PWA that helps pet owners act fast in a health scare. Owners describe symptoms and get AI-powered, non-diagnostic triage with a clear urgency level, find nearby vets, generate a lost-pet poster, and check insurance options — all with medical guardrails that never replace a real vet. Sole full-stack developer, from architecture to launch."
+      },
+      "sarahPsy": {
+        "title": "Sarah Cousin Roshay — Bilingual Therapy Practice",
+        "label": "Client project · Live",
+        "description": "A bilingual (EN/FR) website for a CBT therapist serving expats, professionals, and parents. Built for the two things that win clients online: being found and being trusted. Per-page SEO, clean multilingual routing, testimonials, and one-tap discovery-call booking. Design, build, SEO, and copy."
+      },
       "bitconsulting": {
         "title": "B-itconsulting",
-        "description": "Portfolio + blog CMS for an IT infrastructure consultant with LinkedIn auto-posting, content management, and responsive design."
+        "label": "Client project · Live",
+        "description": "Portfolio and blog CMS for an IT infrastructure consultant, with automated LinkedIn posting, content management, and a responsive build. Content published once flows straight to LinkedIn — a small automation that saves a manual step every post.",
+        "imageAlt": "B-itconsulting portfolio and blog CMS homepage"
       },
       "matchmeal": {
         "title": "MatchMeal",
-        "description": "AI-powered recipe app that identifies ingredients and suggests personalized meals using OpenAI API. Features image uploads, favorites, and adaptive UI."
+        "label": "Founder · Product",
+        "description": "An AI recipe app I founded: photograph your ingredients, and it identifies them and suggests personalised meals via the OpenAI API. Image uploads, favourites, and an adaptive UI. Built and shipped end to end.",
+        "imageAlt": "MatchMeal AI recipe app showing ingredient recognition and meal suggestions"
       },
       "flatrent": {
         "title": "FlatRent",
-        "description": "Full-stack booking platform inspired by Airbnb — my Le Wagon capstone, built with Ruby on Rails. Property listings, authentication, search filters, and reservation management. Deployed on Heroku."
+        "label": "Le Wagon capstone",
+        "description": "A full-stack booking platform inspired by Airbnb — my Le Wagon capstone. Listings, authentication, search filters, reservations, maps, and payments. Where I proved I could ship a complete product.",
+        "imageAlt": "FlatRent booking platform property listings page"
       }
     }
   },
   "contact": {
-    "title": "Let's Build Something Amazing",
-    "description": "Have a project in mind? I'd love to hear about it. Let's discuss how we can bring your vision to life with cutting-edge technology and thoughtful design.",
+    "title": "Let's talk about your project",
+    "description": "The best first step is a quick call. Tell me what's slow, manual, or on your roadmap — I'll tell you honestly whether I'm the right fit and what it would take.",
+    "calendly": {
+      "title": "Book a free discovery call",
+      "subtitle": "20 minutes, no obligation. We'll talk through your problem and whether it's worth building.",
+      "perk1": "Free & no-pressure",
+      "perk2": "EN or FR, your choice",
+      "perk3": "Straight answer on fit & budget",
+      "button": "Book a free discovery call",
+      "fallback": "Prefer to write first? Use the form below."
+    },
     "form": {
-      "title": "Send a Message",
+      "title": "Or send a message",
       "name": "Name",
       "email": "Email",
       "subject": "Subject",
       "message": "Message",
       "namePlaceholder": "Your name",
       "emailPlaceholder": "your@email.com",
-      "subjectPlaceholder": "Project inquiry",
-      "messagePlaceholder": "Tell me about your project, timeline, and any specific requirements...",
-      "send": "Send Message"
+      "subjectPlaceholder": "What's this about?",
+      "messagePlaceholder": "Tell me about your project, timeline, and what success looks like.",
+      "send": "Send message"
     },
     "info": {
-      "title": "Get in Touch",
-      "description": "Whether you're a startup looking to build your first product or an established company needing to modernize your web presence, I'm here to help.",
+      "title": "Get in touch",
+      "description": "Whether you're scoping a first AI feature or modernising an existing product, I'm happy to help you think it through.",
       "phone": "Phone",
       "phoneValue": "+33 6 74 94 12 49",
-      "phoneDescription": "Available Mon-Fri, 9AM-6PM CET",
+      "phoneDescription": "Mon–Fri, 9AM–6PM CET",
       "location": "Location",
-      "locationValue": "Saint Médard en Jalles, France / Remote",
-      "locationDescription": "Open to remote projects worldwide",
-      "quickResponse": "Quick Response",
-      "quickResponseDescription": "I typically respond within 24 hours. For urgent projects, feel free to call directly and we can set up a quick chat."
+      "locationValue": "Near Bordeaux, France · Remote worldwide",
+      "quickResponse": "Quick response",
+      "quickResponseDescription": "I usually reply within 24 hours. For anything urgent, call directly."
     }
   },
   "footer": {
-    "description": "AI Enablement & Product Builder — shipping AI-enabled workflows, integrations, and full-stack web applications.",
+    "description": "AI Enablement & Product Builder. I design AI-enabled workflows, integrations, and full-stack web apps — and ship them.",
     "navigation": "Navigation",
-    "copyright": "Matt Roshay. Made with",
+    "getInTouch": "Get in touch",
+    "copyright": "Matt Roshay. Built with",
     "and": "and lots of",
     "backToTop": "Back to top"
+  },
+  "meta": {
+    "home": {
+      "title": "Matt Roshay — AI Workflow & Automation Developer",
+      "description": "Freelance AI enablement specialist and full-stack developer near Bordeaux. I turn manual processes into AI-enabled workflows that ship. Book a free call."
+    },
+    "about": {
+      "title": "About Matt Roshay — From Law-Firm BD to AI Builder",
+      "description": "15 years managing senior stakeholders in international law firms, now building AI workflows and full-stack products. The story behind the pivot."
+    },
+    "services": {
+      "title": "Services — AI Workflows, Integration & Web Development",
+      "description": "AI workflow design (n8n, Make, Dust, Claude), AI integration, full-stack web/app development, and discovery & scoping. From first webhook to shipped product."
+    },
+    "work": {
+      "title": "Work — AI Apps, Automations & Bilingual Websites",
+      "description": "Selected freelance projects: an AI pet-health triage app, a bilingual SEO-first therapy site, automated content platforms, and AI-powered products."
+    },
+    "contact": {
+      "title": "Contact — Book a Free AI & Automation Discovery Call",
+      "description": "Tell me what's slow, manual, or on your roadmap. Book a free 20-minute call (EN or FR) for a straight answer on fit and budget."
+    }
   }
 }
