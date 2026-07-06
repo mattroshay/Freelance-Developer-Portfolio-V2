@@ -4,8 +4,8 @@ import { Hero } from "../components/Hero";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { useRevealGroup } from "../hooks/useReveal";
 
-// Order per copy deck: the two AI offerings lead, Discovery closes.
-const SERVICE_KEYS = ["aiWorkflow", "aiIntegration", "webDev", "discovery"];
+// Product-first positioning: building leads, then AI/automation, Discovery closes.
+const SERVICE_KEYS = ["webDev", "aiIntegration", "aiWorkflow", "discovery"];
 
 // Home work teasers: featured + two cards (deck order).
 const WORK_TEASERS = [

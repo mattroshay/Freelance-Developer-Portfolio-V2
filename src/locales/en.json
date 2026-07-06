@@ -8,14 +8,14 @@
     "bookCall": "Book a call"
   },
   "hero": {
-    "availability": "Available for freelance projects — AI workflows, automation & product builds",
+    "availability": "Available for freelance projects — apps, AI products & automation",
     "greeting": "Hi, I'm",
     "name": "Matt Roshay",
-    "tagline": "Translate. Automate. Ship.",
-    "brandLine": "From fuzzy ask to working workflow.",
-    "description": "I help teams turn manual, messy processes into",
-    "descriptionBold": "AI-enabled workflows that actually get used",
-    "descriptionEnd": "— and build the apps and products around them.",
+    "tagline": "Build. Automate. Ship.",
+    "brandLine": "From first idea to shipped product.",
+    "description": "I build",
+    "descriptionBold": "apps and AI products that actually ship",
+    "descriptionEnd": "— and the automations that keep them running.",
     "bookCall": "Book a free discovery call",
     "seeWork": "See my work"
   },
@@ -35,8 +35,8 @@
       "link": "More about me"
     },
     "cta": {
-      "title": "Have a process that should run itself?",
-      "description": "Tell me what's slow, manual, or held together by copy-paste. I'll tell you what's automatable — and what's worth building. First call is free.",
+      "title": "Have a product to build — or a process that should run itself?",
+      "description": "Tell me what you want to build — or what's slow, manual, and held together by copy-paste. I'll tell you what's worth building, and what can just run itself. First call is free.",
       "button": "Book a free discovery call"
     }
   },
@@ -178,7 +178,7 @@
     }
   },
   "footer": {
-    "description": "AI Enablement & Product Builder. I design AI-enabled workflows, integrations, and full-stack web apps — and ship them.",
+    "description": "AI Enablement & Product Builder. I build full-stack apps and AI products — and the workflows and integrations that run around them.",
     "navigation": "Navigation",
     "getInTouch": "Get in touch",
     "copyright": "Matt Roshay. Built with",
@@ -189,8 +189,8 @@
   },
   "meta": {
     "home": {
-      "title": "Matt Roshay — AI Workflow & Automation Developer",
-      "description": "Freelance AI enablement specialist and full-stack developer near Bordeaux. I turn manual processes into AI-enabled workflows that ship. Book a free call."
+      "title": "Matt Roshay — AI Product Builder & Automation Developer",
+      "description": "Freelance AI enablement specialist and full-stack developer near Bordeaux. I build apps and AI products — and the automations around them. Book a free call."
     },
     "about": {
       "title": "About Matt Roshay — From Law-Firm BD to AI Builder",

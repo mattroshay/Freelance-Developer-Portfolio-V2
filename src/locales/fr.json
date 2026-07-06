@@ -8,14 +8,14 @@
     "bookCall": "Réserver un appel"
   },
   "hero": {
-    "availability": "Disponible pour des missions freelance — workflows IA, automatisation & produits",
+    "availability": "Disponible pour des missions freelance — applications, produits IA & automatisation",
     "greeting": "Bonjour, je suis",
     "name": "Matt Roshay",
-    "tagline": "Traduire. Automatiser. Livrer.",
-    "brandLine": "De la demande floue au workflow qui tourne.",
-    "description": "J'aide les équipes à transformer des processus manuels et désordonnés en",
-    "descriptionBold": "workflows IA réellement utilisés",
-    "descriptionEnd": "— et je construis les applications et produits autour.",
+    "tagline": "Construire. Automatiser. Livrer.",
+    "brandLine": "De la première idée au produit livré.",
+    "description": "Je construis des",
+    "descriptionBold": "applications et produits IA réellement livrés",
+    "descriptionEnd": "— et les automatisations qui les font tourner.",
     "bookCall": "Réserver un appel découverte",
     "seeWork": "Voir mes réalisations"
   },
@@ -35,8 +35,8 @@
       "link": "En savoir plus sur moi"
     },
     "cta": {
-      "title": "Un processus qui devrait tourner tout seul ?",
-      "description": "Dites-moi ce qui est lent, manuel ou tenu par des copier-coller. Je vous dirai ce qui est automatisable — et ce qui vaut la peine d'être construit. Le premier appel est gratuit.",
+      "title": "Un produit à construire — ou un processus qui devrait tourner tout seul ?",
+      "description": "Dites-moi ce que vous voulez construire — ou ce qui est lent, manuel et tenu par des copier-coller. Je vous dirai ce qui vaut la peine d'être construit, et ce qui peut tourner tout seul. Le premier appel est gratuit.",
       "button": "Réserver un appel découverte gratuit"
     }
   },
@@ -178,7 +178,7 @@
     }
   },
   "footer": {
-    "description": "AI Enablement & Product Builder. Je conçois des workflows IA, des intégrations et des applications web full-stack — et je les livre.",
+    "description": "AI Enablement & Product Builder. Je construis des applications full-stack et des produits IA — et les workflows et intégrations qui tournent autour.",
     "navigation": "Navigation",
     "getInTouch": "Me contacter",
     "copyright": "Matt Roshay. Conçu avec",
@@ -189,8 +189,8 @@
   },
   "meta": {
     "home": {
-      "title": "Matt Roshay — Développeur workflows IA & automatisation",
-      "description": "Spécialiste AI enablement et développeur full-stack freelance près de Bordeaux. Je transforme vos processus manuels en workflows IA opérationnels. Appel gratuit."
+      "title": "Matt Roshay — Développeur produits IA & automatisation",
+      "description": "Spécialiste AI enablement et développeur full-stack freelance près de Bordeaux. Je construis des applications et produits IA — et les automatisations autour. Appel gratuit."
     },
     "about": {
       "title": "À propos — De la BD en cabinet d'avocats au développeur IA",

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { useRevealGroup } from "../hooks/useReveal";
 
-// Order per copy deck: the two AI offerings lead, Discovery closes.
-const SERVICES = ["aiWorkflow", "aiIntegration", "webDev", "discovery"];
+// Product-first positioning: building leads, then AI/automation, Discovery closes.
+const SERVICES = ["webDev", "aiIntegration", "aiWorkflow", "discovery"];
 
 export function Services() {
   const { t } = useTranslation();
