@@ -1,237 +1,185 @@
-import type { ReactNode } from "react";
-import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
-import { ExternalLink, Github, ArrowUpRight, HeartPulse, Globe, Lock } from "lucide-react";
+import { Lock } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { GITHUB_URL } from "../config/site";
+import { useRevealGroup } from "../hooks/useReveal";
 
 interface Project {
   key: string;
   image?: string;
-  placeholderIcon?: ReactNode;
+  /** Watermark initials for the gradient placeholder (decorative). */
+  mark?: string;
   technologies: string[];
   liveUrl?: string;
   githubUrl?: string;
   featured?: boolean;
 }
 
+// Order per copy deck: strongest-first, bootcamp capstone last.
+const PROJECTS: Project[] = [
+  {
+    key: "petHealth",
+    mark: "AI",
+    technologies: ["Next.js", "React", "Tailwind", "Supabase", "OpenAI (text + vision)", "Google Places", "PWA", "Vercel"],
+    featured: true,
+  },
+  {
+    key: "sarahPsy",
+    mark: "SC",
+    technologies: ["Next.js", "App Router", "i18n (EN/FR)", "SEO", "Calendly", "Vercel"],
+    liveUrl: "https://www.sarah-psy.com",
+  },
+  {
+    key: "bitconsulting",
+    image: "/images/projects/b-itconsulting.png",
+    technologies: ["Ruby on Rails", "JavaScript", "PostgreSQL", "SCSS", "Heroku", "Cloudinary"],
+    liveUrl: "https://www.b-itconsulting.com",
+  },
+  {
+    key: "matchmeal",
+    image: "/images/projects/matchmeal-screen.png",
+    technologies: ["Ruby on Rails", "OpenAI API", "Spoonacular API", "PostgreSQL", "JavaScript", "Heroku"],
+    liveUrl: "https://www.matchmeal.eu",
+    githubUrl: "https://github.com/mattroshay/MatchMeal",
+  },
+  {
+    key: "flatrent",
+    image: "/images/projects/flatrent.png",
+    technologies: ["Ruby on Rails", "PostgreSQL", "Mapbox API", "Stripe API", "Heroku"],
+    liveUrl: "https://airbnb-roshaym-5f0f5ed33d88.herokuapp.com",
+    githubUrl: "https://github.com/mattroshay/CEMY-AirBNB",
+  },
+];
+
 export function Projects() {
   const { t } = useTranslation();
+  const headRef = useRevealGroup<HTMLDivElement>();
+  const listRef = useRevealGroup<HTMLDivElement>();
 
-  // Order per copy deck: strongest-first, bootcamp capstone last.
-  const projects: Project[] = [
-    {
-      key: "petHealth",
-      placeholderIcon: <HeartPulse className="w-16 h-16" />,
-      technologies: ["Next.js", "React", "Tailwind", "Supabase", "OpenAI (text + vision)", "Google Places", "PWA", "Vercel"],
-      featured: true
-    },
-    {
-      key: "sarahPsy",
-      placeholderIcon: <Globe className="w-12 h-12" />,
-      technologies: ["Next.js", "App Router", "i18n (EN/FR)", "SEO", "Calendly", "Vercel"],
-      liveUrl: "https://www.sarah-psy.com"
-    },
-    {
-      key: "bitconsulting",
-      image: "/images/projects/b-itconsulting.png",
-      technologies: ["Ruby on Rails", "JavaScript", "PostgreSQL", "SCSS", "Heroku", "Cloudinary"],
-      liveUrl: "https://www.b-itconsulting.com"
-    },
-    {
-      key: "matchmeal",
-      image: "/images/projects/matchmeal-screen.png",
-      technologies: ["Ruby on Rails", "OpenAI API", "Spoonacular API", "PostgreSQL", "JavaScript", "Heroku"],
-      liveUrl: "https://www.matchmeal.eu",
-      githubUrl: "https://github.com/mattroshay/MatchMeal"
-    },
-    {
-      key: "flatrent",
-      image: "/images/projects/flatrent.png",
-      technologies: ["Ruby on Rails", "PostgreSQL", "Mapbox API", "Stripe API", "Heroku"],
-      liveUrl: "https://airbnb-roshaym-5f0f5ed33d88.herokuapp.com",
-      githubUrl: "https://github.com/mattroshay/CEMY-AirBNB"
-    }
-  ];
+  const featured = PROJECTS.find((p) => p.featured)!;
+  const others = PROJECTS.filter((p) => !p.featured);
 
-  const renderVisual = (project: Project, className: string) =>
-    project.image ? (
-      <ImageWithFallback
-        src={project.image}
-        alt={t(`projects.list.${project.key}.imageAlt`)}
-        className={className}
-      />
-    ) : (
-      <div
-        className={`${className} flex items-center justify-center bg-gradient-to-br from-orange-500/20 via-orange-600/10 to-background text-orange-500`}
-        role="img"
-        aria-label={t(`projects.list.${project.key}.title`)}
-      >
-        {project.placeholderIcon}
-      </div>
-    );
+  const media = (project: Project, large = false) => (
+    <div className="ds-card__media">
+      {project.image ? (
+        <ImageWithFallback
+          src={project.image}
+          alt={t(`projects.list.${project.key}.imageAlt`)}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
+      ) : (
+        <span
+          className={`ds-watermark${large ? " ds-watermark--lg" : ""}`}
+          role="img"
+          aria-label={t(`projects.list.${project.key}.title`)}
+        >
+          {project.mark}
+        </span>
+      )}
+    </div>
+  );
+
+  const links = (project: Project) => (
+    <div className="ds-card__links">
+      {project.liveUrl ? (
+        <a
+          href={project.liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ds-mono-link"
+        >
+          {t("projects.viewLive")} →
+        </a>
+      ) : (
+        <span
+          className="ds-dim"
+          style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 13 }}
+        >
+          <Lock size={13} color="#f7941e" aria-hidden="true" />
+          {t("projects.noLink")}
+        </span>
+      )}
+      {project.githubUrl && (
+        <a
+          href={project.githubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ds-mono-link"
+        >
+          {t("projects.code")} →
+        </a>
+      )}
+    </div>
+  );
 
   return (
-    <section
-      id="projects"
-      className="py-32 relative overflow-hidden scroll-mt-24"
-    >
-      {/* Background decoration */}
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute top-20 right-10 w-80 h-80 bg-orange-400/8 rounded-full blur-3xl"></div>
-
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-
-          {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mb-20"
-          >
-            <h1 className="text-4xl md:text-5xl mb-6">
-              {t('projects.title')}
+    <section id="projects">
+      <div className="ds-container">
+        <div ref={headRef} className="ds-section-head" style={{ marginBottom: 56 }}>
+          <div className="ds-section-head__text">
+            <div data-reveal className="ds-eyebrow">
+              {t("nav.work")}
+            </div>
+            <h1 data-reveal className="ds-h1">
+              {t("projects.title")}
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              {t('projects.description')}
+            <p data-reveal className="ds-lede">
+              {t("projects.description")}
             </p>
-          </motion.div>
+          </div>
+        </div>
 
-          {/* Featured Project */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="mb-20"
-          >
-            {projects.filter(p => p.featured).map((project) => (
-              <div key={project.key} className="group relative overflow-hidden rounded-2xl border border-border/50 hover:border-orange-500/30 transition-all duration-500">
-                <div className="grid lg:grid-cols-2 gap-0">
-                  <div className="relative overflow-hidden">
-                    {renderVisual(project, "w-full h-64 lg:h-full object-cover group-hover:scale-105 transition-transform duration-700")}
-                    <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  </div>
-
-                  <div className="p-8 lg:p-12 flex flex-col justify-center">
-                    <div className="mb-4">
-                      <Badge variant="outline" className="mb-4 border-orange-500/30 text-orange-500">
-                        {t(`projects.list.${project.key}.label`)}
-                      </Badge>
-                      <h2 className="text-2xl lg:text-3xl mb-4 group-hover:text-primary transition-colors">
-                        {t(`projects.list.${project.key}.title`)}
-                      </h2>
-                      <p className="text-muted-foreground leading-relaxed mb-6">
-                        {t(`projects.list.${project.key}.description`)}
-                      </p>
-                    </div>
-
-                    <div className="flex flex-wrap gap-2 mb-8">
-                      {project.technologies.map((tech, techIndex) => (
-                        <Badge key={techIndex} variant="secondary" className="text-xs">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-
-                    <div className="flex flex-wrap gap-4 items-center">
-                      {project.liveUrl ? (
-                        <Button className="group/btn" onClick={() => window.open(project.liveUrl, "_blank")}>
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          {t('projects.viewLive')}
-                          <ArrowUpRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
-                        </Button>
-                      ) : (
-                        <span className="inline-flex items-center text-sm text-muted-foreground">
-                          <Lock className="w-4 h-4 mr-2 text-orange-500" />
-                          {t('projects.noLink')}
-                        </span>
-                      )}
-                      {project.githubUrl && (
-                        <Button variant="outline" onClick={() => window.open(project.githubUrl, "_blank")}>
-                          <Github className="w-4 h-4 mr-2" />
-                          {t('projects.code')}
-                        </Button>
-                      )}
-                    </div>
-                  </div>
-                </div>
+        <div ref={listRef}>
+          {/* Featured project */}
+          <article data-reveal className="ds-card ds-card--featured" style={{ marginBottom: 24 }}>
+            {media(featured, true)}
+            <div className="ds-card__content">
+              <span className="ds-card__label">{t(`projects.list.${featured.key}.label`)}</span>
+              <h2 className="ds-card__title">{t(`projects.list.${featured.key}.title`)}</h2>
+              <p className="ds-card__desc">{t(`projects.list.${featured.key}.description`)}</p>
+              <div className="ds-tags" style={{ marginTop: 4 }}>
+                {featured.technologies.map((tech) => (
+                  <span key={tech} className="ds-tag">
+                    {tech}
+                  </span>
+                ))}
               </div>
-            ))}
-          </motion.div>
+              {links(featured)}
+            </div>
+          </article>
 
-          {/* Other Projects Grid */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {projects.filter(p => !p.featured).map((project, index) => (
-              <motion.div
-                key={project.key}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
-                whileHover={{ y: -5 }}
-              >
-                <div className="relative overflow-hidden">
-                  {renderVisual(project, "w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500")}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-
-                <div className="p-6">
-                  <Badge variant="outline" className="mb-3 border-orange-500/30 text-orange-500 text-xs">
-                    {t(`projects.list.${project.key}.label`)}
-                  </Badge>
-                  <h2 className="text-xl mb-3 group-hover:text-primary transition-colors">
-                    {t(`projects.list.${project.key}.title`)}
-                  </h2>
-                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                    {t(`projects.list.${project.key}.description`)}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="outline" className="text-xs">
+          {/* Remaining projects — bordered cards, 2-up */}
+          <div className="ds-cardgrid" style={{ marginBottom: 56 }}>
+            {others.map((project) => (
+              <article data-reveal key={project.key} className="ds-card">
+                {media(project)}
+                <div className="ds-card__content">
+                  <span className="ds-card__label">{t(`projects.list.${project.key}.label`)}</span>
+                  <h2 className="ds-card__title">{t(`projects.list.${project.key}.title`)}</h2>
+                  <p className="ds-card__desc">{t(`projects.list.${project.key}.description`)}</p>
+                  <div className="ds-tags">
+                    {project.technologies.map((tech) => (
+                      <span key={tech} className="ds-tag">
                         {tech}
-                      </Badge>
+                      </span>
                     ))}
                   </div>
-
-                  <div className="flex space-x-3">
-                    {project.liveUrl && (
-                      <Button size="sm" className="flex-1 group/btn" onClick={() => window.open(project.liveUrl, "_blank")}>
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        {t('projects.liveDemo')}
-                      </Button>
-                    )}
-                    {project.githubUrl && (
-                      <Button size="sm" variant="outline" className="aspect-square p-0" onClick={() => window.open(project.githubUrl, "_blank")}>
-                        <Github className="w-4 h-4" />
-                      </Button>
-                    )}
-                  </div>
+                  {links(project)}
                 </div>
-              </motion.div>
+              </article>
             ))}
           </div>
 
-          {/* Call to Action */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-center relative z-10"
-          >
-            <Button variant="outline" size="lg" className="group" onClick={() => window.open(GITHUB_URL, "_blank")}>
-              <Github className="w-4 h-4 mr-2" />
-              {t('projects.viewAllGithub')}
-              <ArrowUpRight className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </Button>
-          </motion.div>
+          <div data-reveal style={{ display: "flex", justifyContent: "center" }}>
+            <a
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ds-btn ds-btn--secondary"
+            >
+              {t("projects.viewAllGithub")}
+            </a>
+          </div>
         </div>
       </div>
     </section>
