@@ -19,7 +19,7 @@ interface Project {
 const PROJECTS: Project[] = [
   {
     key: "petHealth",
-    image: "/images/projects/pet-health.jpg",
+    image: "/images/projects/pet-health.png",
     technologies: ["Next.js", "React", "Tailwind", "Supabase", "OpenAI (text + vision)", "Google Places", "PWA", "Vercel"],
     featured: true,
   },

@@ -9,7 +9,7 @@ const SERVICE_KEYS = ["aiWorkflow", "aiIntegration", "webDev", "discovery"];
 
 // Home work teasers: featured + two cards (deck order).
 const WORK_TEASERS = [
-  { key: "petHealth", image: "/images/projects/pet-health.jpg", featured: true, tags: ["Next.js", "React", "Supabase", "OpenAI"] },
+  { key: "petHealth", image: "/images/projects/pet-health.png", featured: true, tags: ["Next.js", "React", "Supabase", "OpenAI"] },
   { key: "sarahPsy", image: "/images/projects/sarah-psy.jpg" },
   { key: "bitconsulting", image: "/images/projects/b-itconsulting.jpg" },
 ];
