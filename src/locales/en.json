@@ -111,8 +111,9 @@
       "petHealth": {
         "title": "AI Pet-Health Triage App",
         "label": "Client project · 2026",
-        "description": "A mobile-first PWA that helps pet owners act fast in a health scare. Owners describe symptoms and get AI-powered, non-diagnostic triage with a clear urgency level, find nearby vets, generate a lost-pet poster, and check insurance options — all with medical guardrails that never replace a real vet. Sole full-stack developer, from architecture to launch.",
-        "imageAlt": "Illustration of the AI pet-health triage app: a phone showing a triage result with urgency level and nearby vets"
+        "description": "A mobile-first PWA built around a RAG-powered AI chat assistant, grounded in domain-specific data to give users reliable, context-aware answers. Alongside the assistant: a structured digital records system, location-based search, and one-tap PDF document generation. Built French-first with a fully scaffolded i18n layer, so an English version ships without rework. Architected for privacy and trust from day one — Supabase Auth (email/password + magic link), Row-Level Security on every table, EU-region hosting for GDPR, server-side-only secrets, and route-level auth guards. Every change is gated in CI on lint, type-check and build. Solo design, architecture and full-stack development.",
+        "descriptionShort": "A mobile-first PWA built around a RAG-powered AI chat assistant grounded in domain-specific data — with structured digital records, location-based search, and one-tap PDF generation. Solo full-stack build.",
+        "imageAlt": "8-bit pixel-art illustration of a dog and a cat — AI pet-health assistant built as a mobile-first PWA"
       },
       "sarahPsy": {
         "title": "Sarah Cousin Roshay — Bilingual Therapy Practice",

@@ -20,7 +20,7 @@ const PROJECTS: Project[] = [
   {
     key: "petHealth",
     image: "/images/projects/pet-health.png",
-    technologies: ["Next.js", "React", "Tailwind", "Supabase", "OpenAI (text + vision)", "Google Places", "PWA", "Vercel"],
+    technologies: ["Next.js 16 (App Router)", "React 19", "TypeScript", "Tailwind CSS v4", "next-intl", "Supabase (Postgres / Auth / Storage)", "Vercel"],
     featured: true,
   },
   {

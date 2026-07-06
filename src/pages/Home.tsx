@@ -9,7 +9,8 @@ const SERVICE_KEYS = ["aiWorkflow", "aiIntegration", "webDev", "discovery"];
 
 // Home work teasers: featured + two cards (deck order).
 const WORK_TEASERS = [
-  { key: "petHealth", image: "/images/projects/pet-health.png", featured: true, tags: ["Next.js", "React", "Supabase", "OpenAI"] },
+  // shortDesc: full description is Work-page length; teaser uses the condensed key.
+  { key: "petHealth", image: "/images/projects/pet-health.png", featured: true, shortDesc: true, tags: ["Next.js 16", "React 19", "TypeScript", "Supabase"] },
   { key: "sarahPsy", image: "/images/projects/sarah-psy.jpg" },
   { key: "bitconsulting", image: "/images/projects/b-itconsulting.jpg" },
 ];
@@ -100,7 +101,9 @@ export function Home() {
             <div className="ds-card__content">
               <span className="ds-card__label">{t(`projects.list.${featured.key}.label`)}</span>
               <h3 className="ds-card__title">{t(`projects.list.${featured.key}.title`)}</h3>
-              <p className="ds-card__desc">{t(`projects.list.${featured.key}.description`)}</p>
+              <p className="ds-card__desc">
+                {t(`projects.list.${featured.key}.${featured.shortDesc ? "descriptionShort" : "description"}`)}
+              </p>
               <div className="ds-tags" style={{ marginTop: 4 }}>
                 {featured.tags!.map((tag) => (
                   <span key={tag} className="ds-tag">
