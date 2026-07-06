@@ -1,31 +1,50 @@
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
-import logo from "figma:asset/34a5fadfce0c33b5681d5bdf10379722f562ddef.png";
+import { MRLogo } from "./MRLogo";
 
 const NAV_ITEMS = [
-  { key: 'home', path: '/' },
-  { key: 'about', path: '/about' },
-  { key: 'services', path: '/services' },
-  { key: 'work', path: '/work' },
-  { key: 'contact', path: '/contact' }
+  { key: "home", path: "/" },
+  { key: "about", path: "/about" },
+  { key: "services", path: "/services" },
+  { key: "work", path: "/work" },
+  { key: "contact", path: "/contact" },
 ];
 
-export function Header() {
-  const { t, i18n } = useTranslation();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
+function LangPill() {
+  const { i18n } = useTranslation();
+  const isFr = i18n.language?.startsWith("fr") ?? false;
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  return (
+    <div className={`ds-pill${isFr ? " is-fr" : ""}`}>
+      <span className="ds-pill__thumb" aria-hidden="true" />
+      <button
+        type="button"
+        className={`ds-pill__opt${!isFr ? " is-active" : ""}`}
+        onClick={() => i18n.changeLanguage("en")}
+        aria-label="Switch to English"
+        aria-pressed={!isFr}
+      >
+        EN
+      </button>
+      <button
+        type="button"
+        className={`ds-pill__opt${isFr ? " is-active" : ""}`}
+        onClick={() => i18n.changeLanguage("fr")}
+        aria-label="Passer en français"
+        aria-pressed={isFr}
+      >
+        FR
+      </button>
+    </div>
+  );
+}
+
+export function Header() {
+  const { t } = useTranslation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   // Close the mobile menu whenever the route changes
   useEffect(() => {
@@ -33,229 +52,72 @@ export function Header() {
   }, [location.pathname]);
 
   const isActive = (path: string) =>
-    path === '/' ? location.pathname === '/' : location.pathname.startsWith(path);
+    path === "/" ? location.pathname === "/" : location.pathname.startsWith(path);
 
   return (
-    <motion.header
-      className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-border/50 backdrop-blur-sm isolate"
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
-      <div className="container mx-auto px-4 py-4 relative">
-        <div className="flex items-center justify-between">
-          <motion.div
-            className="relative"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          >
-            <Link to="/" className="flex items-center space-x-3 group">
-              {/* Logo */}
-              <div className="relative w-10 h-10 group-hover:scale-110 transition-transform duration-300">
-                <img
-                  src={logo}
-                  alt="Matt Roshay Logo"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <span className="text-lg bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent hidden sm:block">
-                Matt Roshay
-              </span>
-            </Link>
-          </motion.div>
+    <header className="ds-nav">
+      <div className="ds-nav__inner">
+        <Link to="/" className="ds-nav__brand">
+          <MRLogo height={22} />
+          <span className="ds-nav__name">{t("hero.name")}</span>
+        </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1">
-            {NAV_ITEMS.map((item, index) => (
-              <motion.div
+        <div className="ds-nav__right">
+          <nav className="ds-nav__links" aria-label="Primary">
+            {NAV_ITEMS.map((item) => (
+              <Link
                 key={item.key}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -2 }}
+                to={item.path}
+                className={`ds-nav__link${isActive(item.path) ? " is-active" : ""}`}
+                aria-current={isActive(item.path) ? "page" : undefined}
               >
-                <Link
-                  to={item.path}
-                  className={`px-4 py-2 transition-colors relative group block ${
-                    isActive(item.path)
-                      ? 'text-foreground'
-                      : 'text-muted-foreground hover:text-foreground'
-                  }`}
-                >
-                  {t(`nav.${item.key}`)}
-                  <span
-                    className={`absolute bottom-0 left-4 right-4 h-0.5 bg-primary origin-left transition-transform duration-300 ${
-                      isActive(item.path) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                    }`}
-                  />
-                </Link>
-              </motion.div>
+                {t(`nav.${item.key}`)}
+              </Link>
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
-            {/* Language Toggle */}
-            <motion.div
-              className="flex items-center gap-1 text-sm"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <button
-                onClick={() => i18n.changeLanguage('en')}
-                className={`px-2 py-1 transition-colors ${
-                  i18n.language?.startsWith('en') || !i18n.language
-                    ? 'text-orange-500 font-medium'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
-                aria-label="Switch to English"
-              >
-                EN
-              </button>
-              <span className="text-muted-foreground">/</span>
-              <button
-                onClick={() => i18n.changeLanguage('fr')}
-                className={`px-2 py-1 transition-colors ${
-                  i18n.language?.startsWith('fr')
-                    ? 'text-orange-500 font-medium'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
-                aria-label="Switch to French"
-              >
-                FR
-              </button>
-            </motion.div>
+          <div className="ds-nav__actions">
+            <LangPill />
 
-            {/* Persistent booking CTA */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all shrink-0 outline-none bg-primary text-primary-foreground hover:bg-primary/90 h-8 px-3 relative overflow-hidden group"
-              >
-                <span className="relative z-10">{t('nav.bookCall')}</span>
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.2 }}
-                />
-              </Link>
-            </motion.div>
-          </div>
+            <Link to="/contact" className="ds-btn ds-btn--primary ds-btn--sm ds-nav__cta">
+              {t("nav.bookCall")}
+            </Link>
 
-          {/* Mobile Language Toggle & Menu Button */}
-          <div className="md:hidden flex items-center gap-3">
-            {/* Language Toggle for Mobile/Tablet */}
-            <motion.div
-              className="flex items-center gap-1 text-sm"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <button
-                onClick={() => i18n.changeLanguage('en')}
-                className={`px-2 py-1 transition-colors ${
-                  i18n.language?.startsWith('en') || !i18n.language
-                    ? 'text-orange-500 font-medium'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
-                aria-label="Switch to English"
-              >
-                EN
-              </button>
-              <span className="text-muted-foreground">/</span>
-              <button
-                onClick={() => i18n.changeLanguage('fr')}
-                className={`px-2 py-1 transition-colors ${
-                  i18n.language?.startsWith('fr')
-                    ? 'text-orange-500 font-medium'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
-                aria-label="Switch to French"
-              >
-                FR
-              </button>
-            </motion.div>
-
-            {/* Menu Button */}
-            <motion.button
-              className="p-2 rounded-lg hover:bg-accent transition-colors"
+            <button
+              type="button"
+              className="ds-nav__burger"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              whileTap={{ scale: 0.95 }}
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
             >
-              <motion.div
-                initial={false}
-                animate={{ rotate: isMenuOpen ? 180 : 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
-              </motion.div>
-            </motion.button>
+              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
           </div>
         </div>
-
-        {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              className="md:hidden overflow-hidden"
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <nav className="py-4 space-y-2 border-t border-border/50 mt-4 relative z-20">
-                {NAV_ITEMS.map((item, index) => (
-                  <motion.div
-                    key={item.key}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                  >
-                    <Link
-                      to={item.path}
-                      onClick={() => setIsMenuOpen(false)}
-                      className={`block w-full text-left px-4 py-3 hover:bg-accent/50 rounded-lg transition-colors ${
-                        isActive(item.path)
-                          ? 'text-foreground'
-                          : 'text-muted-foreground hover:text-foreground'
-                      }`}
-                    >
-                      {t(`nav.${item.key}`)}
-                    </Link>
-                  </motion.div>
-                ))}
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 20 }}
-                  transition={{ duration: 0.3, delay: 0.5 }}
-                  className="pt-4"
-                >
-                  <Link
-                    to="/contact"
-                    onClick={() => setIsMenuOpen(false)}
-                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all shrink-0 outline-none bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-4 py-2 w-full relative overflow-hidden"
-                  >
-                    <span className="relative z-10">{t('nav.bookCall')}</span>
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.2 }}
-                    />
-                  </Link>
-                </motion.div>
-              </nav>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
-    </motion.header>
+
+      {isMenuOpen && (
+        <nav className="ds-nav__mobile" aria-label="Primary mobile">
+          {NAV_ITEMS.map((item) => (
+            <Link
+              key={item.key}
+              to={item.path}
+              onClick={() => setIsMenuOpen(false)}
+              className={`ds-nav__link${isActive(item.path) ? " is-active" : ""}`}
+              aria-current={isActive(item.path) ? "page" : undefined}
+            >
+              {t(`nav.${item.key}`)}
+            </Link>
+          ))}
+          <Link
+            to="/contact"
+            onClick={() => setIsMenuOpen(false)}
+            className="ds-btn ds-btn--primary ds-btn--sm"
+          >
+            {t("nav.bookCall")}
+          </Link>
+        </nav>
+      )}
+    </header>
   );
 }

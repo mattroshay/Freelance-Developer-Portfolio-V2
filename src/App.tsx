@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
-import { AnimatedBackground } from "./components/AnimatedBackground";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Services } from "./pages/Services";
@@ -43,7 +42,6 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <div className="min-h-screen relative">
-        <AnimatedBackground />
         <Header />
         <main>
           <Routes>
