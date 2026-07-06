@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 /**
  * The orange MR brand mark, extracted from the approved Claude Design
@@ -40,7 +40,9 @@ export function MRLogo({ height = 22, ariaLabel }: MRLogoProps) {
 export function MRLogoDraw({ width = 360, ariaLabel }: { width?: number; ariaLabel?: string }) {
   const ref = useRef<SVGSVGElement>(null);
 
-  useEffect(() => {
+  // Layout effect: the start offset must be in place before first paint,
+  // or the full outline flashes for a frame.
+  useLayoutEffect(() => {
     const svg = ref.current;
     if (!svg) return;
     const paths = Array.from(svg.querySelectorAll("path"));

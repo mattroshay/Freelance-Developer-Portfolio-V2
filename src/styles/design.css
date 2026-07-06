@@ -812,12 +812,15 @@ body {
 
 .ds-logo-draw path {
   fill-opacity: 0;
-  transition: stroke-dashoffset 1.3s ease-out 0.15s, fill-opacity 0.7s ease 1.15s;
 }
 
+/* Transition only in the drawn state: the JS that sets the start offset
+   (0 → path length) must snap instantly, or it would itself animate and
+   the draw would run 0 → 0. */
 .ds-logo-draw.is-drawn path {
   stroke-dashoffset: 0 !important;
   fill-opacity: 1;
+  transition: stroke-dashoffset 1.3s ease-out 0.15s, fill-opacity 0.7s ease 1.15s;
 }
 
 @media (prefers-reduced-motion: reduce) {
