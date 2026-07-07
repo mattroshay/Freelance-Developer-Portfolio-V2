@@ -32,6 +32,12 @@ const PROJECTS: Project[] = [
     githubUrl: "https://github.com/mattroshay/wealth-dashboard",
   },
   {
+    key: "video2course",
+    image: "/images/projects/video2course.png",
+    technologies: ["Python", "Ollama (qwen3.6)", "faster-whisper", "ffmpeg", "yt-dlp", "Claude API (opt-in)"],
+    githubUrl: "https://github.com/mattroshay/video2course",
+  },
+  {
     key: "bitconsulting",
     image: "/images/projects/b-itconsulting.jpg",
     technologies: ["Ruby on Rails", "JavaScript", "PostgreSQL", "SCSS", "Heroku", "Cloudinary"],

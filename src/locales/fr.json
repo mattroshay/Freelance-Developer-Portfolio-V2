@@ -121,6 +121,13 @@
         "descriptionShort": "Automatisation locale des finances : synchronisation quotidienne PSD2 + IBKR vers SQLite, rendue en tableau de bord HTML autonome. Pas de cloud, zéro saisie manuelle — open source avec démo synthétique.",
         "imageAlt": "Démo du tableau de bord patrimonial : vue des dépenses avec courbe mensuelle, répartition par catégorie et indicateurs, générée à partir de données synthétiques"
       },
+      "video2course": {
+        "title": "video2course",
+        "label": "Projet perso · Open source",
+        "description": "Transforme une vidéo tutorielle en notes de cours structurées en Markdown — chapitres, prose de cours, captures d'écran intégrées, points clés et glossaire. Un pipeline local avant tout : faster-whisper transcrit, ffmpeg capture l'image la plus nette après chaque changement de plan, et une structuration LLM en deux passes (plan global, puis un appel à schéma imposé par section) rédige les notes — qwen3.6 via Ollama par défaut, rien ne quitte la machine ; Claude reste une option pour les vidéos qui comptent le plus. Traite des vidéos de plusieurs heures en une seule exécution et produit des notes prêtes pour Obsidian avec liens horodatés vers la vidéo. Fini la prise de notes en pause-reprise ; le tout alimente une base de connaissances personnelle.",
+        "descriptionShort": "Pipeline local qui transforme des vidéos tutorielles en notes de cours structurées en Markdown — transcription Whisper, captures aux changements de plan, rédaction LLM en deux passes via Ollama. Rien ne quitte la machine — open source.",
+        "imageAlt": "Sortie de video2course : une fiche de section générée avec titre de chapitre, capture de la vidéo intégrée, prose de cours et points clés"
+      },
       "bitconsulting": {
         "title": "B-itconsulting",
         "label": "Projet client · En ligne",
