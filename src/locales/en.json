@@ -27,7 +27,7 @@
     },
     "work": {
       "title": "Selected work",
-      "subtext": "A few recent client and product builds. From AI triage apps to bilingual, SEO-first websites.",
+      "subtext": "A few recent client and product builds. From AI-powered apps to bilingual, SEO-first websites.",
       "link": "See all work"
     },
     "about": {
@@ -108,13 +108,6 @@
     "noLink": "Client project — details on request",
     "viewAllGithub": "View all projects on GitHub",
     "list": {
-      "petHealth": {
-        "title": "Confidential AI Pet App",
-        "label": "Client project · 2026",
-        "description": "A mobile-first PWA built around a RAG-powered AI chat assistant, grounded in domain-specific data to give users reliable, context-aware answers.",
-        "descriptionShort": "A mobile-first PWA built around a RAG-powered AI chat assistant, grounded in domain-specific data to give users reliable, context-aware answers.",
-        "imageAlt": "8-bit pixel-art illustration of a dog and a cat — AI pet-health assistant built as a mobile-first PWA"
-      },
       "sarahPsy": {
         "title": "Sarah Cousin Roshay — Bilingual Therapy Practice",
         "label": "Client project · Live",
@@ -202,7 +195,7 @@
     },
     "work": {
       "title": "Work — AI Apps, Automations & Bilingual Websites",
-      "description": "Selected freelance projects: an AI pet-health triage app, a bilingual SEO-first therapy site, automated content platforms, and AI-powered products."
+      "description": "Selected freelance projects: a bilingual SEO-first therapy site, automated content platforms, and AI-powered products."
     },
     "contact": {
       "title": "Contact — Book a Free AI & Automation Discovery Call",

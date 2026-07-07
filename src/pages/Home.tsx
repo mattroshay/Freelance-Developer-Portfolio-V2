@@ -8,11 +8,11 @@ import { useRevealGroup } from "../hooks/useReveal";
 const SERVICE_KEYS = ["webDev", "aiIntegration", "aiWorkflow", "discovery"];
 
 // Home work teasers: featured + two cards (deck order).
+// petHealth is temporarily unlisted pending client approval to publish.
 const WORK_TEASERS = [
-  // shortDesc: full description is Work-page length; teaser uses the condensed key.
-  { key: "petHealth", image: "/images/projects/pet-health.png", featured: true, shortDesc: true, tags: ["Next.js 16", "React 19", "TypeScript", "Supabase"] },
-  { key: "sarahPsy", image: "/images/projects/sarah-psy.jpg" },
+  { key: "sarahPsy", image: "/images/projects/sarah-psy.jpg", featured: true, tags: ["Next.js", "App Router", "i18n (EN/FR)", "SEO"] },
   { key: "bitconsulting", image: "/images/projects/b-itconsulting.jpg" },
+  { key: "matchmeal", image: "/images/projects/matchmeal-screen.png" },
 ];
 
 const ABOUT_FACT_KEYS = ["experience", "certification", "tooling", "location"];
@@ -102,7 +102,7 @@ export function Home() {
               <span className="ds-card__label">{t(`projects.list.${featured.key}.label`)}</span>
               <h3 className="ds-card__title">{t(`projects.list.${featured.key}.title`)}</h3>
               <p className="ds-card__desc">
-                {t(`projects.list.${featured.key}.${featured.shortDesc ? "descriptionShort" : "description"}`)}
+                {t(`projects.list.${featured.key}.description`)}
               </p>
               <div className="ds-tags" style={{ marginTop: 4 }}>
                 {featured.tags!.map((tag) => (
