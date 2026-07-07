@@ -114,6 +114,13 @@
         "description": "Un site bilingue (EN/FR) pour une thérapeute TCC accompagnant expatriés, professionnels et parents. Conçu pour les deux choses qui convertissent en ligne : être trouvée et inspirer confiance. SEO page par page, routage multilingue propre, témoignages et réservation d'appel découverte en un clic. Design, développement, SEO et rédaction.",
         "imageAlt": "Page d'accueil de sarah-psy.com : site bilingue de cabinet de thérapie avec réservation d'appel découverte"
       },
+      "wealthDashboard": {
+        "title": "Wealth Dashboard",
+        "label": "Projet perso · Open source",
+        "description": "Automatisation locale des finances pour les foyers européens. Une synchronisation quotidienne planifiée récupère les comptes bancaires (PSD2 via Enable Banking — plus de 2 500 banques en Europe) et Interactive Brokers dans une base SQLite locale, un moteur de règles catégorise les libellés bancaires bruts, et le tout est rendu en un tableau de bord HTML autonome — dépenses, revenus, patrimoine net et digest hebdomadaire. Pas de cloud, aucun agrégateur ne stocke vos données. Fini les exports de relevés sur trois établissements ; les chiffres fiscaux de fin d'année sortent d'un script. Open source, avec un jeu de données de démo entièrement synthétique.",
+        "descriptionShort": "Automatisation locale des finances : synchronisation quotidienne PSD2 + IBKR vers SQLite, rendue en tableau de bord HTML autonome. Pas de cloud, zéro saisie manuelle — open source avec démo synthétique.",
+        "imageAlt": "Démo du tableau de bord patrimonial : vue des dépenses avec courbe mensuelle, répartition par catégorie et indicateurs, générée à partir de données synthétiques"
+      },
       "bitconsulting": {
         "title": "B-itconsulting",
         "label": "Projet client · En ligne",

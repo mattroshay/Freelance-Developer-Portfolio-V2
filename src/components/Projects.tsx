@@ -26,6 +26,12 @@ const PROJECTS: Project[] = [
     featured: true,
   },
   {
+    key: "wealthDashboard",
+    image: "/images/projects/wealth-dashboard.png",
+    technologies: ["Python", "SQLite", "Enable Banking (PSD2)", "IBKR Flex", "Vanilla JS/HTML", "macOS launchd"],
+    githubUrl: "https://github.com/mattroshay/wealth-dashboard",
+  },
+  {
     key: "bitconsulting",
     image: "/images/projects/b-itconsulting.jpg",
     technologies: ["Ruby on Rails", "JavaScript", "PostgreSQL", "SCSS", "Heroku", "Cloudinary"],
@@ -86,7 +92,7 @@ export function Projects() {
         >
           {t("projects.viewLive")} →
         </a>
-      ) : (
+      ) : project.githubUrl ? null : (
         <span
           className="ds-dim"
           style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 13 }}
