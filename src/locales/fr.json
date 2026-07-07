@@ -27,7 +27,7 @@
     },
     "work": {
       "title": "Réalisations sélectionnées",
-      "subtext": "Quelques projets clients et produits récents. Des applications de triage IA aux sites bilingues pensés pour le SEO.",
+      "subtext": "Quelques projets clients et produits récents. Des applications propulsées par l'IA aux sites bilingues pensés pour le SEO.",
       "link": "Voir toutes les réalisations"
     },
     "about": {
@@ -108,13 +108,6 @@
     "noLink": "Projet client — détails sur demande",
     "viewAllGithub": "Voir tous les projets sur GitHub",
     "list": {
-      "petHealth": {
-        "title": "Application IA animalière confidentielle",
-        "label": "Projet client · 2026",
-        "description": "Une PWA mobile-first construite autour d'un assistant conversationnel IA (RAG), ancré dans des données métier pour des réponses fiables et contextualisées.",
-        "descriptionShort": "Une PWA mobile-first construite autour d'un assistant conversationnel IA (RAG), ancré dans des données métier pour des réponses fiables et contextualisées.",
-        "imageAlt": "Illustration pixel-art 8-bit d'un chien et d'un chat — assistant santé animale par IA, conçu comme une PWA mobile-first"
-      },
       "sarahPsy": {
         "title": "Sarah Cousin Roshay — Cabinet de thérapie bilingue",
         "label": "Projet client · En ligne",
@@ -202,7 +195,7 @@
     },
     "work": {
       "title": "Réalisations — Apps IA, automatisations & sites bilingues",
-      "description": "Projets freelance sélectionnés : app de triage santé animale par IA, site de thérapie bilingue optimisé SEO, plateformes de contenu automatisées et produits IA."
+      "description": "Projets freelance sélectionnés : site de thérapie bilingue optimisé SEO, plateformes de contenu automatisées et produits IA."
     },
     "contact": {
       "title": "Contact — Réservez un appel découverte IA gratuit",
