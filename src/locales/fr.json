@@ -303,6 +303,13 @@
       }
     ]
   },
+  "consent": {
+    "ariaLabel": "Consentement aux cookies",
+    "message": "Ce site utilise des cookies de mesure d'audience (Google Analytics). Ils ne sont déposés que si vous acceptez — refuser ne change rien à votre navigation.",
+    "learnMore": "Politique de confidentialité",
+    "accept": "Accepter",
+    "reject": "Refuser"
+  },
   "meta": {
     "home": {
       "title": "Matt Roshay — Développeur produits IA & automatisation",

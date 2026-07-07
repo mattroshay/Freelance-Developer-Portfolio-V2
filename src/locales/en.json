@@ -303,6 +303,13 @@
       }
     ]
   },
+  "consent": {
+    "ariaLabel": "Cookie consent",
+    "message": "This site uses cookies for audience measurement (Google Analytics). They are only set if you accept — declining changes nothing about your browsing.",
+    "learnMore": "Privacy policy",
+    "accept": "Accept",
+    "reject": "Decline"
+  },
   "meta": {
     "home": {
       "title": "Matt Roshay — AI Product Builder & Automation Developer",
