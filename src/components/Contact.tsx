@@ -93,6 +93,16 @@ export function Contact() {
                 method="POST"
                 style={{ display: "flex", flexDirection: "column", gap: 20 }}
               >
+                {/* Honeypot: hidden from users; Formspree silently drops any
+                    submission where this field is filled (bots auto-fill it). */}
+                <input
+                  type="text"
+                  name="_gotcha"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  style={{ display: "none" }}
+                />
                 <div
                   style={{
                     display: "grid",
