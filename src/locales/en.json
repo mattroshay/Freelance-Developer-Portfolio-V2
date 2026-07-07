@@ -124,7 +124,7 @@
       "wealthDashboard": {
         "title": "Wealth Dashboard",
         "label": "Personal project · Open source",
-        "description": "Local-first personal-finance automation for a French household. A daily scheduled sync pulls bank accounts (PSD2 via Enable Banking) and Interactive Brokers into a local SQLite database, a rule engine categorises French merchant labels, and everything renders as a single self-contained HTML dashboard — spending, income, net worth, and a weekly digest. No cloud, no aggregator storing your data. Replaced spreadsheet exports across three institutions; year-end tax figures now come from one script. Open source, with a fully synthetic demo dataset.",
+        "description": "Local-first personal-finance automation for European households. A daily scheduled sync pulls bank accounts (PSD2 via Enable Banking — 2,500+ banks across Europe) and Interactive Brokers into a local SQLite database, a rule engine categorises raw merchant labels, and everything renders as a single self-contained HTML dashboard — spending, income, net worth, and a weekly digest. No cloud, no aggregator storing your data. Replaced spreadsheet exports across three institutions; year-end tax figures now come from one script. Open source, with a fully synthetic demo dataset.",
         "descriptionShort": "Local-first finance automation: daily PSD2 bank + IBKR sync into SQLite, rendered as a single-file HTML dashboard. No cloud, zero manual entry — open source with a synthetic demo.",
         "imageAlt": "Wealth dashboard demo: spending overview with monthly outflow chart, category mix and KPI tiles, built from synthetic data"
       },
