@@ -109,10 +109,10 @@
     "viewAllGithub": "View all projects on GitHub",
     "list": {
       "petHealth": {
-        "title": "AI Pet-Health Triage App",
+        "title": "Confidential AI Pet App",
         "label": "Client project · 2026",
-        "description": "A mobile-first PWA built around a RAG-powered AI chat assistant, grounded in domain-specific data to give users reliable, context-aware answers — alongside structured digital records, location-based search, and one-tap PDF generation. Built French-first with a full i18n layer, and architected for privacy and trust from day one, with EU hosting for GDPR. Solo design, architecture and full-stack development.",
-        "descriptionShort": "A mobile-first PWA built around a RAG-powered AI chat assistant grounded in domain-specific data — with structured digital records, location-based search, and one-tap PDF generation. Solo full-stack build.",
+        "description": "A mobile-first PWA built around a RAG-powered AI chat assistant, grounded in domain-specific data to give users reliable, context-aware answers.",
+        "descriptionShort": "A mobile-first PWA built around a RAG-powered AI chat assistant, grounded in domain-specific data to give users reliable, context-aware answers.",
         "imageAlt": "8-bit pixel-art illustration of a dog and a cat — AI pet-health assistant built as a mobile-first PWA"
       },
       "sarahPsy": {

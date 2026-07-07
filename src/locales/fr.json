@@ -109,10 +109,10 @@
     "viewAllGithub": "Voir tous les projets sur GitHub",
     "list": {
       "petHealth": {
-        "title": "Application de triage santé animale par IA",
+        "title": "Application IA animalière confidentielle",
         "label": "Projet client · 2026",
-        "description": "Une PWA mobile-first construite autour d'un assistant conversationnel IA (RAG), ancré dans des données métier pour des réponses fiables et contextualisées — avec dossiers numériques structurés, recherche géolocalisée et génération de documents PDF en un clic. Conçue d'abord en français avec une couche i18n complète, et pensée pour la confidentialité et la confiance dès le premier jour (hébergement UE, RGPD). Design, architecture et développement full-stack en solo.",
-        "descriptionShort": "Une PWA mobile-first construite autour d'un assistant IA (RAG) ancré dans des données métier — dossiers numériques structurés, recherche géolocalisée et génération de PDF en un clic. Conception et développement full-stack en solo.",
+        "description": "Une PWA mobile-first construite autour d'un assistant conversationnel IA (RAG), ancré dans des données métier pour des réponses fiables et contextualisées.",
+        "descriptionShort": "Une PWA mobile-first construite autour d'un assistant conversationnel IA (RAG), ancré dans des données métier pour des réponses fiables et contextualisées.",
         "imageAlt": "Illustration pixel-art 8-bit d'un chien et d'un chat — assistant santé animale par IA, conçu comme une PWA mobile-first"
       },
       "sarahPsy": {
