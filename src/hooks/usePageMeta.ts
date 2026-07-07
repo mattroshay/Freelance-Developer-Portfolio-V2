@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-type PageKey = "home" | "about" | "services" | "work" | "contact";
+type PageKey = "home" | "about" | "services" | "work" | "contact" | "legal" | "privacy";
 
 /**
  * Sets the document title and meta description for the current page,

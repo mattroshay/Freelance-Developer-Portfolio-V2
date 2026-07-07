@@ -178,7 +178,130 @@
     "love": "love",
     "coffee": "coffee",
     "and": "and lots of",
-    "backToTop": "Back to top"
+    "backToTop": "Back to top",
+    "legalNotice": "Legal notice",
+    "privacyPolicy": "Privacy policy"
+  },
+  "legal": {
+    "eyebrow": "Legal",
+    "title": "Legal Notice",
+    "updated": "Last updated: 7 July 2026",
+    "sections": [
+      {
+        "heading": "Site publisher",
+        "paragraphs": [
+          "In accordance with Article 6 of French law n° 2004-575 of 21 June 2004 on confidence in the digital economy (LCEN), this website (mattroshay.com) is published by:"
+        ],
+        "items": [
+          "Matthieu Roshay, sole proprietor (entrepreneur individuel) under French law",
+          "SIREN: 990 225 419 — SIRET (head office): 990 225 419 00011",
+          "APE code: 62.01Z — Computer programming",
+          "Registered office: 5 allée de Terre Vieille, 33160 Saint-Médard-en-Jalles, France",
+          "Registered in the French National Business Register (RNE) since 12 August 2025",
+          "VAT not applicable — Article 293 B of the French General Tax Code (franchise en base)"
+        ]
+      },
+      {
+        "heading": "Publication director",
+        "paragraphs": [
+          "Matthieu Roshay."
+        ]
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": [
+          "You can reach the publisher through the contact form on this site, or by phone at +33 6 74 94 12 49."
+        ]
+      },
+      {
+        "heading": "Hosting",
+        "paragraphs": [
+          "This site is hosted by Heroku, a service of Salesforce, Inc., 415 Mission Street, Suite 300, San Francisco, CA 94105, United States — heroku.com."
+        ]
+      },
+      {
+        "heading": "Intellectual property",
+        "paragraphs": [
+          "Unless stated otherwise, all content on this site (text, images, logos, code and layout) is the property of Matthieu Roshay and is protected by French and international intellectual-property law. Any reproduction, distribution or modification, in whole or in part, without prior written permission is prohibited.",
+          "Third-party trademarks and logos mentioned on this site (clients, tools, platforms) remain the property of their respective owners."
+        ]
+      },
+      {
+        "heading": "Liability",
+        "paragraphs": [
+          "The information published on this site is provided for general information purposes and may be updated at any time. Despite the care taken in its preparation, it may contain inaccuracies or omissions; the publisher cannot be held liable for any direct or indirect damage arising from the use of this site.",
+          "This site contains links to external websites. The publisher has no control over their content and accepts no responsibility for them."
+        ]
+      },
+      {
+        "heading": "Applicable law",
+        "paragraphs": [
+          "This site is governed by French law. Any dispute relating to its use falls under the jurisdiction of the French courts."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "eyebrow": "Privacy",
+    "title": "Privacy Policy",
+    "updated": "Last updated: 7 July 2026",
+    "sections": [
+      {
+        "heading": "Who is responsible for your data",
+        "paragraphs": [
+          "Matthieu Roshay, sole proprietor (entrepreneur individuel), 5 allée de Terre Vieille, 33160 Saint-Médard-en-Jalles, France — SIREN 990 225 419 — is the data controller for personal data collected on mattroshay.com. Full identification details are available on the Legal Notice page."
+        ]
+      },
+      {
+        "heading": "What data is collected, and why",
+        "items": [
+          "Contact form — name, email address, subject and message. Purpose: answering your enquiry. Legal basis: steps taken at your request prior to entering into a contract, or legitimate interest in responding (Art. 6(1)(b) and 6(1)(f) GDPR).",
+          "Call booking — if you book a call, your name, email and chosen time slot are collected directly by Calendly on its own site, under Calendly's privacy policy.",
+          "Audience measurement — with your consent, Google Tag Manager and Google Analytics collect browsing data (pages visited, approximate location, device type) to understand how the site is used. Legal basis: consent (Art. 6(1)(a) GDPR)."
+        ],
+        "paragraphs": [
+          "No personal data is sold or rented to third parties, and the site collects nothing beyond what is listed above."
+        ]
+      },
+      {
+        "heading": "Service providers and data transfers",
+        "paragraphs": [
+          "The following processors handle data on the publisher's behalf:"
+        ],
+        "items": [
+          "Formspree, Inc. (United States) — contact-form submissions",
+          "Calendly LLC (United States) — call scheduling",
+          "Google Ireland Ltd / Google LLC — audience measurement, only if you consent",
+          "Salesforce, Inc. — Heroku (United States) — site hosting"
+        ]
+      },
+      {
+        "heading": "Transfers outside the European Union",
+        "paragraphs": [
+          "Some of these providers are located in the United States. Where data is transferred outside the EU, the transfer relies on safeguards recognised by the GDPR, such as the EU–U.S. Data Privacy Framework or the European Commission's Standard Contractual Clauses."
+        ]
+      },
+      {
+        "heading": "How long data is kept",
+        "paragraphs": [
+          "Contact-form messages are kept for the time needed to handle the exchange, and at most 12 months after our last contact — unless we start working together, in which case legal contractual and accounting retention periods apply. Audience-measurement data is retained for at most 14 months."
+        ]
+      },
+      {
+        "heading": "Cookies and trackers",
+        "paragraphs": [
+          "Cookies and similar trackers used for audience measurement are only set after you give consent via the cookie banner, and you can withdraw that consent at any time without affecting your browsing.",
+          "Strictly necessary local storage — such as remembering your language preference (EN/FR) — does not require consent."
+        ]
+      },
+      {
+        "heading": "Your rights",
+        "paragraphs": [
+          "Under the GDPR and the French Data Protection Act (Loi Informatique et Libertés), you have the right to access, rectify and erase your personal data, to restrict or object to its processing, and to receive it in a portable format.",
+          "To exercise these rights, contact me via the contact form or by phone at +33 6 74 94 12 49. If you believe your rights have not been respected, you may lodge a complaint with the CNIL (cnil.fr)."
+        ]
+      }
+    ]
   },
   "meta": {
     "home": {
@@ -200,6 +323,14 @@
     "contact": {
       "title": "Contact — Book a Free AI & Automation Discovery Call",
       "description": "Tell me what's slow, manual, or on your roadmap. Book a free 30-minute call (EN or FR) for a straight answer on fit and budget."
+    },
+    "legal": {
+      "title": "Legal Notice — Matt Roshay",
+      "description": "Legal notice (mentions légales) for mattroshay.com: publisher identification, hosting, intellectual property and applicable law."
+    },
+    "privacy": {
+      "title": "Privacy Policy — Matt Roshay",
+      "description": "How mattroshay.com handles your personal data: what is collected, why, how long it is kept, and your GDPR rights."
     }
   }
 }

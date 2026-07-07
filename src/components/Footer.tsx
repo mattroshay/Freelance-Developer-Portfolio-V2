@@ -74,6 +74,14 @@ export function Footer() {
           <Coffee size={12} color="#f7941e" aria-hidden="true" />
           <span className="ds-sr-only">{t("footer.coffee")}</span>.
         </div>
+        <div style={{ display: "inline-flex", flexWrap: "wrap", gap: 16 }}>
+          <Link to="/mentions-legales" className="ds-footer__link">
+            {t("footer.legalNotice")}
+          </Link>
+          <Link to="/privacy" className="ds-footer__link">
+            {t("footer.privacyPolicy")}
+          </Link>
+        </div>
         <div>{t("contact.info.locationValue")}</div>
       </div>
     </footer>
