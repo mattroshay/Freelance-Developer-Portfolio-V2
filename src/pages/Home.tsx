@@ -67,6 +67,50 @@ export function Home() {
         </div>
       </section>
 
+      {/* About strip — statement + fact list */}
+      <section ref={aboutRef} className="ds-section ds-section--alt">
+        <div className="ds-container ds-strip">
+          <div className="ds-strip__text">
+            <div data-reveal className="ds-eyebrow">
+              {t("home.about.title")}
+            </div>
+            <h2 data-reveal className="ds-h2 ds-h2--strip">
+              {t("about.paragraph1")}
+            </h2>
+            <Link data-reveal to="/about" className="ds-mono-link">
+              {t("home.about.link")} →
+            </Link>
+          </div>
+          <div data-reveal className="ds-facts">
+            {ABOUT_FACT_KEYS.map((key) => (
+              <div key={key} className="ds-facts__row">
+                <span>{t(`about.stats.${key}`)}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA — centered */}
+      <section ref={ctaRef} className="ds-section">
+        <div className="ds-container ds-cta">
+          <h2 data-reveal className="ds-h2 ds-h2--cta">
+            {t("home.cta.title")}
+          </h2>
+          <p data-reveal className="ds-lede">
+            {t("home.cta.description")}
+          </p>
+          <div data-reveal className="ds-btn-row" style={{ marginTop: 8 }}>
+            <Link to="/contact" className="ds-btn ds-btn--primary">
+              {t("home.cta.button")}
+            </Link>
+            <Link to="/work" className="ds-btn ds-btn--secondary">
+              {t("hero.seeWork")}
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Work preview — featured card + two cards */}
       <section ref={workRef} className="ds-section ds-section--alt">
         <div className="ds-container">
@@ -131,50 +175,6 @@ export function Home() {
                 </div>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* About strip — statement + fact list */}
-      <section ref={aboutRef} className="ds-section">
-        <div className="ds-container ds-strip">
-          <div className="ds-strip__text">
-            <div data-reveal className="ds-eyebrow">
-              {t("home.about.title")}
-            </div>
-            <h2 data-reveal className="ds-h2 ds-h2--strip">
-              {t("about.paragraph1")}
-            </h2>
-            <Link data-reveal to="/about" className="ds-mono-link">
-              {t("home.about.link")} →
-            </Link>
-          </div>
-          <div data-reveal className="ds-facts">
-            {ABOUT_FACT_KEYS.map((key) => (
-              <div key={key} className="ds-facts__row">
-                <span>{t(`about.stats.${key}`)}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA — centered */}
-      <section ref={ctaRef} className="ds-section ds-section--alt">
-        <div className="ds-container ds-cta">
-          <h2 data-reveal className="ds-h2 ds-h2--cta">
-            {t("home.cta.title")}
-          </h2>
-          <p data-reveal className="ds-lede">
-            {t("home.cta.description")}
-          </p>
-          <div data-reveal className="ds-btn-row" style={{ marginTop: 8 }}>
-            <Link to="/contact" className="ds-btn ds-btn--primary">
-              {t("home.cta.button")}
-            </Link>
-            <Link to="/work" className="ds-btn ds-btn--secondary">
-              {t("hero.seeWork")}
-            </Link>
           </div>
         </div>
       </section>
