@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { CALENDLY_URL, CONTACT_PHONE } from "../config/site";
 import { useRevealGroup } from "../hooks/useReveal";
 
@@ -152,6 +153,14 @@ export function Contact() {
                     {t("contact.form.send")}
                   </button>
                 </div>
+
+                <p className="ds-dim" style={{ fontSize: 13, margin: 0 }}>
+                  {t("contact.form.consentNotice")}{" "}
+                  <Link to="/privacy" style={{ color: "inherit", textDecoration: "underline" }}>
+                    {t("contact.form.consentLink")}
+                  </Link>
+                  .
+                </p>
               </form>
             </div>
 

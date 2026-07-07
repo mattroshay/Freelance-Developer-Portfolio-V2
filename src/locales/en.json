@@ -156,7 +156,9 @@
       "emailPlaceholder": "your@email.com",
       "subjectPlaceholder": "What's this about?",
       "messagePlaceholder": "Tell me about your project, timeline, and what success looks like.",
-      "send": "Send message"
+      "send": "Send message",
+      "consentNotice": "The details you send are used only to reply to your message and are never shared for marketing — see the",
+      "consentLink": "privacy policy"
     },
     "info": {
       "title": "Get in touch",
