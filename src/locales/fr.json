@@ -126,7 +126,7 @@
         "label": "Projet perso · Open source",
         "description": "Transforme une vidéo tutorielle en notes de cours structurées en Markdown — chapitres, prose de cours, captures d'écran intégrées, points clés et glossaire. Un pipeline local avant tout : faster-whisper transcrit, ffmpeg capture l'image la plus nette après chaque changement de plan, et une structuration LLM en deux passes (plan global, puis un appel à schéma imposé par section) rédige les notes — qwen3.6 via Ollama par défaut, rien ne quitte la machine ; Claude reste une option pour les vidéos qui comptent le plus. Traite des vidéos de plusieurs heures en une seule exécution et produit des notes prêtes pour Obsidian avec liens horodatés vers la vidéo. Fini la prise de notes en pause-reprise ; le tout alimente une base de connaissances personnelle.",
         "descriptionShort": "Pipeline local qui transforme des vidéos tutorielles en notes de cours structurées en Markdown — transcription Whisper, captures aux changements de plan, rédaction LLM en deux passes via Ollama. Rien ne quitte la machine — open source.",
-        "imageAlt": "Sortie de video2course : une fiche de section générée avec titre de chapitre, capture de la vidéo intégrée, prose de cours et points clés"
+        "imageAlt": "Application video2course : interface web locale avec une vidéo en file d'attente et des sections de cours en cours de rédaction, barre de progression en direct"
       },
       "bitconsulting": {
         "title": "B-itconsulting",
