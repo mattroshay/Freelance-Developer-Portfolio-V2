@@ -27,7 +27,7 @@
     },
     "work": {
       "title": "Selected work",
-      "subtext": "A few recent client and product builds. From AI triage apps to bilingual, SEO-first websites.",
+      "subtext": "A few recent client and product builds. From AI-powered apps to bilingual, SEO-first websites.",
       "link": "See all work"
     },
     "about": {
@@ -108,13 +108,6 @@
     "noLink": "Client project — details on request",
     "viewAllGithub": "View all projects on GitHub",
     "list": {
-      "petHealth": {
-        "title": "AI Pet-Health Triage App",
-        "label": "Client project · 2026",
-        "description": "A mobile-first PWA built around a RAG-powered AI chat assistant, grounded in domain-specific data to give users reliable, context-aware answers. Alongside the assistant: a structured digital records system, location-based search, and one-tap PDF document generation. Built French-first with a fully scaffolded i18n layer, so an English version ships without rework. Architected for privacy and trust from day one — Supabase Auth (email/password + magic link), Row-Level Security on every table, EU-region hosting for GDPR, server-side-only secrets, and route-level auth guards. Every change is gated in CI on lint, type-check and build. Solo design, architecture and full-stack development.",
-        "descriptionShort": "A mobile-first PWA built around a RAG-powered AI chat assistant grounded in domain-specific data — with structured digital records, location-based search, and one-tap PDF generation. Solo full-stack build.",
-        "imageAlt": "8-bit pixel-art illustration of a dog and a cat — AI pet-health assistant built as a mobile-first PWA"
-      },
       "sarahPsy": {
         "title": "Sarah Cousin Roshay — Bilingual Therapy Practice",
         "label": "Client project · Live",
@@ -202,7 +195,7 @@
     },
     "work": {
       "title": "Work — AI Apps, Automations & Bilingual Websites",
-      "description": "Selected freelance projects: an AI pet-health triage app, a bilingual SEO-first therapy site, automated content platforms, and AI-powered products."
+      "description": "Selected freelance projects: a bilingual SEO-first therapy site, automated content platforms, and AI-powered products."
     },
     "contact": {
       "title": "Contact — Book a Free AI & Automation Discovery Call",
