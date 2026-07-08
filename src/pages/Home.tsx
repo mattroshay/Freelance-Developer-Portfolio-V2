@@ -7,12 +7,14 @@ import { useRevealGroup } from "../hooks/useReveal";
 // Product-first positioning: building leads, then AI/automation, Discovery closes.
 const SERVICE_KEYS = ["webDev", "aiIntegration", "aiWorkflow", "discovery"];
 
-// Home work teasers: featured + two cards (deck order).
+// Home work teasers: featured client project + the two current open-source
+// projects (AI/automation positioning). Small cards need a
+// projects.list.<key>.descriptionShort in both locales.
 // petHealth is temporarily unlisted pending client approval to publish.
 const WORK_TEASERS = [
   { key: "sarahPsy", image: "/images/projects/sarah-psy.jpg", featured: true, tags: ["Next.js", "App Router", "i18n (EN/FR)", "SEO"] },
-  { key: "bitconsulting", image: "/images/projects/b-itconsulting.jpg" },
-  { key: "matchmeal", image: "/images/projects/matchmeal-screen.png" },
+  { key: "wealthDashboard", image: "/images/projects/wealth-dashboard.png" },
+  { key: "video2course", image: "/images/projects/video2course.png" },
 ];
 
 const ABOUT_FACT_KEYS = ["experience", "certification", "tooling", "location"];
@@ -63,6 +65,50 @@ export function Home() {
                 </span>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About strip — statement + fact list */}
+      <section ref={aboutRef} className="ds-section ds-section--alt">
+        <div className="ds-container ds-strip">
+          <div className="ds-strip__text">
+            <div data-reveal className="ds-eyebrow">
+              {t("home.about.title")}
+            </div>
+            <h2 data-reveal className="ds-h2 ds-h2--strip">
+              {t("about.paragraph1")}
+            </h2>
+            <Link data-reveal to="/about" className="ds-mono-link">
+              {t("home.about.link")} →
+            </Link>
+          </div>
+          <div data-reveal className="ds-facts">
+            {ABOUT_FACT_KEYS.map((key) => (
+              <div key={key} className="ds-facts__row">
+                <span>{t(`about.stats.${key}`)}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA — centered */}
+      <section ref={ctaRef} className="ds-section">
+        <div className="ds-container ds-cta">
+          <h2 data-reveal className="ds-h2 ds-h2--cta">
+            {t("home.cta.title")}
+          </h2>
+          <p data-reveal className="ds-lede">
+            {t("home.cta.description")}
+          </p>
+          <div data-reveal className="ds-btn-row" style={{ marginTop: 8 }}>
+            <Link to="/contact" className="ds-btn ds-btn--primary">
+              {t("home.cta.button")}
+            </Link>
+            <Link to="/work" className="ds-btn ds-btn--secondary">
+              {t("hero.seeWork")}
+            </Link>
           </div>
         </div>
       </section>
@@ -127,54 +173,10 @@ export function Home() {
                 </div>
                 <div className="ds-card__content">
                   <h3 className="ds-card__title">{t(`projects.list.${proj.key}.title`)}</h3>
-                  <p className="ds-card__desc">{t(`projects.list.${proj.key}.description`)}</p>
+                  <p className="ds-card__desc">{t(`projects.list.${proj.key}.descriptionShort`)}</p>
                 </div>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* About strip — statement + fact list */}
-      <section ref={aboutRef} className="ds-section">
-        <div className="ds-container ds-strip">
-          <div className="ds-strip__text">
-            <div data-reveal className="ds-eyebrow">
-              {t("home.about.title")}
-            </div>
-            <h2 data-reveal className="ds-h2 ds-h2--strip">
-              {t("about.paragraph1")}
-            </h2>
-            <Link data-reveal to="/about" className="ds-mono-link">
-              {t("home.about.link")} →
-            </Link>
-          </div>
-          <div data-reveal className="ds-facts">
-            {ABOUT_FACT_KEYS.map((key) => (
-              <div key={key} className="ds-facts__row">
-                <span>{t(`about.stats.${key}`)}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA — centered */}
-      <section ref={ctaRef} className="ds-section ds-section--alt">
-        <div className="ds-container ds-cta">
-          <h2 data-reveal className="ds-h2 ds-h2--cta">
-            {t("home.cta.title")}
-          </h2>
-          <p data-reveal className="ds-lede">
-            {t("home.cta.description")}
-          </p>
-          <div data-reveal className="ds-btn-row" style={{ marginTop: 8 }}>
-            <Link to="/contact" className="ds-btn ds-btn--primary">
-              {t("home.cta.button")}
-            </Link>
-            <Link to="/work" className="ds-btn ds-btn--secondary">
-              {t("hero.seeWork")}
-            </Link>
           </div>
         </div>
       </section>

@@ -114,6 +114,20 @@
         "description": "A bilingual (EN/FR) website for a CBT therapist serving expats, professionals, and parents. Built for the two things that win clients online: being found and being trusted. Per-page SEO, clean multilingual routing, testimonials, and one-tap discovery-call booking. Design, build, SEO, and copy.",
         "imageAlt": "sarah-psy.com homepage: bilingual therapy practice website with discovery-call booking"
       },
+      "wealthDashboard": {
+        "title": "Wealth Dashboard",
+        "label": "Personal project · Open source",
+        "description": "Local-first personal-finance automation for European households. A daily scheduled sync pulls bank accounts (PSD2 via Enable Banking — 2,500+ banks across Europe) and Interactive Brokers into a local SQLite database, a rule engine categorises raw merchant labels, and everything renders as a single self-contained HTML dashboard — spending, income, net worth, and a weekly digest. No cloud, no aggregator storing your data. Replaced spreadsheet exports across three institutions; year-end tax figures now come from one script. Open source, with a fully synthetic demo dataset.",
+        "descriptionShort": "Local-first finance automation: daily PSD2 bank + IBKR sync into SQLite, rendered as a single-file HTML dashboard. No cloud, zero manual entry — open source with a synthetic demo.",
+        "imageAlt": "Wealth dashboard demo: spending overview with monthly outflow chart, category mix and KPI tiles, built from synthetic data"
+      },
+      "video2course": {
+        "title": "video2course",
+        "label": "Personal project · Open source",
+        "description": "Turns a tutorial video into structured Markdown course notes — chapters, lecture prose, inline screenshots, key points and a glossary. A local-first pipeline: faster-whisper transcribes, ffmpeg grabs the sharpest frame after each scene cut, and a two-pass LLM stage (outline first, then one schema-enforced call per section) writes the notes — qwen3.6 via Ollama by default, so nothing leaves the machine; Claude is opt-in for the videos that matter most. Handles multi-hour videos in a single run and outputs Obsidian-ready notes with timestamp deep-links back to the video. Replaced pause-and-type note-taking; the output feeds a personal knowledge base.",
+        "descriptionShort": "Local-first pipeline that turns tutorial videos into structured Markdown course notes — Whisper transcription, scene-cut screenshots, two-pass LLM writing via Ollama. Nothing leaves the machine — open source.",
+        "imageAlt": "video2course app: local web interface with a video queued and course sections being written, live progress bar"
+      },
       "bitconsulting": {
         "title": "B-itconsulting",
         "label": "Client project · Live",
