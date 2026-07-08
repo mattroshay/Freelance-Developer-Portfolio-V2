@@ -1,7 +1,16 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { getStoredConsent, storeConsent, loadGtm, type ConsentChoice } from "../utils/gtm";
+import {
+  getStoredConsent,
+  storeConsent,
+  loadGtm,
+  isGtmLoaded,
+  type ConsentChoice,
+} from "../utils/gtm";
+
+/** Dispatched by the footer's "Cookie preferences" link to reopen the banner. */
+export const OPEN_CONSENT_EVENT = "cookie-consent:open";
 
 /**
  * CNIL-compliant cookie banner: analytics (GTM/GA) only load after an
@@ -19,14 +28,22 @@ export function CookieConsent() {
     } else if (stored === null) {
       setVisible(true);
     }
+
+    const reopen = () => setVisible(true);
+    window.addEventListener(OPEN_CONSENT_EVENT, reopen);
+    return () => window.removeEventListener(OPEN_CONSENT_EVENT, reopen);
   }, []);
 
   const decide = (choice: ConsentChoice) => {
     storeConsent(choice);
+    setVisible(false);
     if (choice === "accepted") {
       loadGtm();
+    } else if (isGtmLoaded()) {
+      // Consent withdrawn after GTM was already running: a reload is the only
+      // way to actually stop the loaded trackers.
+      window.location.reload();
     }
-    setVisible(false);
   };
 
   if (!visible) return null;

@@ -2,6 +2,7 @@ import { Heart, Coffee } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { MRLogo } from "./MRLogo";
+import { OPEN_CONSENT_EVENT } from "./CookieConsent";
 import { GITHUB_URL, LINKEDIN_URL } from "../config/site";
 
 const NAV_ITEMS = [
@@ -75,6 +76,21 @@ export function Footer() {
           <Link to="/privacy" className="ds-footer__link">
             {t("footer.privacyPolicy")}
           </Link>
+          <button
+            type="button"
+            className="ds-footer__link"
+            onClick={() => window.dispatchEvent(new Event(OPEN_CONSENT_EVENT))}
+            style={{
+              background: "none",
+              border: 0,
+              padding: 0,
+              font: "inherit",
+              cursor: "pointer",
+              textAlign: "left",
+            }}
+          >
+            {t("footer.cookiePreferences")}
+          </button>
         </div>
         <div>{t("contact.info.locationValue")}</div>
       </div>
