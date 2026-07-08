@@ -26,13 +26,17 @@ declare global {
   }
 }
 
+export function isGtmLoaded(): boolean {
+  return !!document.querySelector('script[src^="https://www.googletagmanager.com/gtm.js"]');
+}
+
 /**
  * Injects the Google Tag Manager snippet at runtime. GTM is intentionally
  * absent from index.html: audience-measurement trackers may only run after
  * the visitor accepts via the cookie banner (GDPR/ePrivacy prior consent).
  */
 export function loadGtm() {
-  if (document.querySelector('script[src^="https://www.googletagmanager.com/gtm.js"]')) {
+  if (isGtmLoaded()) {
     return;
   }
   window.dataLayer = window.dataLayer || [];
