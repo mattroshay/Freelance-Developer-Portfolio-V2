@@ -192,7 +192,130 @@
     "love": "amour",
     "coffee": "café",
     "and": "et beaucoup de",
-    "backToTop": "Retour en haut"
+    "backToTop": "Retour en haut",
+    "legalNotice": "Mentions légales",
+    "privacyPolicy": "Politique de confidentialité"
+  },
+  "legal": {
+    "eyebrow": "Légal",
+    "title": "Mentions légales",
+    "updated": "Dernière mise à jour : 7 juillet 2026",
+    "sections": [
+      {
+        "heading": "Éditeur du site",
+        "paragraphs": [
+          "Conformément à l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), le site mattroshay.com est édité par :"
+        ],
+        "items": [
+          "Matthieu Roshay, entrepreneur individuel (EI)",
+          "SIREN : 990 225 419 — SIRET (siège) : 990 225 419 00011",
+          "Code APE : 62.01Z — Programmation informatique",
+          "Siège : 5 allée de Terre Vieille, 33160 Saint-Médard-en-Jalles, France",
+          "Immatriculé au Registre national des entreprises (RNE) depuis le 12 août 2025",
+          "TVA non applicable — article 293 B du Code général des impôts (franchise en base)"
+        ]
+      },
+      {
+        "heading": "Directeur de la publication",
+        "paragraphs": [
+          "Matthieu Roshay."
+        ]
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": [
+          "Vous pouvez contacter l'éditeur via le formulaire de contact du site ou par téléphone au +33 6 74 94 12 49."
+        ]
+      },
+      {
+        "heading": "Hébergement",
+        "paragraphs": [
+          "Le site est hébergé par Heroku, un service de Salesforce, Inc., 415 Mission Street, Suite 300, San Francisco, CA 94105, États-Unis — heroku.com."
+        ]
+      },
+      {
+        "heading": "Propriété intellectuelle",
+        "paragraphs": [
+          "Sauf mention contraire, l'ensemble des contenus de ce site (textes, images, logos, code et mise en page) est la propriété de Matthieu Roshay et est protégé par le droit français et international de la propriété intellectuelle. Toute reproduction, diffusion ou modification, totale ou partielle, sans autorisation écrite préalable est interdite.",
+          "Les marques et logos de tiers cités sur ce site (clients, outils, plateformes) restent la propriété de leurs titulaires respectifs."
+        ]
+      },
+      {
+        "heading": "Responsabilité",
+        "paragraphs": [
+          "Les informations publiées sur ce site le sont à titre informatif et peuvent être mises à jour à tout moment. Malgré le soin apporté à leur rédaction, elles peuvent comporter des inexactitudes ou des omissions ; la responsabilité de l'éditeur ne saurait être engagée pour tout dommage direct ou indirect résultant de l'utilisation de ce site.",
+          "Ce site contient des liens vers des sites externes. L'éditeur n'exerce aucun contrôle sur leur contenu et décline toute responsabilité à leur égard."
+        ]
+      },
+      {
+        "heading": "Droit applicable",
+        "paragraphs": [
+          "Le présent site est soumis au droit français. Tout litige relatif à son utilisation relève de la compétence des juridictions françaises."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "eyebrow": "Confidentialité",
+    "title": "Politique de confidentialité",
+    "updated": "Dernière mise à jour : 7 juillet 2026",
+    "sections": [
+      {
+        "heading": "Responsable du traitement",
+        "paragraphs": [
+          "Matthieu Roshay, entrepreneur individuel, 5 allée de Terre Vieille, 33160 Saint-Médard-en-Jalles, France — SIREN 990 225 419 — est responsable du traitement des données personnelles collectées sur mattroshay.com. L'identification complète figure sur la page Mentions légales."
+        ]
+      },
+      {
+        "heading": "Données collectées et finalités",
+        "items": [
+          "Formulaire de contact — nom, adresse e-mail, objet et message. Finalité : répondre à votre demande. Base légale : mesures précontractuelles prises à votre demande, ou intérêt légitime à y répondre (art. 6(1)(b) et 6(1)(f) du RGPD).",
+          "Réservation d'appel — si vous réservez un appel, vos nom, e-mail et créneau choisi sont collectés directement par Calendly sur son propre site, selon la politique de confidentialité de Calendly.",
+          "Mesure d'audience — avec votre consentement, Google Tag Manager et Google Analytics collectent des données de navigation (pages visitées, localisation approximative, type d'appareil) pour comprendre l'utilisation du site. Base légale : consentement (art. 6(1)(a) du RGPD)."
+        ],
+        "paragraphs": [
+          "Aucune donnée personnelle n'est vendue ni louée à des tiers, et le site ne collecte rien au-delà de ce qui est listé ci-dessus."
+        ]
+      },
+      {
+        "heading": "Sous-traitants et destinataires",
+        "paragraphs": [
+          "Les sous-traitants suivants traitent des données pour le compte de l'éditeur :"
+        ],
+        "items": [
+          "Formspree, Inc. (États-Unis) — envois du formulaire de contact",
+          "Calendly LLC (États-Unis) — prise de rendez-vous",
+          "Google Ireland Ltd / Google LLC — mesure d'audience, uniquement si vous y consentez",
+          "Salesforce, Inc. — Heroku (États-Unis) — hébergement du site"
+        ]
+      },
+      {
+        "heading": "Transferts hors Union européenne",
+        "paragraphs": [
+          "Certains de ces prestataires sont situés aux États-Unis. Lorsque des données sont transférées hors de l'UE, le transfert s'appuie sur des garanties reconnues par le RGPD, telles que le Data Privacy Framework UE–États-Unis ou les clauses contractuelles types de la Commission européenne."
+        ]
+      },
+      {
+        "heading": "Durées de conservation",
+        "paragraphs": [
+          "Les messages du formulaire de contact sont conservés le temps nécessaire au traitement de l'échange, et au maximum 12 mois après notre dernier contact — sauf si une collaboration débute, auquel cas les durées légales contractuelles et comptables s'appliquent. Les données de mesure d'audience sont conservées au maximum 14 mois."
+        ]
+      },
+      {
+        "heading": "Cookies et traceurs",
+        "paragraphs": [
+          "Les cookies et traceurs de mesure d'audience ne sont déposés qu'après votre consentement via le bandeau cookies, et vous pouvez retirer ce consentement à tout moment sans que cela n'affecte votre navigation.",
+          "Le stockage local strictement nécessaire — comme la mémorisation de votre préférence de langue (EN/FR) — ne nécessite pas de consentement."
+        ]
+      },
+      {
+        "heading": "Vos droits",
+        "paragraphs": [
+          "Conformément au RGPD et à la loi Informatique et Libertés, vous disposez de droits d'accès, de rectification et d'effacement de vos données, de limitation et d'opposition à leur traitement, ainsi que d'un droit à la portabilité.",
+          "Pour exercer ces droits, contactez-moi via le formulaire de contact ou par téléphone au +33 6 74 94 12 49. Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la CNIL (cnil.fr)."
+        ]
+      }
+    ]
   },
   "meta": {
     "home": {
@@ -214,6 +337,14 @@
     "contact": {
       "title": "Contact — Réservez un appel découverte IA gratuit",
       "description": "Dites-moi ce qui est lent, manuel ou sur votre feuille de route. Réservez un appel gratuit de 30 minutes (EN ou FR) pour une réponse claire."
+    },
+    "legal": {
+      "title": "Mentions légales — Matt Roshay",
+      "description": "Mentions légales de mattroshay.com : identification de l'éditeur, hébergeur, propriété intellectuelle et droit applicable."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité — Matt Roshay",
+      "description": "Comment mattroshay.com traite vos données personnelles : données collectées, finalités, durées de conservation et vos droits RGPD."
     }
   }
 }

@@ -8,6 +8,8 @@ import { About } from "./pages/About";
 import { Services } from "./pages/Services";
 import { Work } from "./pages/Work";
 import { Contact } from "./pages/Contact";
+import { MentionsLegales } from "./pages/MentionsLegales";
+import { Privacy } from "./pages/Privacy";
 
 // Scroll to the top on every route change (browsers only restore scroll
 // for history navigation; new pushes should start at the top).
@@ -50,6 +52,8 @@ export default function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/work" element={<Work />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/mentions-legales" element={<MentionsLegales />} />
+            <Route path="/privacy" element={<Privacy />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
