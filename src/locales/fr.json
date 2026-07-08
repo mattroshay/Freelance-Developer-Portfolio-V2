@@ -170,7 +170,9 @@
       "emailPlaceholder": "votre@email.com",
       "subjectPlaceholder": "C'est à quel sujet ?",
       "messagePlaceholder": "Parlez-moi de votre projet, du calendrier et de ce à quoi ressemble la réussite.",
-      "send": "Envoyer le message"
+      "send": "Envoyer le message",
+      "consentNotice": "Les informations envoyées ne servent qu'à répondre à votre message et ne sont jamais partagées à des fins marketing — voir la",
+      "consentLink": "politique de confidentialité"
     },
     "info": {
       "title": "Entrer en contact",
