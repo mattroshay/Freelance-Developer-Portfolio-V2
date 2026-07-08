@@ -163,13 +163,10 @@
     "info": {
       "title": "Get in touch",
       "description": "Whether you're scoping a first AI feature or modernising an existing product, I'm happy to help you think it through.",
-      "phone": "Phone",
-      "phoneValue": "+33 6 74 94 12 49",
-      "phoneDescription": "Mon–Fri, 9AM–6PM CET",
       "location": "Location",
       "locationValue": "Near Bordeaux, France · Remote worldwide",
       "quickResponse": "Quick response",
-      "quickResponseDescription": "I usually reply within 24 hours. For anything urgent, call directly."
+      "quickResponseDescription": "I usually reply within 24 hours — mention it in your message if it's urgent."
     }
   },
   "footer": {

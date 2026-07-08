@@ -2,7 +2,7 @@ import { Heart, Coffee } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { MRLogo } from "./MRLogo";
-import { GITHUB_URL, LINKEDIN_URL, CONTACT_EMAIL, CONTACT_PHONE } from "../config/site";
+import { GITHUB_URL, LINKEDIN_URL, CONTACT_EMAIL } from "../config/site";
 
 const NAV_ITEMS = [
   { key: "home", path: "/" },
@@ -40,9 +40,6 @@ export function Footer() {
           <div className="ds-footer__heading">{t("footer.getInTouch")}</div>
           <a href={`mailto:${CONTACT_EMAIL}`} className="ds-footer__link">
             {CONTACT_EMAIL}
-          </a>
-          <a href={`tel:${CONTACT_PHONE}`} className="ds-footer__link">
-            {t("contact.info.phoneValue")}
           </a>
           <div className="ds-footer__social">
             <a
