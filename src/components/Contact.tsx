@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { CALENDLY_URL, CONTACT_PHONE } from "../config/site";
+import { CALENDLY_URL } from "../config/site";
 import { useRevealGroup } from "../hooks/useReveal";
 
 export function Contact() {
@@ -184,22 +184,6 @@ export function Contact() {
               </div>
 
               <div className="ds-facts">
-                <div className="ds-facts__row">
-                  <span className="ds-footer__heading" style={{ width: 88, flexShrink: 0 }}>
-                    {t("contact.info.phone")}
-                  </span>
-                  <span style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-                    <a
-                      href={`tel:${CONTACT_PHONE}`}
-                      style={{ color: "inherit", textDecoration: "none" }}
-                    >
-                      {t("contact.info.phoneValue")}
-                    </a>
-                    <span className="ds-dim" style={{ fontSize: 13 }}>
-                      {t("contact.info.phoneDescription")}
-                    </span>
-                  </span>
-                </div>
                 <div className="ds-facts__row">
                   <span className="ds-footer__heading" style={{ width: 88, flexShrink: 0 }}>
                     {t("contact.info.location")}

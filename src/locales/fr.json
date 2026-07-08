@@ -177,13 +177,10 @@
     "info": {
       "title": "Entrer en contact",
       "description": "Que vous cadriez une première fonctionnalité IA ou modernisiez un produit existant, je vous aide volontiers à y voir clair.",
-      "phone": "Téléphone",
-      "phoneValue": "+33 6 74 94 12 49",
-      "phoneDescription": "Lun–Ven, 9h–18h CET",
       "location": "Localisation",
       "locationValue": "Près de Bordeaux, France · À distance dans le monde entier",
       "quickResponse": "Réponse rapide",
-      "quickResponseDescription": "Je réponds généralement sous 24 heures. Pour tout ce qui est urgent, appelez directement."
+      "quickResponseDescription": "Je réponds généralement sous 24 heures — précisez-le dans votre message si c'est urgent."
     }
   },
   "footer": {
