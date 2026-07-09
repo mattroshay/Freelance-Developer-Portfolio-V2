@@ -16,14 +16,18 @@ interface Project {
 }
 
 // Order per copy deck: strongest-first, bootcamp capstone last.
-// petHealth is temporarily unlisted pending client approval to publish.
 const PROJECTS: Project[] = [
+  {
+    key: "petHealth",
+    image: "/images/projects/pet-health.png",
+    technologies: ["Next.js 16 (App Router)", "React 19", "TypeScript", "Tailwind CSS v4", "next-intl", "Supabase (Postgres / Auth / Storage)", "Vercel"],
+    featured: true,
+  },
   {
     key: "sarahPsy",
     image: "/images/projects/sarah-psy.jpg",
     technologies: ["Next.js", "App Router", "i18n (EN/FR)", "SEO", "Calendly", "Vercel"],
     liveUrl: "https://www.sarah-psy.com",
-    featured: true,
   },
   {
     key: "wealthDashboard",

@@ -10,9 +10,9 @@ const SERVICE_KEYS = ["webDev", "aiIntegration", "aiWorkflow", "discovery"];
 // Home work teasers: featured client project + the two current open-source
 // projects (AI/automation positioning). Small cards need a
 // projects.list.<key>.descriptionShort in both locales.
-// petHealth is temporarily unlisted pending client approval to publish.
 const WORK_TEASERS = [
-  { key: "sarahPsy", image: "/images/projects/sarah-psy.jpg", featured: true, tags: ["Next.js", "App Router", "i18n (EN/FR)", "SEO"] },
+  // shortDesc: full description is Work-page length; teaser uses the condensed key.
+  { key: "petHealth", image: "/images/projects/pet-health.png", featured: true, shortDesc: true, tags: ["Next.js 16", "React 19", "TypeScript", "Supabase"] },
   { key: "wealthDashboard", image: "/images/projects/wealth-dashboard.png" },
   { key: "video2course", image: "/images/projects/video2course.png" },
 ];
@@ -148,7 +148,7 @@ export function Home() {
               <span className="ds-card__label">{t(`projects.list.${featured.key}.label`)}</span>
               <h3 className="ds-card__title">{t(`projects.list.${featured.key}.title`)}</h3>
               <p className="ds-card__desc">
-                {t(`projects.list.${featured.key}.description`)}
+                {t(`projects.list.${featured.key}.${featured.shortDesc ? "descriptionShort" : "description"}`)}
               </p>
               <div className="ds-tags" style={{ marginTop: 4 }}>
                 {featured.tags!.map((tag) => (
