@@ -24,10 +24,10 @@ const PROJECTS: Project[] = [
     featured: true,
   },
   {
-    key: "sarahPsy",
-    image: "/images/projects/sarah-psy.jpg",
-    technologies: ["Next.js", "App Router", "i18n (EN/FR)", "SEO", "Calendly", "Vercel"],
-    liveUrl: "https://www.sarah-psy.com",
+    key: "bitconsulting",
+    image: "/images/projects/b-itconsulting.jpg",
+    technologies: ["Ruby on Rails", "JavaScript", "PostgreSQL", "SCSS", "Heroku", "Cloudinary"],
+    liveUrl: "https://www.b-itconsulting.com",
   },
   {
     key: "wealthDashboard",
@@ -42,10 +42,10 @@ const PROJECTS: Project[] = [
     githubUrl: "https://github.com/mattroshay/video2course",
   },
   {
-    key: "bitconsulting",
-    image: "/images/projects/b-itconsulting.jpg",
-    technologies: ["Ruby on Rails", "JavaScript", "PostgreSQL", "SCSS", "Heroku", "Cloudinary"],
-    liveUrl: "https://www.b-itconsulting.com",
+    key: "sarahPsy",
+    image: "/images/projects/sarah-psy.jpg",
+    technologies: ["Next.js", "App Router", "i18n (EN/FR)", "SEO", "Calendly", "Vercel"],
+    liveUrl: "https://www.sarah-psy.com",
   },
   {
     key: "matchmeal",
