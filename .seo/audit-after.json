@@ -1,0 +1,975 @@
+{
+  "mode": "local",
+  "target": "build",
+  "pages": [
+    {
+      "page": "index.html",
+      "title": "Matt Roshay \u2014 AI Product Builder & Automation Developer",
+      "description": "Freelance AI enablement specialist and full-stack developer near Bordeaux. I build apps and AI products \u2014 and the automations around them. Book a free call.",
+      "checks": [
+        {
+          "check": "title_present",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page has a <title>",
+          "detail": "Matt Roshay \u2014 AI Product Builder & Automation Developer"
+        },
+        {
+          "check": "title_length",
+          "status": "pass",
+          "weight": 2,
+          "description": "Title length 30-60 chars",
+          "detail": "55 chars"
+        },
+        {
+          "check": "meta_description",
+          "status": "pass",
+          "weight": 3,
+          "description": "Meta description present",
+          "detail": "Freelance AI enablement specialist and full-stack developer near Bordeaux. I build apps and AI produ"
+        },
+        {
+          "check": "meta_desc_length",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta description length 70-160 chars",
+          "detail": "156 chars"
+        },
+        {
+          "check": "single_h1",
+          "status": "pass",
+          "weight": 3,
+          "description": "Exactly one <h1>",
+          "detail": "1 h1 tags"
+        },
+        {
+          "check": "heading_order",
+          "status": "pass",
+          "weight": 1,
+          "description": "No skipped heading levels",
+          "detail": "ok"
+        },
+        {
+          "check": "img_alt",
+          "status": "pass",
+          "weight": 2,
+          "description": "All <img> tags have alt text",
+          "detail": "0 imgs ok"
+        },
+        {
+          "check": "canonical",
+          "status": "pass",
+          "weight": 2,
+          "description": "rel=canonical link present",
+          "detail": ""
+        },
+        {
+          "check": "viewport",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta viewport present",
+          "detail": ""
+        },
+        {
+          "check": "html_lang",
+          "status": "pass",
+          "weight": 2,
+          "description": "<html lang> attribute set",
+          "detail": "en"
+        },
+        {
+          "check": "og_tags",
+          "status": "pass",
+          "weight": 2,
+          "description": "Open Graph title, description and image",
+          "detail": "ok"
+        },
+        {
+          "check": "twitter_card",
+          "status": "pass",
+          "weight": 1,
+          "description": "Twitter card meta present",
+          "detail": ""
+        },
+        {
+          "check": "structured_data",
+          "status": "pass",
+          "weight": 2,
+          "description": "JSON-LD structured data present",
+          "detail": "1 valid JSON-LD block(s)"
+        },
+        {
+          "check": "not_noindex",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page is not blocked by noindex",
+          "detail": "index, follow"
+        },
+        {
+          "check": "content_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Main content is not thin (>=300 words)",
+          "detail": "~205 words"
+        },
+        {
+          "check": "internal_links",
+          "status": "pass",
+          "weight": 1,
+          "description": "Page links to other internal pages",
+          "detail": "14 internal links"
+        },
+        {
+          "check": "broken_internal",
+          "status": "pass",
+          "weight": 2,
+          "description": "No broken internal links (local mode)",
+          "detail": "ok"
+        },
+        {
+          "check": "favicon",
+          "status": "pass",
+          "weight": 1,
+          "description": "Favicon declared",
+          "detail": ""
+        }
+      ],
+      "score": 97.2
+    },
+    {
+      "page": "services/index.html",
+      "title": "Services \u2014 AI Workflows, Integration & Web Development",
+      "description": "AI workflow design (n8n, Make, Dust, Claude), AI integration, full-stack web/app development, and discovery & scoping. From first webhook to shipped product.",
+      "checks": [
+        {
+          "check": "title_present",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page has a <title>",
+          "detail": "Services \u2014 AI Workflows, Integration & Web Development"
+        },
+        {
+          "check": "title_length",
+          "status": "pass",
+          "weight": 2,
+          "description": "Title length 30-60 chars",
+          "detail": "54 chars"
+        },
+        {
+          "check": "meta_description",
+          "status": "pass",
+          "weight": 3,
+          "description": "Meta description present",
+          "detail": "AI workflow design (n8n, Make, Dust, Claude), AI integration, full-stack web/app development, and di"
+        },
+        {
+          "check": "meta_desc_length",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta description length 70-160 chars",
+          "detail": "157 chars"
+        },
+        {
+          "check": "single_h1",
+          "status": "pass",
+          "weight": 3,
+          "description": "Exactly one <h1>",
+          "detail": "1 h1 tags"
+        },
+        {
+          "check": "heading_order",
+          "status": "pass",
+          "weight": 1,
+          "description": "No skipped heading levels",
+          "detail": "ok"
+        },
+        {
+          "check": "img_alt",
+          "status": "pass",
+          "weight": 2,
+          "description": "All <img> tags have alt text",
+          "detail": "0 imgs ok"
+        },
+        {
+          "check": "canonical",
+          "status": "pass",
+          "weight": 2,
+          "description": "rel=canonical link present",
+          "detail": ""
+        },
+        {
+          "check": "viewport",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta viewport present",
+          "detail": ""
+        },
+        {
+          "check": "html_lang",
+          "status": "pass",
+          "weight": 2,
+          "description": "<html lang> attribute set",
+          "detail": "en"
+        },
+        {
+          "check": "og_tags",
+          "status": "pass",
+          "weight": 2,
+          "description": "Open Graph title, description and image",
+          "detail": "ok"
+        },
+        {
+          "check": "twitter_card",
+          "status": "pass",
+          "weight": 1,
+          "description": "Twitter card meta present",
+          "detail": ""
+        },
+        {
+          "check": "structured_data",
+          "status": "pass",
+          "weight": 2,
+          "description": "JSON-LD structured data present",
+          "detail": "1 valid JSON-LD block(s)"
+        },
+        {
+          "check": "not_noindex",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page is not blocked by noindex",
+          "detail": "index, follow"
+        },
+        {
+          "check": "content_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Main content is not thin (>=300 words)",
+          "detail": "~212 words"
+        },
+        {
+          "check": "internal_links",
+          "status": "pass",
+          "weight": 1,
+          "description": "Page links to other internal pages",
+          "detail": "7 internal links"
+        },
+        {
+          "check": "broken_internal",
+          "status": "pass",
+          "weight": 2,
+          "description": "No broken internal links (local mode)",
+          "detail": "ok"
+        },
+        {
+          "check": "favicon",
+          "status": "pass",
+          "weight": 1,
+          "description": "Favicon declared",
+          "detail": ""
+        }
+      ],
+      "score": 97.2
+    },
+    {
+      "page": "mentions-legales/index.html",
+      "title": "Legal Notice \u2014 Matt Roshay",
+      "description": "Legal notice (mentions l\u00e9gales) for mattroshay.com: publisher identification, hosting, intellectual property and applicable law.",
+      "checks": [
+        {
+          "check": "title_present",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page has a <title>",
+          "detail": "Legal Notice \u2014 Matt Roshay"
+        },
+        {
+          "check": "title_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Title length 30-60 chars",
+          "detail": "26 chars"
+        },
+        {
+          "check": "meta_description",
+          "status": "pass",
+          "weight": 3,
+          "description": "Meta description present",
+          "detail": "Legal notice (mentions l\u00e9gales) for mattroshay.com: publisher identification, hosting, intellectual "
+        },
+        {
+          "check": "meta_desc_length",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta description length 70-160 chars",
+          "detail": "128 chars"
+        },
+        {
+          "check": "single_h1",
+          "status": "pass",
+          "weight": 3,
+          "description": "Exactly one <h1>",
+          "detail": "1 h1 tags"
+        },
+        {
+          "check": "heading_order",
+          "status": "pass",
+          "weight": 1,
+          "description": "No skipped heading levels",
+          "detail": "ok"
+        },
+        {
+          "check": "img_alt",
+          "status": "pass",
+          "weight": 2,
+          "description": "All <img> tags have alt text",
+          "detail": "0 imgs ok"
+        },
+        {
+          "check": "canonical",
+          "status": "pass",
+          "weight": 2,
+          "description": "rel=canonical link present",
+          "detail": ""
+        },
+        {
+          "check": "viewport",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta viewport present",
+          "detail": ""
+        },
+        {
+          "check": "html_lang",
+          "status": "pass",
+          "weight": 2,
+          "description": "<html lang> attribute set",
+          "detail": "en"
+        },
+        {
+          "check": "og_tags",
+          "status": "pass",
+          "weight": 2,
+          "description": "Open Graph title, description and image",
+          "detail": "ok"
+        },
+        {
+          "check": "twitter_card",
+          "status": "pass",
+          "weight": 1,
+          "description": "Twitter card meta present",
+          "detail": ""
+        },
+        {
+          "check": "structured_data",
+          "status": "pass",
+          "weight": 2,
+          "description": "JSON-LD structured data present",
+          "detail": "1 valid JSON-LD block(s)"
+        },
+        {
+          "check": "not_noindex",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page is not blocked by noindex",
+          "detail": "index, follow"
+        },
+        {
+          "check": "content_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Main content is not thin (>=300 words)",
+          "detail": "~19 words"
+        },
+        {
+          "check": "internal_links",
+          "status": "pass",
+          "weight": 1,
+          "description": "Page links to other internal pages",
+          "detail": "7 internal links"
+        },
+        {
+          "check": "broken_internal",
+          "status": "pass",
+          "weight": 2,
+          "description": "No broken internal links (local mode)",
+          "detail": "ok"
+        },
+        {
+          "check": "favicon",
+          "status": "pass",
+          "weight": 1,
+          "description": "Favicon declared",
+          "detail": ""
+        }
+      ],
+      "score": 94.4
+    },
+    {
+      "page": "work/index.html",
+      "title": "Work \u2014 AI Apps, Automations & Bilingual Websites",
+      "description": "Selected freelance projects: an AI pet-health triage app, a bilingual SEO-first therapy site, automated content platforms, and AI-powered products.",
+      "checks": [
+        {
+          "check": "title_present",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page has a <title>",
+          "detail": "Work \u2014 AI Apps, Automations & Bilingual Websites"
+        },
+        {
+          "check": "title_length",
+          "status": "pass",
+          "weight": 2,
+          "description": "Title length 30-60 chars",
+          "detail": "48 chars"
+        },
+        {
+          "check": "meta_description",
+          "status": "pass",
+          "weight": 3,
+          "description": "Meta description present",
+          "detail": "Selected freelance projects: an AI pet-health triage app, a bilingual SEO-first therapy site, automa"
+        },
+        {
+          "check": "meta_desc_length",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta description length 70-160 chars",
+          "detail": "147 chars"
+        },
+        {
+          "check": "single_h1",
+          "status": "pass",
+          "weight": 3,
+          "description": "Exactly one <h1>",
+          "detail": "1 h1 tags"
+        },
+        {
+          "check": "heading_order",
+          "status": "pass",
+          "weight": 1,
+          "description": "No skipped heading levels",
+          "detail": "ok"
+        },
+        {
+          "check": "img_alt",
+          "status": "pass",
+          "weight": 2,
+          "description": "All <img> tags have alt text",
+          "detail": "0 imgs ok"
+        },
+        {
+          "check": "canonical",
+          "status": "pass",
+          "weight": 2,
+          "description": "rel=canonical link present",
+          "detail": ""
+        },
+        {
+          "check": "viewport",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta viewport present",
+          "detail": ""
+        },
+        {
+          "check": "html_lang",
+          "status": "pass",
+          "weight": 2,
+          "description": "<html lang> attribute set",
+          "detail": "en"
+        },
+        {
+          "check": "og_tags",
+          "status": "pass",
+          "weight": 2,
+          "description": "Open Graph title, description and image",
+          "detail": "ok"
+        },
+        {
+          "check": "twitter_card",
+          "status": "pass",
+          "weight": 1,
+          "description": "Twitter card meta present",
+          "detail": ""
+        },
+        {
+          "check": "structured_data",
+          "status": "pass",
+          "weight": 2,
+          "description": "JSON-LD structured data present",
+          "detail": "1 valid JSON-LD block(s)"
+        },
+        {
+          "check": "not_noindex",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page is not blocked by noindex",
+          "detail": "index, follow"
+        },
+        {
+          "check": "content_length",
+          "status": "pass",
+          "weight": 2,
+          "description": "Main content is not thin (>=300 words)",
+          "detail": "~484 words"
+        },
+        {
+          "check": "internal_links",
+          "status": "pass",
+          "weight": 1,
+          "description": "Page links to other internal pages",
+          "detail": "7 internal links"
+        },
+        {
+          "check": "broken_internal",
+          "status": "pass",
+          "weight": 2,
+          "description": "No broken internal links (local mode)",
+          "detail": "ok"
+        },
+        {
+          "check": "favicon",
+          "status": "pass",
+          "weight": 1,
+          "description": "Favicon declared",
+          "detail": ""
+        }
+      ],
+      "score": 100.0
+    },
+    {
+      "page": "contact/index.html",
+      "title": "Contact \u2014 Book a Free AI & Automation Discovery Call",
+      "description": "Tell me what's slow, manual, or on your roadmap. Book a free 30-minute call (EN or FR) for a straight answer on fit and budget.",
+      "checks": [
+        {
+          "check": "title_present",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page has a <title>",
+          "detail": "Contact \u2014 Book a Free AI & Automation Discovery Call"
+        },
+        {
+          "check": "title_length",
+          "status": "pass",
+          "weight": 2,
+          "description": "Title length 30-60 chars",
+          "detail": "52 chars"
+        },
+        {
+          "check": "meta_description",
+          "status": "pass",
+          "weight": 3,
+          "description": "Meta description present",
+          "detail": "Tell me what's slow, manual, or on your roadmap. Book a free 30-minute call (EN or FR) for a straigh"
+        },
+        {
+          "check": "meta_desc_length",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta description length 70-160 chars",
+          "detail": "127 chars"
+        },
+        {
+          "check": "single_h1",
+          "status": "pass",
+          "weight": 3,
+          "description": "Exactly one <h1>",
+          "detail": "1 h1 tags"
+        },
+        {
+          "check": "heading_order",
+          "status": "pass",
+          "weight": 1,
+          "description": "No skipped heading levels",
+          "detail": "ok"
+        },
+        {
+          "check": "img_alt",
+          "status": "pass",
+          "weight": 2,
+          "description": "All <img> tags have alt text",
+          "detail": "0 imgs ok"
+        },
+        {
+          "check": "canonical",
+          "status": "pass",
+          "weight": 2,
+          "description": "rel=canonical link present",
+          "detail": ""
+        },
+        {
+          "check": "viewport",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta viewport present",
+          "detail": ""
+        },
+        {
+          "check": "html_lang",
+          "status": "pass",
+          "weight": 2,
+          "description": "<html lang> attribute set",
+          "detail": "en"
+        },
+        {
+          "check": "og_tags",
+          "status": "pass",
+          "weight": 2,
+          "description": "Open Graph title, description and image",
+          "detail": "ok"
+        },
+        {
+          "check": "twitter_card",
+          "status": "pass",
+          "weight": 1,
+          "description": "Twitter card meta present",
+          "detail": ""
+        },
+        {
+          "check": "structured_data",
+          "status": "pass",
+          "weight": 2,
+          "description": "JSON-LD structured data present",
+          "detail": "1 valid JSON-LD block(s)"
+        },
+        {
+          "check": "not_noindex",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page is not blocked by noindex",
+          "detail": "index, follow"
+        },
+        {
+          "check": "content_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Main content is not thin (>=300 words)",
+          "detail": "~58 words"
+        },
+        {
+          "check": "internal_links",
+          "status": "pass",
+          "weight": 1,
+          "description": "Page links to other internal pages",
+          "detail": "7 internal links"
+        },
+        {
+          "check": "broken_internal",
+          "status": "pass",
+          "weight": 2,
+          "description": "No broken internal links (local mode)",
+          "detail": "ok"
+        },
+        {
+          "check": "favicon",
+          "status": "pass",
+          "weight": 1,
+          "description": "Favicon declared",
+          "detail": ""
+        }
+      ],
+      "score": 97.2
+    },
+    {
+      "page": "privacy/index.html",
+      "title": "Privacy Policy \u2014 Matt Roshay",
+      "description": "How mattroshay.com handles your personal data: what is collected, why, how long it is kept, and your GDPR rights.",
+      "checks": [
+        {
+          "check": "title_present",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page has a <title>",
+          "detail": "Privacy Policy \u2014 Matt Roshay"
+        },
+        {
+          "check": "title_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Title length 30-60 chars",
+          "detail": "28 chars"
+        },
+        {
+          "check": "meta_description",
+          "status": "pass",
+          "weight": 3,
+          "description": "Meta description present",
+          "detail": "How mattroshay.com handles your personal data: what is collected, why, how long it is kept, and your"
+        },
+        {
+          "check": "meta_desc_length",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta description length 70-160 chars",
+          "detail": "113 chars"
+        },
+        {
+          "check": "single_h1",
+          "status": "pass",
+          "weight": 3,
+          "description": "Exactly one <h1>",
+          "detail": "1 h1 tags"
+        },
+        {
+          "check": "heading_order",
+          "status": "pass",
+          "weight": 1,
+          "description": "No skipped heading levels",
+          "detail": "ok"
+        },
+        {
+          "check": "img_alt",
+          "status": "pass",
+          "weight": 2,
+          "description": "All <img> tags have alt text",
+          "detail": "0 imgs ok"
+        },
+        {
+          "check": "canonical",
+          "status": "pass",
+          "weight": 2,
+          "description": "rel=canonical link present",
+          "detail": ""
+        },
+        {
+          "check": "viewport",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta viewport present",
+          "detail": ""
+        },
+        {
+          "check": "html_lang",
+          "status": "pass",
+          "weight": 2,
+          "description": "<html lang> attribute set",
+          "detail": "en"
+        },
+        {
+          "check": "og_tags",
+          "status": "pass",
+          "weight": 2,
+          "description": "Open Graph title, description and image",
+          "detail": "ok"
+        },
+        {
+          "check": "twitter_card",
+          "status": "pass",
+          "weight": 1,
+          "description": "Twitter card meta present",
+          "detail": ""
+        },
+        {
+          "check": "structured_data",
+          "status": "pass",
+          "weight": 2,
+          "description": "JSON-LD structured data present",
+          "detail": "1 valid JSON-LD block(s)"
+        },
+        {
+          "check": "not_noindex",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page is not blocked by noindex",
+          "detail": "index, follow"
+        },
+        {
+          "check": "content_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Main content is not thin (>=300 words)",
+          "detail": "~24 words"
+        },
+        {
+          "check": "internal_links",
+          "status": "pass",
+          "weight": 1,
+          "description": "Page links to other internal pages",
+          "detail": "7 internal links"
+        },
+        {
+          "check": "broken_internal",
+          "status": "pass",
+          "weight": 2,
+          "description": "No broken internal links (local mode)",
+          "detail": "ok"
+        },
+        {
+          "check": "favicon",
+          "status": "pass",
+          "weight": 1,
+          "description": "Favicon declared",
+          "detail": ""
+        }
+      ],
+      "score": 94.4
+    },
+    {
+      "page": "about/index.html",
+      "title": "About Matt Roshay \u2014 From Law-Firm BD to AI Builder",
+      "description": "15 years managing senior stakeholders in international law firms, now building AI workflows and full-stack products. The story behind the pivot.",
+      "checks": [
+        {
+          "check": "title_present",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page has a <title>",
+          "detail": "About Matt Roshay \u2014 From Law-Firm BD to AI Builder"
+        },
+        {
+          "check": "title_length",
+          "status": "pass",
+          "weight": 2,
+          "description": "Title length 30-60 chars",
+          "detail": "50 chars"
+        },
+        {
+          "check": "meta_description",
+          "status": "pass",
+          "weight": 3,
+          "description": "Meta description present",
+          "detail": "15 years managing senior stakeholders in international law firms, now building AI workflows and full"
+        },
+        {
+          "check": "meta_desc_length",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta description length 70-160 chars",
+          "detail": "144 chars"
+        },
+        {
+          "check": "single_h1",
+          "status": "pass",
+          "weight": 3,
+          "description": "Exactly one <h1>",
+          "detail": "1 h1 tags"
+        },
+        {
+          "check": "heading_order",
+          "status": "pass",
+          "weight": 1,
+          "description": "No skipped heading levels",
+          "detail": "ok"
+        },
+        {
+          "check": "img_alt",
+          "status": "pass",
+          "weight": 2,
+          "description": "All <img> tags have alt text",
+          "detail": "0 imgs ok"
+        },
+        {
+          "check": "canonical",
+          "status": "pass",
+          "weight": 2,
+          "description": "rel=canonical link present",
+          "detail": ""
+        },
+        {
+          "check": "viewport",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta viewport present",
+          "detail": ""
+        },
+        {
+          "check": "html_lang",
+          "status": "pass",
+          "weight": 2,
+          "description": "<html lang> attribute set",
+          "detail": "en"
+        },
+        {
+          "check": "og_tags",
+          "status": "pass",
+          "weight": 2,
+          "description": "Open Graph title, description and image",
+          "detail": "ok"
+        },
+        {
+          "check": "twitter_card",
+          "status": "pass",
+          "weight": 1,
+          "description": "Twitter card meta present",
+          "detail": ""
+        },
+        {
+          "check": "structured_data",
+          "status": "pass",
+          "weight": 2,
+          "description": "JSON-LD structured data present",
+          "detail": "1 valid JSON-LD block(s)"
+        },
+        {
+          "check": "not_noindex",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page is not blocked by noindex",
+          "detail": "index, follow"
+        },
+        {
+          "check": "content_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Main content is not thin (>=300 words)",
+          "detail": "~157 words"
+        },
+        {
+          "check": "internal_links",
+          "status": "pass",
+          "weight": 1,
+          "description": "Page links to other internal pages",
+          "detail": "7 internal links"
+        },
+        {
+          "check": "broken_internal",
+          "status": "pass",
+          "weight": 2,
+          "description": "No broken internal links (local mode)",
+          "detail": "ok"
+        },
+        {
+          "check": "favicon",
+          "status": "pass",
+          "weight": 1,
+          "description": "Favicon declared",
+          "detail": ""
+        }
+      ],
+      "score": 97.2
+    }
+  ],
+  "site": [
+    {
+      "check": "robots_txt",
+      "status": "pass",
+      "weight": 2,
+      "description": "robots.txt exists",
+      "detail": ""
+    },
+    {
+      "check": "sitemap",
+      "status": "pass",
+      "weight": 3,
+      "description": "sitemap.xml exists",
+      "detail": ""
+    },
+    {
+      "check": "unique_titles",
+      "status": "pass",
+      "weight": 3,
+      "description": "Titles unique across pages",
+      "detail": "ok"
+    },
+    {
+      "check": "unique_descriptions",
+      "status": "pass",
+      "weight": 2,
+      "description": "Meta descriptions unique across pages",
+      "detail": "ok"
+    }
+  ],
+  "site_score": 97.4
+}

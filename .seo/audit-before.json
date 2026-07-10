@@ -1,0 +1,707 @@
+{
+  "mode": "live",
+  "target": "https://mattroshay.com",
+  "pages": [
+    {
+      "page": "https://mattroshay.com",
+      "title": "Matt Roshay | Freelance Full-Stack Developer & AI Integration (Bordeaux, FR)",
+      "description": "Matt Roshay \u2014 freelance full-stack developer near Bordeaux, France. I help startups, SMEs and founders ship scalable web products and AI-powered workflows with Ruby on Rails, React, Python and OpenAI. Bilingual EN/FR, available worldwide.",
+      "checks": [
+        {
+          "check": "title_present",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page has a <title>",
+          "detail": "Matt Roshay | Freelance Full-Stack Developer & AI Integration (Bordeaux, FR)"
+        },
+        {
+          "check": "title_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Title length 30-60 chars",
+          "detail": "76 chars"
+        },
+        {
+          "check": "meta_description",
+          "status": "pass",
+          "weight": 3,
+          "description": "Meta description present",
+          "detail": "Matt Roshay \u2014 freelance full-stack developer near Bordeaux, France. I help startups, SMEs and founde"
+        },
+        {
+          "check": "meta_desc_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Meta description length 70-160 chars",
+          "detail": "238 chars"
+        },
+        {
+          "check": "single_h1",
+          "status": "fail",
+          "weight": 3,
+          "description": "Exactly one <h1>",
+          "detail": "0 h1 tags"
+        },
+        {
+          "check": "heading_order",
+          "status": "warn",
+          "weight": 1,
+          "description": "No skipped heading levels",
+          "detail": "no headings"
+        },
+        {
+          "check": "img_alt",
+          "status": "pass",
+          "weight": 2,
+          "description": "All <img> tags have alt text",
+          "detail": "0 imgs ok"
+        },
+        {
+          "check": "canonical",
+          "status": "pass",
+          "weight": 2,
+          "description": "rel=canonical link present",
+          "detail": ""
+        },
+        {
+          "check": "viewport",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta viewport present",
+          "detail": ""
+        },
+        {
+          "check": "html_lang",
+          "status": "pass",
+          "weight": 2,
+          "description": "<html lang> attribute set",
+          "detail": "en"
+        },
+        {
+          "check": "og_tags",
+          "status": "pass",
+          "weight": 2,
+          "description": "Open Graph title, description and image",
+          "detail": "ok"
+        },
+        {
+          "check": "twitter_card",
+          "status": "pass",
+          "weight": 1,
+          "description": "Twitter card meta present",
+          "detail": ""
+        },
+        {
+          "check": "structured_data",
+          "status": "pass",
+          "weight": 2,
+          "description": "JSON-LD structured data present",
+          "detail": "1 valid JSON-LD block(s)"
+        },
+        {
+          "check": "not_noindex",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page is not blocked by noindex",
+          "detail": "index, follow"
+        },
+        {
+          "check": "content_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Main content is not thin (>=300 words)",
+          "detail": "~0 words"
+        },
+        {
+          "check": "internal_links",
+          "status": "warn",
+          "weight": 1,
+          "description": "Page links to other internal pages",
+          "detail": "0 internal links"
+        },
+        {
+          "check": "broken_internal",
+          "status": "pass",
+          "weight": 2,
+          "description": "No broken internal links (local mode)",
+          "detail": "not checked (live mode)"
+        },
+        {
+          "check": "favicon",
+          "status": "pass",
+          "weight": 1,
+          "description": "Favicon declared",
+          "detail": ""
+        }
+      ],
+      "score": 80.6
+    },
+    {
+      "page": "https://mattroshay.com/about",
+      "title": "Matt Roshay | Freelance Full-Stack Developer & AI Integration (Bordeaux, FR)",
+      "description": "Matt Roshay \u2014 freelance full-stack developer near Bordeaux, France. I help startups, SMEs and founders ship scalable web products and AI-powered workflows with Ruby on Rails, React, Python and OpenAI. Bilingual EN/FR, available worldwide.",
+      "checks": [
+        {
+          "check": "title_present",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page has a <title>",
+          "detail": "Matt Roshay | Freelance Full-Stack Developer & AI Integration (Bordeaux, FR)"
+        },
+        {
+          "check": "title_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Title length 30-60 chars",
+          "detail": "76 chars"
+        },
+        {
+          "check": "meta_description",
+          "status": "pass",
+          "weight": 3,
+          "description": "Meta description present",
+          "detail": "Matt Roshay \u2014 freelance full-stack developer near Bordeaux, France. I help startups, SMEs and founde"
+        },
+        {
+          "check": "meta_desc_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Meta description length 70-160 chars",
+          "detail": "238 chars"
+        },
+        {
+          "check": "single_h1",
+          "status": "fail",
+          "weight": 3,
+          "description": "Exactly one <h1>",
+          "detail": "0 h1 tags"
+        },
+        {
+          "check": "heading_order",
+          "status": "warn",
+          "weight": 1,
+          "description": "No skipped heading levels",
+          "detail": "no headings"
+        },
+        {
+          "check": "img_alt",
+          "status": "pass",
+          "weight": 2,
+          "description": "All <img> tags have alt text",
+          "detail": "0 imgs ok"
+        },
+        {
+          "check": "canonical",
+          "status": "pass",
+          "weight": 2,
+          "description": "rel=canonical link present",
+          "detail": ""
+        },
+        {
+          "check": "viewport",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta viewport present",
+          "detail": ""
+        },
+        {
+          "check": "html_lang",
+          "status": "pass",
+          "weight": 2,
+          "description": "<html lang> attribute set",
+          "detail": "en"
+        },
+        {
+          "check": "og_tags",
+          "status": "pass",
+          "weight": 2,
+          "description": "Open Graph title, description and image",
+          "detail": "ok"
+        },
+        {
+          "check": "twitter_card",
+          "status": "pass",
+          "weight": 1,
+          "description": "Twitter card meta present",
+          "detail": ""
+        },
+        {
+          "check": "structured_data",
+          "status": "pass",
+          "weight": 2,
+          "description": "JSON-LD structured data present",
+          "detail": "1 valid JSON-LD block(s)"
+        },
+        {
+          "check": "not_noindex",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page is not blocked by noindex",
+          "detail": "index, follow"
+        },
+        {
+          "check": "content_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Main content is not thin (>=300 words)",
+          "detail": "~0 words"
+        },
+        {
+          "check": "internal_links",
+          "status": "warn",
+          "weight": 1,
+          "description": "Page links to other internal pages",
+          "detail": "0 internal links"
+        },
+        {
+          "check": "broken_internal",
+          "status": "pass",
+          "weight": 2,
+          "description": "No broken internal links (local mode)",
+          "detail": "not checked (live mode)"
+        },
+        {
+          "check": "favicon",
+          "status": "pass",
+          "weight": 1,
+          "description": "Favicon declared",
+          "detail": ""
+        }
+      ],
+      "score": 80.6
+    },
+    {
+      "page": "https://mattroshay.com/services",
+      "title": "Matt Roshay | Freelance Full-Stack Developer & AI Integration (Bordeaux, FR)",
+      "description": "Matt Roshay \u2014 freelance full-stack developer near Bordeaux, France. I help startups, SMEs and founders ship scalable web products and AI-powered workflows with Ruby on Rails, React, Python and OpenAI. Bilingual EN/FR, available worldwide.",
+      "checks": [
+        {
+          "check": "title_present",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page has a <title>",
+          "detail": "Matt Roshay | Freelance Full-Stack Developer & AI Integration (Bordeaux, FR)"
+        },
+        {
+          "check": "title_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Title length 30-60 chars",
+          "detail": "76 chars"
+        },
+        {
+          "check": "meta_description",
+          "status": "pass",
+          "weight": 3,
+          "description": "Meta description present",
+          "detail": "Matt Roshay \u2014 freelance full-stack developer near Bordeaux, France. I help startups, SMEs and founde"
+        },
+        {
+          "check": "meta_desc_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Meta description length 70-160 chars",
+          "detail": "238 chars"
+        },
+        {
+          "check": "single_h1",
+          "status": "fail",
+          "weight": 3,
+          "description": "Exactly one <h1>",
+          "detail": "0 h1 tags"
+        },
+        {
+          "check": "heading_order",
+          "status": "warn",
+          "weight": 1,
+          "description": "No skipped heading levels",
+          "detail": "no headings"
+        },
+        {
+          "check": "img_alt",
+          "status": "pass",
+          "weight": 2,
+          "description": "All <img> tags have alt text",
+          "detail": "0 imgs ok"
+        },
+        {
+          "check": "canonical",
+          "status": "pass",
+          "weight": 2,
+          "description": "rel=canonical link present",
+          "detail": ""
+        },
+        {
+          "check": "viewport",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta viewport present",
+          "detail": ""
+        },
+        {
+          "check": "html_lang",
+          "status": "pass",
+          "weight": 2,
+          "description": "<html lang> attribute set",
+          "detail": "en"
+        },
+        {
+          "check": "og_tags",
+          "status": "pass",
+          "weight": 2,
+          "description": "Open Graph title, description and image",
+          "detail": "ok"
+        },
+        {
+          "check": "twitter_card",
+          "status": "pass",
+          "weight": 1,
+          "description": "Twitter card meta present",
+          "detail": ""
+        },
+        {
+          "check": "structured_data",
+          "status": "pass",
+          "weight": 2,
+          "description": "JSON-LD structured data present",
+          "detail": "1 valid JSON-LD block(s)"
+        },
+        {
+          "check": "not_noindex",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page is not blocked by noindex",
+          "detail": "index, follow"
+        },
+        {
+          "check": "content_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Main content is not thin (>=300 words)",
+          "detail": "~0 words"
+        },
+        {
+          "check": "internal_links",
+          "status": "warn",
+          "weight": 1,
+          "description": "Page links to other internal pages",
+          "detail": "0 internal links"
+        },
+        {
+          "check": "broken_internal",
+          "status": "pass",
+          "weight": 2,
+          "description": "No broken internal links (local mode)",
+          "detail": "not checked (live mode)"
+        },
+        {
+          "check": "favicon",
+          "status": "pass",
+          "weight": 1,
+          "description": "Favicon declared",
+          "detail": ""
+        }
+      ],
+      "score": 80.6
+    },
+    {
+      "page": "https://mattroshay.com/work",
+      "title": "Matt Roshay | Freelance Full-Stack Developer & AI Integration (Bordeaux, FR)",
+      "description": "Matt Roshay \u2014 freelance full-stack developer near Bordeaux, France. I help startups, SMEs and founders ship scalable web products and AI-powered workflows with Ruby on Rails, React, Python and OpenAI. Bilingual EN/FR, available worldwide.",
+      "checks": [
+        {
+          "check": "title_present",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page has a <title>",
+          "detail": "Matt Roshay | Freelance Full-Stack Developer & AI Integration (Bordeaux, FR)"
+        },
+        {
+          "check": "title_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Title length 30-60 chars",
+          "detail": "76 chars"
+        },
+        {
+          "check": "meta_description",
+          "status": "pass",
+          "weight": 3,
+          "description": "Meta description present",
+          "detail": "Matt Roshay \u2014 freelance full-stack developer near Bordeaux, France. I help startups, SMEs and founde"
+        },
+        {
+          "check": "meta_desc_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Meta description length 70-160 chars",
+          "detail": "238 chars"
+        },
+        {
+          "check": "single_h1",
+          "status": "fail",
+          "weight": 3,
+          "description": "Exactly one <h1>",
+          "detail": "0 h1 tags"
+        },
+        {
+          "check": "heading_order",
+          "status": "warn",
+          "weight": 1,
+          "description": "No skipped heading levels",
+          "detail": "no headings"
+        },
+        {
+          "check": "img_alt",
+          "status": "pass",
+          "weight": 2,
+          "description": "All <img> tags have alt text",
+          "detail": "0 imgs ok"
+        },
+        {
+          "check": "canonical",
+          "status": "pass",
+          "weight": 2,
+          "description": "rel=canonical link present",
+          "detail": ""
+        },
+        {
+          "check": "viewport",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta viewport present",
+          "detail": ""
+        },
+        {
+          "check": "html_lang",
+          "status": "pass",
+          "weight": 2,
+          "description": "<html lang> attribute set",
+          "detail": "en"
+        },
+        {
+          "check": "og_tags",
+          "status": "pass",
+          "weight": 2,
+          "description": "Open Graph title, description and image",
+          "detail": "ok"
+        },
+        {
+          "check": "twitter_card",
+          "status": "pass",
+          "weight": 1,
+          "description": "Twitter card meta present",
+          "detail": ""
+        },
+        {
+          "check": "structured_data",
+          "status": "pass",
+          "weight": 2,
+          "description": "JSON-LD structured data present",
+          "detail": "1 valid JSON-LD block(s)"
+        },
+        {
+          "check": "not_noindex",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page is not blocked by noindex",
+          "detail": "index, follow"
+        },
+        {
+          "check": "content_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Main content is not thin (>=300 words)",
+          "detail": "~0 words"
+        },
+        {
+          "check": "internal_links",
+          "status": "warn",
+          "weight": 1,
+          "description": "Page links to other internal pages",
+          "detail": "0 internal links"
+        },
+        {
+          "check": "broken_internal",
+          "status": "pass",
+          "weight": 2,
+          "description": "No broken internal links (local mode)",
+          "detail": "not checked (live mode)"
+        },
+        {
+          "check": "favicon",
+          "status": "pass",
+          "weight": 1,
+          "description": "Favicon declared",
+          "detail": ""
+        }
+      ],
+      "score": 80.6
+    },
+    {
+      "page": "https://mattroshay.com/contact",
+      "title": "Matt Roshay | Freelance Full-Stack Developer & AI Integration (Bordeaux, FR)",
+      "description": "Matt Roshay \u2014 freelance full-stack developer near Bordeaux, France. I help startups, SMEs and founders ship scalable web products and AI-powered workflows with Ruby on Rails, React, Python and OpenAI. Bilingual EN/FR, available worldwide.",
+      "checks": [
+        {
+          "check": "title_present",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page has a <title>",
+          "detail": "Matt Roshay | Freelance Full-Stack Developer & AI Integration (Bordeaux, FR)"
+        },
+        {
+          "check": "title_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Title length 30-60 chars",
+          "detail": "76 chars"
+        },
+        {
+          "check": "meta_description",
+          "status": "pass",
+          "weight": 3,
+          "description": "Meta description present",
+          "detail": "Matt Roshay \u2014 freelance full-stack developer near Bordeaux, France. I help startups, SMEs and founde"
+        },
+        {
+          "check": "meta_desc_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Meta description length 70-160 chars",
+          "detail": "238 chars"
+        },
+        {
+          "check": "single_h1",
+          "status": "fail",
+          "weight": 3,
+          "description": "Exactly one <h1>",
+          "detail": "0 h1 tags"
+        },
+        {
+          "check": "heading_order",
+          "status": "warn",
+          "weight": 1,
+          "description": "No skipped heading levels",
+          "detail": "no headings"
+        },
+        {
+          "check": "img_alt",
+          "status": "pass",
+          "weight": 2,
+          "description": "All <img> tags have alt text",
+          "detail": "0 imgs ok"
+        },
+        {
+          "check": "canonical",
+          "status": "pass",
+          "weight": 2,
+          "description": "rel=canonical link present",
+          "detail": ""
+        },
+        {
+          "check": "viewport",
+          "status": "pass",
+          "weight": 2,
+          "description": "Meta viewport present",
+          "detail": ""
+        },
+        {
+          "check": "html_lang",
+          "status": "pass",
+          "weight": 2,
+          "description": "<html lang> attribute set",
+          "detail": "en"
+        },
+        {
+          "check": "og_tags",
+          "status": "pass",
+          "weight": 2,
+          "description": "Open Graph title, description and image",
+          "detail": "ok"
+        },
+        {
+          "check": "twitter_card",
+          "status": "pass",
+          "weight": 1,
+          "description": "Twitter card meta present",
+          "detail": ""
+        },
+        {
+          "check": "structured_data",
+          "status": "pass",
+          "weight": 2,
+          "description": "JSON-LD structured data present",
+          "detail": "1 valid JSON-LD block(s)"
+        },
+        {
+          "check": "not_noindex",
+          "status": "pass",
+          "weight": 3,
+          "description": "Page is not blocked by noindex",
+          "detail": "index, follow"
+        },
+        {
+          "check": "content_length",
+          "status": "warn",
+          "weight": 2,
+          "description": "Main content is not thin (>=300 words)",
+          "detail": "~0 words"
+        },
+        {
+          "check": "internal_links",
+          "status": "warn",
+          "weight": 1,
+          "description": "Page links to other internal pages",
+          "detail": "0 internal links"
+        },
+        {
+          "check": "broken_internal",
+          "status": "pass",
+          "weight": 2,
+          "description": "No broken internal links (local mode)",
+          "detail": "not checked (live mode)"
+        },
+        {
+          "check": "favicon",
+          "status": "pass",
+          "weight": 1,
+          "description": "Favicon declared",
+          "detail": ""
+        }
+      ],
+      "score": 80.6
+    }
+  ],
+  "site": [
+    {
+      "check": "robots_txt",
+      "status": "pass",
+      "weight": 2,
+      "description": "robots.txt exists",
+      "detail": ""
+    },
+    {
+      "check": "sitemap",
+      "status": "pass",
+      "weight": 3,
+      "description": "sitemap.xml exists",
+      "detail": ""
+    },
+    {
+      "check": "unique_titles",
+      "status": "fail",
+      "weight": 3,
+      "description": "Titles unique across pages",
+      "detail": "duplicated on 5 pages"
+    },
+    {
+      "check": "unique_descriptions",
+      "status": "fail",
+      "weight": 2,
+      "description": "Meta descriptions unique across pages",
+      "detail": "duplicated on 5 pages"
+    }
+  ],
+  "site_score": 74.5
+}

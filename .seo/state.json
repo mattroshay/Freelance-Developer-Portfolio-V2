@@ -1,0 +1,28 @@
+{
+  "site": "mattroshay.com",
+  "stack": "react-vite-spa (react-router 7, i18next, Heroku serve -s build)",
+  "runs": [
+    {
+      "run": 1,
+      "date": "2026-07-10",
+      "mode": "both",
+      "pages_audited": 5,
+      "score_before": 74.5,
+      "score_after": 97.4,
+      "fixes": [
+        {"file": "public/sitemap.xml", "check": "sitemap", "summary": "expanded from 1 to 5 routes with hreflang"},
+        {"file": "src/hooks/usePageMeta.ts", "check": "canonical", "summary": "per-route canonical + og:* + twitter:* + hreflang at runtime"},
+        {"file": "index.html", "check": "title_length", "summary": "title 76->56 chars, aligned with runtime positioning"},
+        {"file": "index.html", "check": "meta_desc_length", "summary": "description 238->156 chars"},
+        {"file": "index.html", "check": "og_tags", "summary": "OG/Twitter aligned to AI Product Builder positioning; keywords meta removed"},
+        {"file": "scripts/prerender.mjs", "check": "content_length", "summary": "NEW: dependency-free post-build prerender of all 7 routes with real content"},
+        {"file": "package.json", "check": "content_length", "summary": "build script now runs prerender after vite build"}
+      ],
+      "deferred": [
+        {"item": "JSON-LD jobTitle vs new positioning", "reason": "owner-voice decision"},
+        {"item": "path-based FR locale (/fr/...)", "reason": "routing project, out of SEO scope"},
+        {"item": "case-study/blog content for competitive queries", "reason": "content strategy, owner decision"}
+      ]
+    }
+  ]
+}
